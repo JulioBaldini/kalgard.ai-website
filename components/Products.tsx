@@ -43,7 +43,7 @@ export default function Products() {
               </h3>
               
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Our comprehensive navigation solution combines proprietary satellite image matching technology with advanced sensor fusion, enabling autonomous UAV operations in GPS-denied environments with sub-meter positioning accuracy.
+                Our comprehensive navigation solution combines proprietary satellite image matching technology with advanced sensor fusion, enabling autonomous UAV operations in GPS-denied environments with 5-10m error positioning accuracy.
               </p>
 
               {/* Key Features */}
@@ -54,7 +54,7 @@ export default function Products() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Visual-Satellite Positioning</h4>
-                    <p className="text-sm text-gray-600">Sub-meter accuracy GPS-free</p>
+                    <p className="text-sm text-gray-600">5-10m error accuracy GPS-free</p>
                   </div>
                 </div>
 
@@ -83,7 +83,7 @@ export default function Products() {
                     <Battery className="w-5 h-5 text-kalgard-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Enterprise Ready</h4>
+                    <h4 className="font-semibold text-gray-900">Soon Enterprise Ready</h4>
                     <p className="text-sm text-gray-600">Professional ground station</p>
                   </div>
                 </div>
@@ -103,6 +103,74 @@ export default function Products() {
                 >
                   Download Specs
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Drift Correction Card */}
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Drift Correction Image */}
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 flex items-center justify-center">
+              <div className="text-center">
+                <img 
+                  src="/media/screenshots/drift_correction.png" 
+                  alt="Drift Correction Visualization"
+                  className="w-full max-w-md mx-auto mb-6 rounded-xl shadow-lg"
+                />
+                <h3 className="text-2xl font-bold mb-2 text-white">Drift Correction</h3>
+                <p className="text-lg opacity-90 text-kalgard-300">Visual-Satellite Positioning</p>
+              </div>
+            </div>
+
+            {/* Drift Correction Explanation */}
+            <div className="p-12">
+              <div className="mb-6">
+                <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
+                  Core Technology
+                </span>
+              </div>
+              
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Drift Correction Technology
+              </h3>
+              
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Our proprietary visual-satellite positioning technology continuously corrects positioning drift by comparing live aerial imagery with reference satellite data, ensuring 5-10m error accuracy even in GPS-denied environments.
+              </p>
+
+              {/* Line Explanations */}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start space-x-3">
+                  <div className="w-4 h-4 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Red Line - Dead Reckoning</h4>
+                    <p className="text-sm text-gray-600">Traditional inertial navigation that accumulates positioning errors over time, causing significant drift from the true path.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <div className="w-4 h-4 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Green Line - Reference GPS</h4>
+                    <p className="text-sm text-gray-600">Ground truth reference path showing the actual flight trajectory for comparison and validation purposes.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <div className="w-4 h-4 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Blue Line - MerlinSight Output</h4>
+                    <p className="text-sm text-gray-600">Our corrected positioning solution that maintains 5-10m error accuracy by continuously applying visual-satellite drift correction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-kalgard-50 rounded-lg p-4">
+                <p className="text-sm text-kalgard-700">
+                  <strong>Key Insight:</strong> The blue line demonstrates how our technology eliminates the cumulative drift errors that plague traditional navigation systems, providing reliable positioning even when GPS signals are unavailable or unreliable.
+                </p>
               </div>
             </div>
           </div>

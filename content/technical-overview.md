@@ -8,7 +8,7 @@
 - **Satellite Image Matching**: Proprietary algorithms compare live aerial footage with high-resolution reference imagery
 - **Keypoint Detection**: Advanced computer vision algorithms identify and match terrain features
 - **Trajectory Replay**: Handles processing delays through intelligent trajectory reconstruction
-- **Sub-meter Accuracy**: Achieves positioning precision comparable to RTK GPS systems
+- **5-10m Error Accuracy**: Achieves positioning precision comparable to RTK GPS systems
 
 #### 2. Multi-Sensor Fusion Engine
 - **Extended Kalman Filter**: Optimal sensor data integration and state estimation
@@ -38,7 +38,7 @@
 
 ### Performance Metrics
 - **Position Update Rate**: Up to 20Hz real-time
-- **Positioning Accuracy**: Sub-meter precision in GPS-denied environments
+- **Positioning Accuracy**: 5-10m error precision in GPS-denied environments
 - **Processing Latency**: Minimal delay for responsive autonomous control
 - **Sensor Fusion**: Extended Kalman Filter implementation
 - **Communication**: ZeroMQ-based distributed processing

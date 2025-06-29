@@ -76,7 +76,7 @@ npm run lint    # Run ESLint
 
 ### **Hero Section**
 - Advanced Aerial Navigation System branding
-- Sub-meter positioning accuracy highlights
+- 5-10m error positioning accuracy highlights
 - 20Hz real-time updates capability
 - GPS-free operation emphasis
 
@@ -136,7 +136,7 @@ npm run lint    # Run ESLint
 
 The website accurately reflects KALGARD's **Advanced Aerial Navigation System** with:
 
-- **Visual-Satellite Positioning**: Sub-meter accuracy without GPS
+- **Visual-Satellite Positioning**: 5-10m error accuracy without GPS
 - **Multi-Sensor Fusion**: Extended Kalman Filter implementation  
 - **Real-Time Processing**: 20Hz position updates
 - **Professional Ground Station**: Enterprise monitoring interface

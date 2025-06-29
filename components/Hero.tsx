@@ -14,7 +14,7 @@ export default function Hero() {
               <span className="text-kalgard-500 block">Navigation System</span>
             </h1>
             <p className="text-xl text-gray-600 mt-6 leading-relaxed">
-              KALGARD Systems delivers cutting-edge autonomous navigation technology that enables UAVs to operate with sub-meter precision in GPS-denied environments through advanced computer vision and sensor fusion.
+              KALGARD Systems delivers cutting-edge autonomous navigation technology that enables UAVs to operate with 5-10m error in GPS-denied environments through advanced computer vision and sensor fusion.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -43,7 +43,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
               <div>
-                <div className="text-3xl font-bold text-kalgard-600">Sub-Meter</div>
+                <div className="text-3xl font-bold text-kalgard-600">5-10m Error</div>
                 <div className="text-sm text-gray-600 mt-1">Positioning Accuracy</div>
               </div>
               <div>

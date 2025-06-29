@@ -13,7 +13,7 @@ export default function Features() {
     {
       icon: MapPin,
       title: 'Visual-Satellite Positioning',
-      description: 'Proprietary satellite image matching technology compares live aerial footage with reference imagery for sub-meter positioning accuracy.',
+      description: 'Proprietary satellite image matching technology compares live aerial footage with reference imagery for 5-10m error positioning accuracy.',
       highlight: 'GPS-denied operation'
     },
     {
@@ -101,7 +101,7 @@ export default function Features() {
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-kalgard-400">
                     <span className="font-medium">Positioning Accuracy</span>
-                    <span className="text-kalgard-100">Sub-meter precision</span>
+                    <span className="text-kalgard-100">5-10m error precision</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-kalgard-400">
                     <span className="font-medium">Sensor Fusion</span>

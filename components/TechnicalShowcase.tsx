@@ -10,7 +10,7 @@ export default function TechnicalShowcase() {
             Advanced Computer Vision Technology
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed">
-            See our proprietary visual-satellite positioning algorithms in action, delivering sub-meter accuracy through real-time image matching and keypoint detection.
+            See our proprietary visual-satellite positioning algorithms in action, delivering 5-10m error accuracy through real-time image matching and keypoint detection.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function TechnicalShowcase() {
                   Real-time Processing
                 </span>
                 <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
-                  Sub-meter Accuracy
+                  5-10m Error Accuracy
                 </span>
                 <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
                   Feature Detection

@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'KALGARD Systems - Advanced Aerial Navigation System',
-  description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with sub-meter precision in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
+  description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with 5-10m error in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
   keywords: 'GPS-denied navigation, aerial navigation system, UAV navigation, visual-satellite positioning, multi-sensor fusion, autonomous drones, KALGARD',
   authors: [{ name: 'KALGARD Systems' }],
   creator: 'KALGARD Systems',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'KALGARD Systems - Advanced Aerial Navigation System',
-    description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with sub-meter precision in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
+    description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with 5-10m error in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
     url: 'https://kalgardsystems.com',
     siteName: 'KALGARD Systems',
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'KALGARD Systems - Advanced Aerial Navigation System',
-    description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with sub-meter precision in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
+    description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with 5-10m error in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
     images: ['/media/renders/nav_module_MerlinSight.png'],
   },
 }

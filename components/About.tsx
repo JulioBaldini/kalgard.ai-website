@@ -59,7 +59,7 @@ export default function About() {
                 Founded with a vision to solve the critical challenge of autonomous navigation in GPS-denied environments, KALGARD Systems emerged from years of research in satellite image matching and multi-sensor fusion technologies.
               </p>
               <p>
-                Our proprietary visual-satellite positioning system combines real-time aerial footage analysis with high-resolution reference imagery, enabling sub-meter positioning accuracy where traditional GPS systems fail.
+                Our proprietary visual-satellite positioning system combines real-time aerial footage analysis with high-resolution reference imagery, enabling 5-10m error positioning accuracy where traditional GPS systems fail.
               </p>
               <p>
                 We hope that soon our navigation solutions will serve search and rescue operations, infrastructure inspection, agricultural surveying, and security missions worldwide.

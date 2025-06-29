@@ -45,11 +45,11 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <button className="bg-kalgard-500 hover:bg-kalgard-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
               Get Started
             </button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button

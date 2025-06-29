@@ -4,7 +4,7 @@
 
 ### 🔍 Search and Rescue Operations
 - **GPS-denied environments**: Mountain valleys, dense forests, urban canyons
-- **Critical precision**: Sub-meter accuracy for precise victim location
+- **Critical precision**: 5-10m error accuracy for precise victim location
 - **All-weather capability**: Operates in challenging weather conditions
 - **Real-time coordination**: Live telemetry for rescue team coordination
 
@@ -46,7 +46,7 @@
 - **Multi-sensor fusion** maintains accuracy even with partial sensor failure
 
 ### Infrastructure Inspection
-- **Sub-meter positioning** ensures precise defect documentation
+- **5-10m error positioning** ensures precise defect documentation
 - **Professional ground station** provides comprehensive mission monitoring
 - **Enterprise architecture** supports regulatory compliance and reporting
 
@@ -62,7 +62,7 @@
 
 ## Competitive Advantages Across Applications
 
-1. **No RTK Required**: Sub-meter accuracy without expensive RTK GPS systems
+1. **No RTK Required**: 5-10m error accuracy without expensive RTK GPS systems
 2. **GPS-Jamming Resilient**: Continues operation when GPS is unavailable or compromised
 3. **Enterprise Ready**: Professional interfaces suitable for commercial operations
 4. **Scalable Architecture**: Supports single UAV missions to large fleet operations
