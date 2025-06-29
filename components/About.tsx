@@ -62,7 +62,7 @@ export default function About() {
                 Our proprietary visual-satellite positioning system combines real-time aerial footage analysis with high-resolution reference imagery, enabling sub-meter positioning accuracy where traditional GPS systems fail.
               </p>
               <p>
-                Today, our enterprise-ready navigation solutions serve search and rescue operations, infrastructure inspection, agricultural surveying, and security missions worldwide.
+                We hope that soon our navigation solutions will serve search and rescue operations, infrastructure inspection, agricultural surveying, and security missions worldwide.
               </p>
             </div>
           </div>
