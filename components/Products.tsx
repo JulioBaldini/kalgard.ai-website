@@ -90,12 +90,19 @@ export default function Products() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-kalgard-500 hover:bg-kalgard-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex-1">
+                <a 
+                  href="mailto:contact@kalgardsystems.com?subject=MerlinSight Information Request&body=Hello,%0D%0A%0D%0AI'm interested in learning more about the MerlinSight Navigation System.%0D%0A%0D%0APlease provide additional information about:%0D%0A- Pricing and availability%0D%0A- Technical specifications%0D%0A- Integration requirements%0D%0A- Support and training options%0D%0A%0D%0AThank you."
+                  className="bg-kalgard-500 hover:bg-kalgard-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex-1 text-center"
+                >
                   Request Information
-                </button>
-                <button className="border-2 border-kalgard-500 text-kalgard-600 hover:bg-kalgard-50 px-6 py-3 rounded-lg font-semibold transition-colors">
+                </a>
+                <a 
+                  href="/resources/merlinsight_specifications.csv"
+                  download="MerlinSight_Specifications.csv"
+                  className="border-2 border-kalgard-500 text-kalgard-600 hover:bg-kalgard-50 px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                >
                   Download Specs
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -108,12 +115,18 @@ export default function Products() {
             Building on our advanced navigation technology, our next step is developing fully autonomous drones. These complete UAV systems will integrate our MerlinSight navigation with intelligent flight control, enabling unprecedented autonomous operations in complex environments.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <button className="bg-kalgard-100 text-kalgard-600 px-6 py-3 rounded-lg font-semibold hover:bg-kalgard-200 transition-colors">
-              Join Our Newsletter
-            </button>
-            <button className="border-2 border-kalgard-500 text-kalgard-600 hover:bg-kalgard-50 px-6 py-3 rounded-lg font-semibold transition-colors">
-              Early Access Program
-            </button>
+            <div className="text-center">
+              <button className="bg-kalgard-100 text-kalgard-600 px-6 py-3 rounded-lg font-semibold hover:bg-kalgard-200 transition-colors w-full">
+                Join Our Newsletter
+              </button>
+              <p className="text-sm text-gray-500 mt-2">(coming soon)</p>
+            </div>
+            <div className="text-center">
+              <button className="border-2 border-kalgard-500 text-kalgard-600 hover:bg-kalgard-50 px-6 py-3 rounded-lg font-semibold transition-colors w-full">
+                Early Access Program
+              </button>
+              <p className="text-sm text-gray-500 mt-2">(coming soon)</p>
+            </div>
           </div>
         </div>
       </div>

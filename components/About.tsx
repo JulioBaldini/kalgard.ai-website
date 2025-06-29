@@ -10,7 +10,8 @@ export default function About() {
             About KALGARD Systems
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed">
-            A defense and space manufacturing company specializing in cutting-edge autonomous navigation systems that enable unmanned aerial vehicles to navigate with unprecedented precision in GPS-denied environments through advanced computer vision algorithms and sophisticated sensor fusion technology.
+          We are a defense and aerospace focused software and hardware manufacturer delivering state-of-the-art autonomous navigation solutions for unmanned aerial vehicles. Leveraging bespoke advanced computer-vision algorithms and robust sensor-fusion architectures, our systems empower UAVs to operate with pinpoint accuracy even in GPS-denied environments. Founded by an Imperial College London engineer with a lifelong passion for drones, we combine academic rigor with practical innovation to redefine what aerial autonomy can achieve.
+
           </p>
         </div>
 
@@ -21,7 +22,7 @@ export default function About() {
               <Target className="w-8 h-8 text-kalgard-600" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Precision</h3>
-            <p className="text-gray-600 text-sm">Millimeter-accurate navigation systems for critical applications</p>
+            <p className="text-gray-600 text-sm">Meter-accurate navigation systems for critical applications</p>
           </div>
 
           <div className="text-center group">

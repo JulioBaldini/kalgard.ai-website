@@ -17,20 +17,21 @@ export default function TechnicalShowcase() {
         {/* Technical Demonstrations Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Keypoint Matching */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full">
-            <div className="relative flex-shrink-0 h-64 flex items-center justify-center bg-gray-50">
-              <img 
-                src="/media/screenshots/keypoint_matching.png" 
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full min-h-[32rem]">
+            <div className="relative flex-shrink-0 aspect-[4/3] bg-gray-50 overflow-hidden">
+              <Image
+                src="/media/screenshots/keypoint_matching.png"
                 alt="Keypoint Matching Algorithm"
-                className="max-w-full max-h-full object-contain"
+                fill
+                style={{ objectFit: 'contain' }}
               />
             </div>
             <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Keypoint Matching</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">Keypoint Matching</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow text-center lg:text-left">
                 Our advanced computer vision algorithms identify and match distinctive features between live aerial footage and reference satellite imagery, enabling precise positioning without GPS.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
                   Real-time Processing
                 </span>
@@ -45,27 +46,33 @@ export default function TechnicalShowcase() {
           </div>
 
           {/* Road Graph Matching */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full">
-            <div className="relative flex-shrink-0 h-64 bg-gray-50">
-              <div className="grid grid-cols-2 gap-1 h-full">
-                <img 
-                  src="/media/screenshots/roadgraph_matching_1.png" 
-                  alt="Road Graph Analysis"
-                  className="w-full h-full object-contain"
-                />
-                <img 
-                  src="/media/screenshots/roadgraph_matching_2.png" 
-                  alt="Road Network Detection"
-                  className="w-full h-full object-contain"
-                />
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full min-h-[32rem]">
+            <div className="relative flex-shrink-0 aspect-[4/3] bg-gray-50 overflow-hidden">
+              <div className="grid grid-cols-2 gap-1 h-full w-full">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/media/screenshots/roadgraph_matching_1.png"
+                    alt="Road Graph Analysis"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/media/screenshots/roadgraph_matching_2.png"
+                    alt="Road Network Detection"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
               </div>
             </div>
             <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Road Graph Matching</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">Road Graph Matching</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow text-center lg:text-left">
                 Intelligent road network analysis and matching capabilities enhance navigation accuracy by correlating detected road patterns with known infrastructure data for robust positioning.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                 <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
                   Infrastructure Detection
                 </span>
@@ -84,8 +91,8 @@ export default function TechnicalShowcase() {
         <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">See MerlinSight in Action</h3>
           <div className="aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
-            <video 
-              controls 
+            <video
+              controls
               className="w-full h-full"
               poster="/media/renders/nav_module_MerlinSight.png"
             >
@@ -100,4 +107,4 @@ export default function TechnicalShowcase() {
       </div>
     </section>
   )
-} 
+}

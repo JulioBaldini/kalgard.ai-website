@@ -41,6 +41,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
+          {/**
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
             
@@ -119,12 +120,12 @@ export default function Contact() {
               </button>
             </form>
           </div>
+          */}
 
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-              
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-kalgard-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -132,55 +133,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">info@kalgardsystems.com</p>
-                    <p className="text-gray-600">sales@kalgardsystems.com</p>
+                    <a href="mailto:contact@kalgardsystems.com" className="text-gray-600 underline hover:text-kalgard-600 transition-colors">contact@kalgardsystems.com</a>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-kalgard-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-kalgard-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 123-4568</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-kalgard-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-kalgard-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Address</h4>
-                    <p className="text-gray-600">
-                      123 Innovation Drive<br />
-                      Tech Valley, CA 94000<br />
-                      United States
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-kalgard-500 rounded-2xl p-8 text-white">
-              <h3 className="text-xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="text-kalgard-100 mb-6">
-                Schedule a demo to see our Advanced Aerial Navigation System in action and discover how it can enable your GPS-denied mission requirements.
-              </p>
-              <div className="space-y-3">
-                <button className="bg-white text-kalgard-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors w-full">
-                  Schedule Demo
-                </button>
-                <a 
-                  href="https://www.linkedin.com/company/kalgard-systems/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors w-full text-center"
-                >
-                  Follow us on LinkedIn
-                </a>
               </div>
             </div>
           </div>
