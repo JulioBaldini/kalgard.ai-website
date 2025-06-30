@@ -109,7 +109,7 @@ export default function Features() {
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-kalgard-400">
                     <span className="font-medium">Communication</span>
-                    <span className="text-kalgard-100">ZeroMQ distributed</span>
+                    <span className="text-kalgard-100">Mavlink distributed</span>
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="font-medium">Architecture</span>
