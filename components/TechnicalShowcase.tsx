@@ -88,7 +88,7 @@ export default function TechnicalShowcase() {
         </div>
 
         {/* Demo Video Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+        <div id="merlinsight-demo" className="bg-white rounded-2xl shadow-xl p-8 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">See MerlinSight in Action</h3>
           <div className="aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
             <video
@@ -96,7 +96,7 @@ export default function TechnicalShowcase() {
               className="w-full h-full"
               poster="/media/renders/nav_module_MerlinSight.png"
             >
-              <source src="/media/videos/drone flying.mp4" type="video/mp4" />
+              <source src="/media/videos/IntrocuctionVideo_MerlinSight_NavigationModule_voiceover.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

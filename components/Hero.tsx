@@ -26,13 +26,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
-                onClick={() => {
-                  const video = document.querySelector('video');
-                  if (video) {
-                    video.scrollIntoView({ behavior: 'smooth' });
-                    video.play();
-                  }
-                }}
+                onClick={() => document.getElementById('merlinsight-demo')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border-2 border-kalgard-500 text-kalgard-600 hover:bg-kalgard-50 px-8 py-4 rounded-lg font-semibold flex items-center justify-center group transition-all"
               >
                 <Play className="mr-2 w-5 h-5" />
