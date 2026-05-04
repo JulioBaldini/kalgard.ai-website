@@ -1,24 +1,35 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+const siteUrl = 'https://kalgardsystems.com'
+const siteTitle = 'MerlinSight by KALGARD'
+const siteDescription =
+  'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
+
 export const metadata: Metadata = {
-  title: 'MerlinSight by KALGARD',
-  description: 'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.',
+  title: siteTitle,
+  description: siteDescription,
   keywords: 'MerlinSight, KALGARD, KALGARD Systems, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
   authors: [{ name: 'KALGARD Systems' }],
   creator: 'KALGARD Systems',
   publisher: 'KALGARD Systems',
   robots: 'index, follow',
-  metadataBase: new URL('https://kalgardsystems.com'),
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
-    icon: '/logos/small/Small_logo.png',
-    shortcut: '/logos/small/Small_logo.png',
-    apple: '/logos/small/Small_logo.png',
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/logos/small/Small_logo.png', type: 'image/png' },
+    ],
+    shortcut: '/icon.png',
+    apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'MerlinSight by KALGARD',
-    description: 'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.',
-    url: 'https://kalgardsystems.com',
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
     siteName: 'KALGARD Systems',
     locale: 'en_US',
     type: 'website',
@@ -33,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MerlinSight by KALGARD',
-    description: 'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.',
+    title: siteTitle,
+    description: siteDescription,
     images: ['/media/renders/nav_module_MerlinSight.png'],
   },
 }
@@ -44,6 +55,29 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: 'KALGARD Systems',
+        url: siteUrl,
+        logo: `${siteUrl}/icon.png`,
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: siteUrl,
+        name: 'KALGARD Systems',
+        description: siteDescription,
+        publisher: {
+          '@id': `${siteUrl}/#organization`,
+        },
+      },
+    ],
+  }
+
   return (
     <html lang="en">
       <head>
@@ -57,10 +91,14 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/logos/small/Small_logo.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/logos/small/Small_logo.png" />
       </head>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
