@@ -8,17 +8,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        paper: '#eee4d5',
+        parchment: '#e0d2bf',
+        ink: '#090909',
+        plum: '#800080',
+        violet: '#bb2aff',
+        gold: '#c8b337',
         'kalgard': {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6', // Main teal color from logo
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
+          50: '#f6f0e8',
+          100: '#eee4d5',
+          200: '#e0d2bf',
+          300: '#d1c0a7',
+          400: '#b99a72',
+          500: '#800080',
+          600: '#5f005f',
+          700: '#3e003f',
+          800: '#1e001f',
+          900: '#090909',
         }
       },
       backgroundImage: {

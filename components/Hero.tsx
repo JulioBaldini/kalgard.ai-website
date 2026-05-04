@@ -1,94 +1,112 @@
 'use client'
 
+import Image from 'next/image'
 import { ArrowRight, Play } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-20 pb-16 bg-gradient-to-br from-gray-50 to-kalgard-50 min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
+    <section id="home" className="grid-paper relative flex min-h-screen items-center overflow-hidden px-4 pb-16 pt-28 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
           <div className="animate-fadeIn">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Advanced Aerial
-              <span className="text-kalgard-500 block">Navigation System</span>
+            <span className="eyebrow">Autonomous Navigation</span>
+            <h1 className="mt-8 max-w-4xl text-5xl leading-[0.96] text-ink sm:text-6xl lg:text-7xl">
+              GPS-denied navigation
+              <span className="block text-[rgba(9,9,9,0.64)]">for UAV operations.</span>
             </h1>
-            <p className="text-xl text-gray-600 mt-6 leading-relaxed">
-              KALGARD Systems delivers cutting-edge autonomous navigation technology that enables UAVs to operate with 5-10m error in GPS-denied environments through advanced computer vision and sensor fusion.
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[rgba(9,9,9,0.72)] sm:text-xl">
+              KALGARD Systems develops visual navigation and sensor fusion systems that keep UAVs operating when GPS is unavailable or unreliable.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button 
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <button
                 onClick={() => document.getElementById('technical-showcase')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-kalgard-500 hover:bg-kalgard-600 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center group transition-all hover:shadow-lg"
+                className="group inline-flex items-center justify-center rounded-full border border-black/10 bg-ink px-8 py-4 text-sm uppercase tracking-[0.22em] text-paper transition-all hover:bg-plum"
               >
-                Explore Our Technology
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Explore Technology
+                <ArrowRight className="ml-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
-              <button 
+              <button
                 onClick={() => document.getElementById('merlinsight-demo')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-kalgard-500 text-kalgard-600 hover:bg-kalgard-50 px-8 py-4 rounded-lg font-semibold flex items-center justify-center group transition-all"
+                className="group inline-flex items-center justify-center rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] px-8 py-4 text-sm uppercase tracking-[0.22em] text-[rgba(9,9,9,0.74)] transition-all hover:border-plum hover:text-plum"
               >
-                <Play className="mr-2 w-5 h-5" />
-                Watch Demo
+                <Play className="mr-3 h-4 w-4" />
+                Watch Video
               </button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
-              <div>
-                <div className="text-3xl font-bold text-kalgard-600">5-10m Error</div>
-                <div className="text-sm text-gray-600 mt-1">Positioning Accuracy</div>
+            <div className="mt-12 grid grid-cols-1 gap-4 border-t border-black/10 pt-8 sm:grid-cols-3">
+              <div className="lab-card rounded-[1.75rem] p-5">
+                <p className="data-label text-[rgba(9,9,9,0.48)]">Accuracy</p>
+                <p className="mt-3 text-3xl text-plum">5-10m</p>
+                <p className="mt-2 text-sm text-[rgba(9,9,9,0.62)]">Sustained error envelope in denied or degraded GPS conditions.</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-kalgard-600">20Hz</div>
-                <div className="text-sm text-gray-600 mt-1">Real-Time Updates</div>
+              <div className="lab-card rounded-[1.75rem] p-5">
+                <p className="data-label text-[rgba(9,9,9,0.48)]">Update Rate</p>
+                <p className="mt-3 text-3xl text-ink">20Hz</p>
+                <p className="mt-2 text-sm text-[rgba(9,9,9,0.62)]">Continuous state refinement for fieldable autonomy stacks.</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-kalgard-600">GPS-Free</div>
-                <div className="text-sm text-gray-600 mt-1">Operation Capability</div>
+              <div className="lab-card rounded-[1.75rem] p-5">
+                <p className="data-label text-[rgba(9,9,9,0.48)]">Mode</p>
+                <p className="mt-3 text-3xl text-gold">GPS-free</p>
+                <p className="mt-2 text-sm text-[rgba(9,9,9,0.62)]">Built around vision and fusion rather than signal availability.</p>
               </div>
             </div>
           </div>
 
-          {/* Visual */}
           <div className="animate-float">
-            <div className="relative">
-              {/* Main product video */}
-              <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
-                <video 
-                  autoPlay 
-                  muted 
-                  loop 
+            <div className="lab-card relative overflow-hidden rounded-[2rem] p-4">
+              <div className="mb-4 flex items-center justify-between rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] px-4 py-3">
+                <div>
+                  <p className="data-label text-[rgba(9,9,9,0.46)]">Current program</p>
+                  <p className="mt-1 text-xl text-ink">MerlinSight</p>
+                </div>
+                <Image
+                  src="/logos/full/Full_logo.png"
+                  alt="MerlinSight by KALGARD"
+                  width={110}
+                  height={110}
+                  className="h-16 w-16 object-contain"
+                />
+              </div>
+
+              <div className="overflow-hidden rounded-[1.5rem] border border-black/10 bg-ink">
+                <video
+                  autoPlay
+                  muted
+                  loop
                   playsInline
-                  className="w-full h-auto aspect-video"
+                  className="aspect-video h-auto w-full"
                   poster="/media/renders/nav_module_MerlinSight.png"
                 >
                   <source src="/media/videos/IntrocuctionVideo_MerlinSight_NavigationModule.mp4" type="video/mp4" />
                   <source src="/media/videos/drone flying.mp4" type="video/mp4" />
-                  {/* Fallback image */}
-                  <img 
-                    src="/media/renders/nav_module_MerlinSight.png" 
+                  <img
+                    src="/media/renders/nav_module_MerlinSight.png"
                     alt="KALGARD Aerial Navigation System"
-                    className="w-full h-auto"
+                    className="h-auto w-full"
                   />
                 </video>
               </div>
-              
-              {/* Video description below */}
-              <div className="text-center mt-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">MerlinSight Navigation Module</h3>
-                <p className="text-gray-600">Real-Time GPS-Denied Navigation</p>
+
+              <div className="mt-4 grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+                <div className="rounded-[1.5rem] border border-black/10 bg-[rgba(255,255,255,0.45)] p-5">
+                  <p className="data-label text-[rgba(9,9,9,0.46)]">System note</p>
+                  <p className="mt-3 text-lg leading-relaxed text-[rgba(9,9,9,0.76)]">
+                    MerlinSight combines visual-satellite positioning and multi-sensor fusion in a field-ready navigation stack.
+                  </p>
+                </div>
+                <div className="rounded-[1.5rem] border border-black/10 bg-[rgba(9,9,9,0.95)] p-5 text-paper">
+                  <p className="data-label text-[rgba(238,228,213,0.54)]">Use Case</p>
+                  <p className="mt-3 text-lg leading-relaxed text-[rgba(238,228,213,0.82)]">
+                    Built for denied, degraded, and mission-critical navigation environments.
+                  </p>
+                </div>
               </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-kalgard-300 rounded-full opacity-60 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-kalgard-200 rounded-full opacity-40 animate-pulse delay-700"></div>
-              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-kalgard-400 rounded-full opacity-50 animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
   )
-} 
+}

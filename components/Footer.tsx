@@ -1,122 +1,86 @@
+import Image from 'next/image'
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Company Info */}
+    <footer className="border-t border-black/10 bg-[rgba(255,255,255,0.22)] py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/logos/small/Small_logo.png" 
-                alt="KALGARD Systems Logo" 
-                className="h-10 w-auto"
+            <div className="mb-6 flex items-center space-x-3">
+              <Image
+                src="/logos/small/Small_logo.png"
+                alt="KALGARD Systems Logo"
+                width={44}
+                height={44}
+                className="h-11 w-11 object-contain"
               />
               <div>
-                <h1 className="text-xl font-bold">KALGARD</h1>
-                <p className="text-xs text-kalgard-400 font-medium">SYSTEMS</p>
+                <h1 className="text-xl text-ink">KALGARD</h1>
+                <p className="data-label mt-1 text-[rgba(9,9,9,0.52)]">Applied Navigation Systems</p>
               </div>
             </div>
-            
-            <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              Pioneering the future of autonomous drone navigation with advanced visual navigation technology. 
+
+            <p className="mb-6 max-w-md leading-relaxed text-[rgba(9,9,9,0.68)]">
+              Pioneering the future of autonomous drone navigation with advanced visual navigation technology.
               Making autonomous flight safer, more reliable, and accessible worldwide.
             </p>
-            
+
+            <div className="mb-6 max-w-md rounded-[1.5rem] border border-black/10 bg-[rgba(255,255,255,0.45)] p-4">
+              <p className="data-label mb-3 text-[rgba(9,9,9,0.52)]">Incubated At</p>
+              <img
+                src="/logos/partners/RF-Inria_Logo_RVB.jpg"
+                alt="INRIA logo"
+                className="h-16 w-auto rounded-sm bg-white px-4 py-3"
+              />
+            </div>
+
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-kalgard-500 transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum">
+                <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/company/kalgard-systems/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-kalgard-500 transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="https://www.linkedin.com/company/kalgard-systems/" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum">
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-kalgard-500 transition-colors">
-                <Github className="w-5 h-5" />
+              <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum">
+                <Github className="h-5 w-5" />
               </a>
-              <a href="mailto:contact@kalgardsystems.com" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-kalgard-500 transition-colors">
-                <Mail className="w-5 h-5" />
+              <a href="mailto:contact@kalgardsystems.com" className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum">
+                <Mail className="h-5 w-5" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#home" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#products" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#features" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Contact
-                </a>
-              </li>
+            <h3 className="text-lg text-ink">Quick Links</h3>
+            <ul className="mt-6 space-y-3">
+              <li><a href="#home" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Home</a></li>
+              <li><a href="#about" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">About</a></li>
+              <li><a href="#products" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Products</a></li>
+              <li><a href="#features" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Features</a></li>
+              <li><a href="#contact" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Contact</a></li>
             </ul>
           </div>
 
-          {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Support</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Technical Support
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Downloads
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-kalgard-400 transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
+            <h3 className="text-lg text-ink">Support</h3>
+            <ul className="mt-6 space-y-3">
+              <li><a href="#" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Documentation</a></li>
+              <li><a href="#" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Technical Support</a></li>
+              <li><a href="#" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Downloads</a></li>
+              <li><a href="#" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">FAQ</a></li>
+              <li><a href="#" className="text-[rgba(9,9,9,0.66)] transition-colors hover:text-plum">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 KALGARD Systems. All rights reserved.
-            </p>
-            <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              Built with precision for the future of autonomous flight.
-            </p>
+        <div className="mt-12 border-t border-black/10 pt-8">
+          <div className="flex flex-col items-center justify-between md:flex-row">
+            <p className="text-sm text-[rgba(9,9,9,0.56)]">© 2024 KALGARD Systems. All rights reserved.</p>
+            <p className="mt-4 text-sm text-[rgba(9,9,9,0.56)] md:mt-0">Incubated at INRIA and built for the future of autonomous flight.</p>
           </div>
         </div>
       </div>
     </footer>
   )
-} 
+}

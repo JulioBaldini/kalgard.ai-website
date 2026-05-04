@@ -1,87 +1,90 @@
+import Image from 'next/image'
 import { Target, Eye, Zap, Shield } from 'lucide-react'
 
 export default function About() {
+  const values = [
+    {
+      icon: Target,
+      title: 'Precision',
+      description: 'Meter-level navigation in the environments where commodity assumptions fail.',
+    },
+    {
+      icon: Eye,
+      title: 'Vision',
+      description: 'Live imagery and satellite priors used as operational inputs, not just analytics.',
+    },
+    {
+      icon: Zap,
+      title: 'Innovation',
+      description: 'Applied R&D shaped by deployment constraints instead of speculative product theater.',
+    },
+    {
+      icon: Shield,
+      title: 'Reliability',
+      description: 'Mission-critical behavior designed around redundancy, logging, and traceable state.',
+    },
+  ]
+
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            About KALGARD Systems
-          </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
-          We are a defense and aerospace focused software and hardware manufacturer delivering state-of-the-art autonomous navigation solutions for unmanned aerial vehicles. Leveraging bespoke advanced computer-vision algorithms and robust sensor-fusion architectures, our systems empower UAVs to operate with pinpoint accuracy even in GPS-denied environments. Founded by an Imperial College London engineer with a lifelong passion for drones, we combine academic rigor with practical innovation to redefine what aerial autonomy can achieve.
-
-          </p>
-        </div>
-
-        {/* Core Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="text-center group">
-            <div className="w-16 h-16 bg-kalgard-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalgard-200 transition-colors">
-              <Target className="w-8 h-8 text-kalgard-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Precision</h3>
-            <p className="text-gray-600 text-sm">Meter-accurate navigation systems for critical applications</p>
-          </div>
-
-          <div className="text-center group">
-            <div className="w-16 h-16 bg-kalgard-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalgard-200 transition-colors">
-              <Eye className="w-8 h-8 text-kalgard-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Vision</h3>
-            <p className="text-gray-600 text-sm">Advanced computer vision algorithms for real-time navigation</p>
-          </div>
-
-          <div className="text-center group">
-            <div className="w-16 h-16 bg-kalgard-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalgard-200 transition-colors">
-              <Zap className="w-8 h-8 text-kalgard-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h3>
-            <p className="text-gray-600 text-sm">Cutting-edge technology pushing the boundaries of what's possible</p>
-          </div>
-
-          <div className="text-center group">
-            <div className="w-16 h-16 bg-kalgard-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalgard-200 transition-colors">
-              <Shield className="w-8 h-8 text-kalgard-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Reliability</h3>
-            <p className="text-gray-600 text-sm">Mission-critical systems built for consistent performance</p>
-          </div>
-        </div>
-
-        {/* Story Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="section-shell py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Story</h3>
-            <div className="space-y-4 text-gray-600">
-              <p>
-                Founded with a vision to solve the critical challenge of autonomous navigation in GPS-denied environments, KALGARD Systems emerged from years of research in satellite image matching and multi-sensor fusion technologies.
-              </p>
-              <p>
-                Our proprietary visual-satellite positioning system combines real-time aerial footage analysis with high-resolution reference imagery, enabling 5-10m error positioning accuracy where traditional GPS systems fail.
-              </p>
-              <p>
-                We hope that soon our navigation solutions will serve search and rescue operations, infrastructure inspection, agricultural surveying, and security missions worldwide.
+            <span className="eyebrow">Company Profile</span>
+            <h2 className="mt-7 text-4xl text-ink sm:text-5xl">About KALGARD</h2>
+            <p className="mt-6 text-lg leading-relaxed text-[rgba(9,9,9,0.72)]">
+              KALGARD develops autonomous navigation systems for UAVs operating where GPS cannot be trusted. Our work combines computer vision, sensor fusion, and deployment-focused engineering.
+            </p>
+            <p className="data-label mt-6 text-plum">Incubated at INRIA</p>
+            <div className="lab-card mt-8 rounded-[2rem] p-6">
+              <p className="data-label text-[rgba(9,9,9,0.5)]">Mission</p>
+              <p className="mt-4 text-2xl leading-snug text-[rgba(9,9,9,0.82)]">
+                Deliver reliable navigation for autonomous aircraft in GPS-denied environments.
               </p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-kalgard-50 to-kalgard-100 rounded-2xl p-8">
-            <div className="text-center">
-              <img 
-                src="/logos/full/Full_logo.png" 
-                alt="KALGARD Systems Logo" 
-                className="w-24 h-24 object-contain mx-auto mb-6"
-              />
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h4>
-              <p className="text-gray-700 leading-relaxed">
-                To enable the next generation of autonomous drones through advanced visual navigation technology, making autonomous flight safer, more reliable, and accessible to industries worldwide.
+          <div className="grid gap-5 md:grid-cols-2">
+            {values.map((value) => (
+              <div key={value.title} className="lab-card rounded-[1.75rem] p-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
+                  <value.icon className="h-5 w-5 text-plum" />
+                </div>
+                <h3 className="mt-5 text-2xl text-ink">{value.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[rgba(9,9,9,0.68)]">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="rounded-[2rem] border border-black/10 bg-[rgba(255,255,255,0.34)] p-8">
+            <span className="data-label text-[rgba(9,9,9,0.48)]">Background</span>
+            <div className="mt-5 space-y-5 text-[rgba(9,9,9,0.72)]">
+              <p>
+                KALGARD emerged from work on satellite image matching, trajectory estimation, and multi-sensor fusion for aircraft operating beyond conventional positioning assumptions.
+              </p>
+              <p>
+                Incubated at INRIA, the project stays closely connected to applied research while focusing on field-ready systems for inspection, defense, search-and-rescue, and security missions.
               </p>
             </div>
+          </div>
+
+          <div className="lab-card flex flex-col items-center rounded-[2rem] p-8 text-center">
+            <Image
+              src="/logos/full/Full_logo.png"
+              alt="MerlinSight by KALGARD"
+              width={240}
+              height={240}
+              className="h-auto w-full max-w-[16rem] object-contain"
+            />
+            <p className="data-label mt-6 text-[rgba(9,9,9,0.48)]">MerlinSight</p>
+            <p className="mt-3 max-w-sm text-sm leading-7 text-[rgba(9,9,9,0.68)]">
+              Our current navigation program for GPS-denied UAV operations.
+            </p>
           </div>
         </div>
       </div>
     </section>
   )
-} 
+}

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
@@ -8,104 +9,83 @@ export default function Header() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
+  const links = [
+    ['Home', '#home'],
+    ['About', '#about'],
+    ['Product', '#products'],
+    ['Research', '#technical-showcase'],
+    ['Contact', '#contact'],
+  ]
+
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/logos/small/Small_logo.png" 
-              alt="KALGARD Systems Logo" 
-              className="h-12 w-auto"
-            />
-            <div>
-              <h1 className="text-xl font-bold text-gray-900">KALGARD</h1>
-              <p className="text-xs text-kalgard-600 font-medium">SYSTEMS</p>
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl rounded-full border border-black/10 bg-[rgba(255,249,240,0.78)] px-5 backdrop-blur-xl">
+        <div className="flex items-center justify-between gap-6 py-3">
+          <a href="#home" className="flex items-center gap-3">
+            <div className="p-1">
+              <Image
+                src="/logos/small/Small_logo.png"
+                alt="KALGARD Systems Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
             </div>
+            <div>
+              <p className="text-xl leading-none text-ink">KALGARD</p>
+              <p className="data-label mt-1 text-[rgba(9,9,9,0.58)]">Applied Navigation Systems</p>
+            </div>
+          </a>
+
+          <div className="hidden items-center gap-3 rounded-full border border-black/10 bg-[rgba(255,255,255,0.42)] px-4 py-2 xl:flex">
+            <div className="text-right">
+              <p className="data-label text-[rgba(9,9,9,0.56)]">Incubated At</p>
+              <p className="text-xs text-[rgba(9,9,9,0.56)]">Research partner</p>
+            </div>
+            <img
+              src="/logos/partners/RF-Inria_Logo_RVB.jpg"
+              alt="INRIA logo"
+              className="h-10 w-auto rounded bg-white px-3 py-2"
+            />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium">
-              Home
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium">
-              About
-            </a>
-            <a href="#products" className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium">
-              Products
-            </a>
-            <a href="#features" className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium">
-              Features
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium">
-              Contact
-            </a>
+          <nav className="hidden items-center gap-8 md:flex">
+            {links.map(([label, href]) => (
+              <a
+                key={href}
+                href={href}
+                className="data-label text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum"
+              >
+                {label}
+              </a>
+            ))}
           </nav>
 
-          {/* CTA Button */}
-          {/* <div className="hidden md:block">
-            <button className="bg-kalgard-500 hover:bg-kalgard-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
-              Get Started
-            </button>
-          </div> */}
-
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-kalgard-600 transition-colors"
+            className="rounded-full border border-black/10 p-2 text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum md:hidden"
             onClick={toggleMenu}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <nav className="flex flex-col space-y-4">
-              <a
-                href="#home"
-                className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium"
-                onClick={toggleMenu}
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium"
-                onClick={toggleMenu}
-              >
-                About
-              </a>
-              <a
-                href="#products"
-                className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium"
-                onClick={toggleMenu}
-              >
-                Products
-              </a>
-              <a
-                href="#features"
-                className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium"
-                onClick={toggleMenu}
-              >
-                Features
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-700 hover:text-kalgard-600 transition-colors font-medium"
-                onClick={toggleMenu}
-              >
-                Contact
-              </a>
-              <button className="bg-kalgard-500 hover:bg-kalgard-600 text-white px-6 py-2 rounded-lg font-medium transition-colors w-full">
-                Get Started
-              </button>
+          <div className="border-t border-black/10 py-4 md:hidden">
+            <nav className="flex flex-col gap-4">
+              {links.map(([label, href]) => (
+                <a
+                  key={href}
+                  href={href}
+                  className="data-label text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum"
+                  onClick={toggleMenu}
+                >
+                  {label}
+                </a>
+              ))}
             </nav>
           </div>
         )}
       </div>
     </header>
   )
-} 
+}

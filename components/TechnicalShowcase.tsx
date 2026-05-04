@@ -2,23 +2,19 @@ import Image from 'next/image'
 
 export default function TechnicalShowcase() {
   return (
-    <section id="technical-showcase" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Advanced Computer Vision Technology
-          </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            See our proprietary visual-satellite positioning algorithms in action, delivering 5-10m error accuracy through real-time image matching and keypoint detection.
+    <section id="technical-showcase" className="section-shell py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <span className="eyebrow">Technical Showcase</span>
+          <h2 className="mt-7 text-4xl text-ink sm:text-5xl">Computer Vision Technology</h2>
+          <p className="mt-6 text-lg leading-relaxed text-[rgba(9,9,9,0.72)]">
+            Key examples of our visual positioning pipeline.
           </p>
         </div>
 
-        {/* Technical Demonstrations Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Keypoint Matching */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full min-h-[32rem]">
-            <div className="relative flex-shrink-0 aspect-[4/3] bg-gray-50 overflow-hidden">
+        <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="lab-card flex min-h-[32rem] flex-col overflow-hidden rounded-[2rem]">
+            <div className="relative aspect-[4/3] flex-shrink-0 overflow-hidden border-b border-black/10 bg-[rgba(255,255,255,0.28)]">
               <Image
                 src="/media/screenshots/keypoint_matching.png"
                 alt="Keypoint Matching Algorithm"
@@ -26,29 +22,23 @@ export default function TechnicalShowcase() {
                 style={{ objectFit: 'contain' }}
               />
             </div>
-            <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">Keypoint Matching</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow text-center lg:text-left">
-                Our advanced computer vision algorithms identify and match distinctive features between live aerial footage and reference satellite imagery, enabling precise positioning without GPS.
+            <div className="flex flex-grow flex-col p-8">
+              <p className="data-label text-[rgba(9,9,9,0.48)]">Exhibit A</p>
+              <h3 className="mt-3 text-3xl text-ink">Keypoint Matching</h3>
+              <p className="mt-4 flex-grow leading-relaxed text-[rgba(9,9,9,0.68)]">
+                Matching features between live aerial footage and reference satellite imagery for GPS-free positioning.
               </p>
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
-                  Real-time Processing
-                </span>
-                <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
-                  5-10m Error Accuracy
-                </span>
-                <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
-                  Feature Detection
-                </span>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-full border border-black/10 bg-[rgba(255,255,255,0.48)] px-3 py-1 text-sm text-[rgba(9,9,9,0.72)]">Real-time Processing</span>
+                <span className="rounded-full border border-black/10 bg-[rgba(128,0,128,0.06)] px-3 py-1 text-sm text-[rgba(9,9,9,0.72)]">5-10m Error Accuracy</span>
+                <span className="rounded-full border border-black/10 bg-[rgba(255,255,255,0.48)] px-3 py-1 text-sm text-[rgba(9,9,9,0.72)]">Feature Detection</span>
               </div>
             </div>
           </div>
 
-          {/* Road Graph Matching */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full min-h-[32rem]">
-            <div className="relative flex-shrink-0 aspect-[4/3] bg-gray-50 overflow-hidden">
-              <div className="grid grid-cols-2 gap-1 h-full w-full">
+          <div className="lab-card flex min-h-[32rem] flex-col overflow-hidden rounded-[2rem]">
+            <div className="relative aspect-[4/3] flex-shrink-0 overflow-hidden border-b border-black/10 bg-[rgba(255,255,255,0.28)]">
+              <div className="grid h-full w-full grid-cols-2 gap-1">
                 <div className="relative h-full w-full">
                   <Image
                     src="/media/screenshots/roadgraph_matching_1.png"
@@ -67,41 +57,36 @@ export default function TechnicalShowcase() {
                 </div>
               </div>
             </div>
-            <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">Road Graph Matching</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow text-center lg:text-left">
-                Intelligent road network analysis and matching capabilities enhance navigation accuracy by correlating detected road patterns with known infrastructure data for robust positioning.
+            <div className="flex flex-grow flex-col p-8">
+              <p className="data-label text-[rgba(9,9,9,0.48)]">Exhibit B</p>
+              <h3 className="mt-3 text-3xl text-ink">Road Graph Matching</h3>
+              <p className="mt-4 flex-grow leading-relaxed text-[rgba(9,9,9,0.68)]">
+                Using detected road structures and known map data to improve positioning robustness.
               </p>
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
-                  Infrastructure Detection
-                </span>
-                <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
-                  Path Planning
-                </span>
-                <span className="bg-kalgard-100 text-kalgard-700 px-3 py-1 rounded-full text-sm font-medium">
-                  Network Analysis
-                </span>
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-full border border-black/10 bg-[rgba(255,255,255,0.48)] px-3 py-1 text-sm text-[rgba(9,9,9,0.72)]">Infrastructure Detection</span>
+                <span className="rounded-full border border-black/10 bg-[rgba(200,179,55,0.12)] px-3 py-1 text-sm text-[rgba(9,9,9,0.72)]">Path Planning</span>
+                <span className="rounded-full border border-black/10 bg-[rgba(255,255,255,0.48)] px-3 py-1 text-sm text-[rgba(9,9,9,0.72)]">Network Analysis</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Demo Video Section */}
-        <div id="merlinsight-demo" className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">See MerlinSight in Action</h3>
-          <div className="aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+        <div id="merlinsight-demo" className="lab-card rounded-[2rem] p-8 text-center">
+          <p className="data-label text-[rgba(9,9,9,0.48)]">Recorded Demonstration</p>
+          <h3 className="mt-3 text-3xl text-ink">See MerlinSight in Action</h3>
+          <div className="mx-auto mt-8 aspect-video max-w-4xl overflow-hidden rounded-[1.5rem] border border-black/10 shadow-[0_20px_60px_rgba(9,9,9,0.1)]">
             <video
               controls
-              className="w-full h-full"
+              className="h-full w-full"
               poster="/media/renders/nav_module_MerlinSight.png"
             >
               <source src="/media/videos/IntrocuctionVideo_MerlinSight_NavigationModule_voiceover.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
-            Watch our autonomous navigation system in real-world flight operations, demonstrating GPS-denied positioning capabilities in challenging environments.
+          <p className="mx-auto mt-6 max-w-2xl text-[rgba(9,9,9,0.68)]">
+            Flight demonstration of GPS-denied positioning in real conditions.
           </p>
         </div>
       </div>
