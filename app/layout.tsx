@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'KALGARD Systems - Advanced Aerial Navigation System',
-  description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with 5-10m error in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
-  keywords: 'GPS-denied navigation, aerial navigation system, UAV navigation, visual-satellite positioning, multi-sensor fusion, autonomous drones, KALGARD',
+  title: 'MerlinSight by KALGARD',
+  description: 'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.',
+  keywords: 'MerlinSight, KALGARD, KALGARD Systems, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
   authors: [{ name: 'KALGARD Systems' }],
   creator: 'KALGARD Systems',
   publisher: 'KALGARD Systems',
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     apple: '/logos/small/Small_logo.png',
   },
   openGraph: {
-    title: 'KALGARD Systems - Advanced Aerial Navigation System',
-    description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with 5-10m error in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
+    title: 'MerlinSight by KALGARD',
+    description: 'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.',
     url: 'https://kalgardsystems.com',
     siteName: 'KALGARD Systems',
     locale: 'en_US',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KALGARD Systems - Advanced Aerial Navigation System',
-    description: 'Enterprise-grade autonomous navigation system enabling UAVs to operate with 5-10m error in GPS-denied environments through visual-satellite positioning and multi-sensor fusion.',
+    title: 'MerlinSight by KALGARD',
+    description: 'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.',
     images: ['/media/renders/nav_module_MerlinSight.png'],
   },
 }
