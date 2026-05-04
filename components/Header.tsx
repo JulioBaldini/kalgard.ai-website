@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-full border border-black/10 bg-[rgba(255,249,240,0.78)] px-4 backdrop-blur-xl sm:px-5">
+      <div className={`mx-auto max-w-7xl border border-black/10 bg-[rgba(255,249,240,0.78)] px-4 backdrop-blur-xl sm:px-5 ${isMenuOpen ? 'rounded-t-[2rem] rounded-b-2xl' : 'rounded-full'}`}>
         <div className="flex items-center justify-between gap-4 py-3">
           <a href="#home" className="min-w-0 flex items-center gap-3">
             <div className="p-1">
