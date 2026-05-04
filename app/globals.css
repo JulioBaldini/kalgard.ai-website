@@ -112,6 +112,12 @@ a {
   text-transform: uppercase;
 }
 
+.brand-wordmark {
+  font-family: 'Ubuntu', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 @keyframes riseIn {
   from {
     opacity: 0;

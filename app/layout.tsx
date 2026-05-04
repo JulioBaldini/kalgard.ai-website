@@ -53,6 +53,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/logos/small/Small_logo.png" sizes="any" />
         <link rel="apple-touch-icon" href="/logos/small/Small_logo.png" />
       </head>
