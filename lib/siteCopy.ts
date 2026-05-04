@@ -9,7 +9,7 @@ export const siteCopy = {
         ['Recruiting', '#recruiting'],
         ['Contact', '#contact'],
       ],
-      strapline: 'UAV Navigation Systems',
+      strapline: 'BY KALGARD',
       incubationLabel: 'Incubation',
       incubationValue: 'INRIA',
       languageLabel: 'Language',

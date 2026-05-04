@@ -27,7 +27,7 @@ export default function Header() {
               />
             </div>
             <div className="min-w-0">
-              <p className="brand-wordmark text-xl leading-none text-ink sm:text-2xl">KALGARD</p>
+              <p className="brand-wordmark text-xl leading-none text-ink sm:text-2xl">MERLINSIGHT</p>
               <p className="data-label mt-1 truncate text-[rgba(9,9,9,0.58)]">{copy.nav.strapline}</p>
             </div>
           </a>
