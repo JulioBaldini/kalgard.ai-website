@@ -175,7 +175,7 @@ export const siteCopy = {
     },
     hero: {
       eyebrow: 'Navigation sans GPS',
-      title: 'Une navigation UAV fiable',
+      title: 'Une navigation UAV robuste',
       titleAccent: 'quand le GPS n’est plus fiable.',
       body:
         'KALGARD Systems développe une technologie de navigation embarquée pour drones opérant dans des environnements GNSS dégradés, brouillés, usurpés ou indisponibles.',
