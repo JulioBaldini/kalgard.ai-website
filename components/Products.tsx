@@ -123,14 +123,14 @@ export default function Products() {
               <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-5">
                 {products.exampleMetrics.map(([label, value]) => (
                   <div key={label} className="rounded-[1rem] border border-black/10 bg-paper p-4">
-                    <p className="text-xl leading-snug text-ink">{value}</p>
+                    <p className="font-['Ubuntu'] text-xl font-bold leading-snug text-ink">{value}</p>
                     <p className="mt-2 text-xs uppercase tracking-[0.16em] text-[rgba(9,9,9,0.52)]">{label}</p>
                   </div>
                 ))}
               </div>
               <div className="mt-4 grid gap-3 lg:grid-cols-[0.36fr_0.64fr]">
                 <div className="rounded-[1rem] border border-black/10 bg-[rgba(255,255,255,0.54)] p-4">
-                  <p className="text-xl leading-snug text-ink">{products.durationMetric[1]}</p>
+                  <p className="font-['Ubuntu'] text-xl font-bold leading-snug text-ink">{products.durationMetric[1]}</p>
                   <p className="mt-2 text-xs uppercase tracking-[0.16em] text-[rgba(9,9,9,0.52)]">{products.durationMetric[0]}</p>
                 </div>
                 <p className="rounded-[1rem] border border-black/10 bg-[rgba(255,255,255,0.28)] p-4 text-sm leading-6 text-[rgba(9,9,9,0.62)]">
