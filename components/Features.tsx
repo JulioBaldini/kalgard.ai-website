@@ -19,12 +19,23 @@ export default function Features() {
         </div>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="lab-card rounded-[2rem] p-8">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
-              <FlaskConical className="h-6 w-6 text-plum" />
+          <div className="lab-card overflow-hidden rounded-[2rem]">
+            <div className="p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
+                <FlaskConical className="h-6 w-6 text-plum" />
+              </div>
+              <h3 className="mt-5 text-2xl text-ink">{credibility.cardTitle}</h3>
+              <p className="mt-3 leading-relaxed text-[rgba(9,9,9,0.68)]">{credibility.cardBody}</p>
             </div>
-            <h3 className="mt-5 text-2xl text-ink">{credibility.cardTitle}</h3>
-            <p className="mt-3 leading-relaxed text-[rgba(9,9,9,0.68)]">{credibility.cardBody}</p>
+            <div className="relative aspect-[275/183] border-t border-black/10 bg-[rgba(255,255,255,0.34)]">
+              <Image
+                src="/media/inria-sophia-antipolis.jpg"
+                alt="INRIA campus seen from the sky"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
 
           <div className="lab-card overflow-hidden rounded-[2rem]">

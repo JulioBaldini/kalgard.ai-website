@@ -1,21 +1,6 @@
 Specification,Value,Description
-Positioning Accuracy,<1 meter,5-10m error precision in GPS-denied environments
-Update Rate,20Hz,Real-time position updates
-Processing Latency,<50ms,End-to-end processing delay
-Operating Altitude,0-5000m,Maximum operational altitude
-Operating Temperature,-20°C to +60°C,Environmental operating range
-Power Consumption,<15W,Typical power draw during operation
-Weight,<500g,Total system weight including sensors
-Dimensions,105x72x45mm,Physical dimensions (LxWxH)
-Sensor Fusion,Extended Kalman Filter,Multi-sensor fusion algorithm
-Visual Processing,Real-time,Continuous image processing capability
-Satellite Image Matching,Proprietary Algorithm,Custom visual-satellite positioning
-GPS Denied Operation,Yes,Full functionality without GPS signal
-Communication Protocol,ZeroMQ,Distributed messaging system
-Ground Station Interface,Web-based,Professional monitoring dashboard
-Containerization,Docker,Enterprise deployment ready
-API Support,REST/WebSocket,Integration capabilities
-Data Logging,Comprehensive,Full mission data recording
-Error Handling,Robust,Automatic error recovery and redundancy
-Certification,In Progress,Industry standard compliance
-Warranty,2 Years,Standard warranty coverage 
+Operational Focus,GNSS-degraded UAV navigation,Resilient onboard localization when satellite positioning cannot be trusted
+Correction Approach,Map-based correction,Uses observed environmental features and trusted reference data
+Validation,Flight tested,Localization error below 5 m observed in test flights
+Defense Context,Validated,Includes evaluation in a defense context
+Integration,UAV onboard module,Designed for practical aircraft integration

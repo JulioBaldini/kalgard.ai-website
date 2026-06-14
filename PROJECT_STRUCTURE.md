@@ -76,30 +76,25 @@ npm run lint    # Run ESLint
 
 ### **Hero Section**
 - Advanced Aerial Navigation System branding
-- 5-10m error positioning accuracy highlights
-- 20Hz real-time updates capability
-- GPS-free operation emphasis
+- Sub-5 m flight-test validation claim
+- GPS-denied operation emphasis
+- Public product positioning without implementation details
 
 ### **About Section**
 - Focus on GPS-denied environment solutions
-- Visual-satellite positioning technology
-- Multi-sensor fusion expertise
-- Target applications (search & rescue, infrastructure, agriculture, security)
+- Resilient UAV navigation positioning
+- Practical integration and flight-test context
 
 ### **Products Section**
-- AeroIntel Navigation System showcase
-- Visual-satellite positioning features
-- Multi-sensor fusion capabilities
-- Real-time processing (20Hz updates)
-- Enterprise-ready architecture
+- MerlinSight navigation system showcase
+- Map-based correction from observed environmental features
+- Flight-test validation and UAV integration focus
 
 ### **Features Section**
-- 6 key technical capabilities
 - GPS-denied operation emphasis
-- Extended Kalman Filter implementation
-- Professional ground station interface
-- Intelligent mapping and terrain analysis
-- Mission-critical reliability focus
+- INRIA incubation
+- Product development credibility
+- Mission continuity focus
 
 ### **Contact Section**
 - Professional contact form
@@ -136,12 +131,11 @@ npm run lint    # Run ESLint
 
 The website accurately reflects KALGARD's **Advanced Aerial Navigation System** with:
 
-- **Visual-Satellite Positioning**: 5-10m error accuracy without GPS
-- **Multi-Sensor Fusion**: Extended Kalman Filter implementation  
-- **Real-Time Processing**: 20Hz position updates
-- **Professional Ground Station**: Enterprise monitoring interface
-- **Intelligent Mapping**: Automated terrain analysis
-- **Enterprise Architecture**: Docker containerized, ZeroMQ communication
+- **Resilient Localization**: UAV navigation when GNSS cannot be trusted
+- **Map-Based Correction**: Publicly described through observed environmental features
+- **Flight Validation**: Sub-5 m localization error observed in test flights
+- **Operational Fit**: Defense, infrastructure, and GNSS-degraded missions
+- **Incubation**: INRIA-supported product development
 
 ## 📝 **Next Steps for Content**
 

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Camera, Compass, Map } from 'lucide-react'
+import { Camera, Compass, Map, ShieldCheck, Target } from 'lucide-react'
 
 import { useLanguage } from '@/components/LanguageProvider'
 
@@ -43,15 +43,7 @@ export default function Products() {
 
             <div className="p-8 sm:p-10 lg:p-12">
               <p className="data-label text-[rgba(9,9,9,0.48)]">{products.systemOverview}</p>
-              <div className="mt-6 overflow-hidden rounded-[1.75rem] border border-black/10 bg-white p-4">
-                <Image
-                  src="/media/new-files/full-pipeline.png"
-                  alt={products.systemOverview}
-                  width={1400}
-                  height={584}
-                  className="h-auto w-full"
-                />
-              </div>
+              <p className="mt-4 text-2xl leading-snug text-ink">{products.systemBody}</p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {products.pillars.map((pillar, index) => {
@@ -72,47 +64,79 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-2">
-          <div className="lab-card overflow-hidden rounded-[2rem]">
-            <div className="border-b border-black/10 bg-white p-4">
-              <Image
-                src="/media/new-files/road-matching.png"
-                alt={products.roadAlt}
-                width={1034}
-                height={490}
-                className="h-auto w-full rounded-[1.25rem]"
-              />
-            </div>
-            <div className="p-8">
-              <p className="data-label text-[rgba(9,9,9,0.48)]">{products.correctionLabel}</p>
-              <h3 className="mt-3 text-3xl text-ink">{products.correctionTitle}</h3>
-              <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{products.correctionBody}</p>
-              <div className="mt-6 overflow-hidden rounded-[1rem] border border-black/10 bg-white p-2">
-                <Image
-                  src="/media/new-files/keypoint-matching.png"
-                  alt={products.keypointAlt}
-                  width={480}
-                  height={146}
+        <div className="mt-10 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div className="lab-card rounded-[2rem] p-8">
+            <div className="mb-7 grid gap-3">
+              <div className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#151515]">
+                <img
+                  src="/media/Screenshot%202026-05-04%20at%2002.50.41.png"
+                  alt={products.mapCorrectionImageAlt}
+                  className="h-auto w-full"
+                />
+              </div>
+              <div className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#151515]">
+                <img
+                  src="/media/Picture1.png"
+                  alt={products.mapCorrectionDetailAlt}
                   className="h-auto w-full"
                 />
               </div>
             </div>
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
+              <Target className="h-6 w-6 text-plum" />
+            </div>
+            <p className="mt-6 data-label text-[rgba(9,9,9,0.48)]">{products.correctionLabel}</p>
+            <h3 className="mt-3 text-3xl text-ink">{products.correctionTitle}</h3>
+            <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{products.correctionBody}</p>
           </div>
 
-          <div className="lab-card overflow-hidden rounded-[2rem]">
-            <div className="border-b border-black/10 bg-white p-4">
-              <Image
-                src="/media/new-files/trajectory-error-performance.png"
-                alt={products.trajectoryAlt}
-                width={782}
-                height={1026}
-                className="mx-auto h-auto max-h-[28rem] w-auto rounded-[1.25rem]"
-              />
+          <div className="lab-card rounded-[2rem] p-8">
+            <div className="grid gap-7 xl:grid-cols-[1.05fr_0.95fr]">
+              <div className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#272727]">
+                <img
+                  src="/media/new-files/test-flight-validation.svg"
+                  alt={products.validationImageAlt}
+                  className="h-auto w-full"
+                />
+                <div className="flex flex-wrap gap-4 border-t border-white/10 px-4 py-3 text-xs uppercase tracking-[0.18em] text-white/70">
+                  <span className="inline-flex items-center gap-2">
+                    <span className="h-2.5 w-6 rounded-full bg-[#1F62C3]" />
+                    {products.groundTruthLabel}
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <span className="h-2.5 w-6 rounded-full bg-[#20D235]" />
+                    {products.estimateLabel}
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
+                  <ShieldCheck className="h-6 w-6 text-plum" />
+                </div>
+                <p className="mt-6 data-label text-[rgba(9,9,9,0.48)]">{products.evaluationLabel}</p>
+                <h3 className="mt-3 text-3xl text-ink">{products.evaluationTitle}</h3>
+                <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{products.evaluationBody}</p>
+              </div>
             </div>
-            <div className="p-8">
-              <p className="data-label text-[rgba(9,9,9,0.48)]">{products.evaluationLabel}</p>
-              <h3 className="mt-3 text-3xl text-ink">{products.evaluationTitle}</h3>
-              <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{products.evaluationBody}</p>
+            <div className="mt-7 rounded-[1.25rem] border border-black/10 bg-[rgba(255,255,255,0.42)] p-5">
+              <p className="data-label text-[rgba(9,9,9,0.48)]">{products.exampleLabel}</p>
+              <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-5">
+                {products.exampleMetrics.map(([label, value]) => (
+                  <div key={label} className="rounded-[1rem] border border-black/10 bg-paper p-4">
+                    <p className="text-xl leading-snug text-ink">{value}</p>
+                    <p className="mt-2 text-xs uppercase tracking-[0.16em] text-[rgba(9,9,9,0.52)]">{label}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 grid gap-3 lg:grid-cols-[0.36fr_0.64fr]">
+                <div className="rounded-[1rem] border border-black/10 bg-[rgba(255,255,255,0.54)] p-4">
+                  <p className="text-xl leading-snug text-ink">{products.durationMetric[1]}</p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.16em] text-[rgba(9,9,9,0.52)]">{products.durationMetric[0]}</p>
+                </div>
+                <p className="rounded-[1rem] border border-black/10 bg-[rgba(255,255,255,0.28)] p-4 text-sm leading-6 text-[rgba(9,9,9,0.62)]">
+                  {products.exampleNote}
+                </p>
+              </div>
             </div>
           </div>
         </div>

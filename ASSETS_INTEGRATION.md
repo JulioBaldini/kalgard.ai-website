@@ -23,9 +23,7 @@ Your real logos, images, and videos have been seamlessly integrated throughout t
 | Asset | Location Used | Purpose |
 |-------|---------------|---------|
 | `nav_module_MerlinSight.png` | Products section, Video poster | Product showcase and fallback |
-| `keypoint_matching.png` | Technical Showcase | Algorithm demonstration |
-| `roadgraph_matching.png` | Technical Showcase | Road network analysis demo |
-| `gui_screenshot_drift_correction.png` | Features section | Ground station interface |
+| `workshop.png` | Credibility section | Prototype preparation and integration context |
 
 ## 🎨 **Visual Impact Changes**
 
@@ -45,15 +43,14 @@ Your real logos, images, and videos have been seamlessly integrated throughout t
 - ✅ **After**: Actual MerlinSight navigation module render
 - 📝 **Updated**: Product name changed to "MerlinSight Navigation System"
 
-#### **4. Technical Showcase (NEW SECTION)**
-- ✨ **Added**: Comprehensive new section showcasing real algorithms
-- 🖼️ **Features**: Keypoint matching and road graph matching screenshots
-- 🎥 **Includes**: Controllable drone flight demonstration video
+#### **4. Technical Showcase**
+- ✨ **Added**: Public application section focused on operational fit
+- 🛡️ **Focus**: Defense, infrastructure, and GNSS-degraded UAV operations
 
 #### **5. Features Section**
 - ❌ **Before**: Generic placeholder specifications
-- ✅ **After**: Real GUI screenshot showing drift correction interface
-- 📊 **Updated**: Accurate technical specifications
+- ✅ **After**: INRIA incubation and prototype development context
+- 📊 **Updated**: Public validation and credibility messaging
 
 ## 🔧 **Technical Implementations**
 

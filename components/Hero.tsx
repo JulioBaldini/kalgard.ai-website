@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ShieldCheck } from 'lucide-react'
 
 import { useLanguage } from '@/components/LanguageProvider'
 
@@ -74,19 +74,17 @@ export default function Hero() {
                 />
               </div>
 
-              <div className="mt-4 grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
                 <div className="rounded-[1.5rem] border border-black/10 bg-[rgba(255,255,255,0.45)] p-5">
                   <p className="data-label text-[rgba(9,9,9,0.46)]">{hero.systemNoteLabel}</p>
                   <p className="mt-3 text-lg leading-relaxed text-[rgba(9,9,9,0.76)]">{hero.systemNote}</p>
                 </div>
-                <div className="overflow-hidden rounded-[1.5rem] border border-black/10 bg-[rgba(9,9,9,0.95)] p-3">
-                  <Image
-                    src="/media/new-files/full-pipeline.png"
-                    alt={hero.pipelineAlt}
-                    width={1400}
-                    height={584}
-                    className="h-full w-full rounded-[1rem] bg-white object-cover"
-                  />
+                <div className="rounded-[1.5rem] border border-black/10 bg-[rgba(255,255,255,0.45)] p-5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-black/10 bg-paper">
+                    <ShieldCheck className="h-5 w-5 text-plum" />
+                  </div>
+                  <p className="mt-4 data-label text-[rgba(9,9,9,0.46)]">{hero.validationLabel}</p>
+                  <p className="mt-3 text-lg leading-relaxed text-[rgba(9,9,9,0.76)]">{hero.validationNote}</p>
                 </div>
               </div>
             </div>

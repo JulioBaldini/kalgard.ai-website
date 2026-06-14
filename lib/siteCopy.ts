@@ -7,6 +7,7 @@ export const siteCopy = {
         ['Mission', '#about'],
         ['MerlinSight', '#products'],
         ['Recruiting', '#recruiting'],
+        ['Partners', '#partners'],
         ['Contact', '#contact'],
       ],
       strapline: 'BY KALGARD',
@@ -31,7 +32,7 @@ export const siteCopy = {
         {
           label: 'Approach',
           value: 'Onboard',
-          description: 'Visual-inertial estimation combined with map-based correction.',
+          description: 'Onboard estimation with correction from observed environmental features.',
         },
         {
           label: 'Stage',
@@ -44,8 +45,10 @@ export const siteCopy = {
       systemNoteLabel: 'System note',
       systemNote:
         'MerlinSight is being developed as an onboard module for resilient localization in degraded environments.',
+      validationLabel: 'Flight validation',
+      validationNote:
+        'Test flights have demonstrated localization error below 5 m, including in a defense evaluation context.',
       moduleAlt: 'MerlinSight prototype navigation module',
-      pipelineAlt: 'Overview of the MerlinSight processing pipeline',
     },
     about: {
       eyebrow: 'Mission',
@@ -63,12 +66,14 @@ export const siteCopy = {
       title: 'MerlinSight',
       paragraphs: [
         'MerlinSight is an onboard navigation system for UAVs designed for GPS-denied operation.',
-        'It combines visual-inertial navigation with in-flight correction from map and satellite imagery to support robust localization in degraded environments.',
+        'It combines onboard navigation with map-based correction from observed environmental features to support robust localization in degraded environments.',
       ],
       prototypeLabel: 'Prototype module',
       prototypeTitle: 'Onboard architecture',
       prototypeBody: 'Designed to sit on the aircraft and preserve navigation when GNSS quality breaks down.',
       systemOverview: 'System overview',
+      systemBody:
+        'MerlinSight provides a resilient onboard localization layer for UAVs that need to keep operating when satellite positioning becomes unavailable or untrustworthy.',
       pillars: [
         {
           title: 'Visual-inertial navigation',
@@ -76,24 +81,58 @@ export const siteCopy = {
         },
         {
           title: 'Map-based correction',
-          description: 'Uses live camera imagery with map and satellite references to correct drift during flight.',
+          description: 'Uses observed environmental features and trusted reference data to correct drift during flight.',
         },
         {
           title: 'UAV integration',
           description: 'Built to support onboard navigation decisions on operational UAVs, not just post-flight analysis.',
         },
       ],
-      roadAlt: 'Road and map matching visualization',
-      keypointAlt: 'Keypoint matching detail',
-      trajectoryAlt: 'Trajectory error performance visualization',
       correctionLabel: 'Correction approach',
       correctionTitle: 'Map-based localization',
       correctionBody:
-        'MerlinSight uses environmental structure and reference data to help correct drift when GNSS cannot be relied on.',
+        'MerlinSight performs map-based correction by comparing observed environmental features with trusted reference data, reducing drift when GNSS cannot be relied on.',
+      mapCorrectionImageAlt: 'Public-safe map correction visualization with observation tracks over grayscale reference imagery',
+      mapCorrectionDetailAlt: 'Public-safe feature overlay visualization for map-based correction',
       evaluationLabel: 'Evaluation',
-      evaluationTitle: 'Flight-test analysis',
+      evaluationTitle: 'Flight-tested precision',
       evaluationBody:
-        'Performance is assessed through trajectory-level analysis to track localization behavior across a full flight path.',
+        'Across flight testing, MerlinSight has demonstrated sub-5 m mean localization error. The figures below show one defense evaluation flight as an example, using post-convergence comparison against GPS ground truth.',
+      validationImageAlt: 'Test flight plot comparing GPS ground truth in blue with MerlinSight estimate in green',
+      groundTruthLabel: 'GPS ground truth',
+      estimateLabel: 'MerlinSight estimate',
+      exampleLabel: 'Example defense evaluation flight',
+      exampleNote:
+        'The flight duration was set by the authorized flight zone. MerlinSight is designed to correct drift against reference observations during flight, rather than let dead-reckoning error accumulate with elapsed time; longer and more varied flights are part of ongoing validation.',
+      exampleMetrics: [
+        ['Mean 2D error', '3.43 m'],
+        ['Mean 3D error', '4.24 m'],
+        ['2D standard deviation', '1.76 m'],
+        ['2D p90', '5.74 m'],
+        ['Altitude MAE', '1.55 m'],
+      ],
+      durationMetric: ['Flight duration', '5m 17s'],
+    },
+    partners: {
+      eyebrow: 'Partner Search',
+      title: 'We are looking for partners to help MerlinSight bring autonomy and resilience to drones.',
+      titleAccent: 'partners',
+      body:
+        'KALGARD is opening conversations with organizations interested in resilient UAV navigation, field validation, and operational deployment.',
+      items: [
+        {
+          title: 'UAV integrators',
+          body: 'Explore MerlinSight integration on existing drone platforms.',
+        },
+        {
+          title: 'Defense and civil end users',
+          body: 'Discuss operational needs and validation scenarios in GNSS-degraded environments.',
+        },
+        {
+          title: 'Investors',
+          body: 'Support the next stage of product development, testing, and market access.',
+        },
+      ],
     },
     applications: {
       eyebrow: 'Applications',
@@ -166,6 +205,7 @@ export const siteCopy = {
         ['Mission', '#about'],
         ['MerlinSight', '#products'],
         ['Recrutement', '#recruiting'],
+        ['Partenaires', '#partners'],
         ['Contact', '#contact'],
       ],
       strapline: 'Systèmes de navigation pour UAV',
@@ -190,7 +230,7 @@ export const siteCopy = {
         {
           label: 'Approche',
           value: 'Embarquée',
-          description: 'Estimation visuo-inertielle combinée à une correction fondée sur des références cartographiques.',
+          description: 'Estimation embarquée avec correction à partir d’éléments observés dans l’environnement.',
         },
         {
           label: 'Avancement',
@@ -203,8 +243,10 @@ export const siteCopy = {
       systemNoteLabel: 'Note système',
       systemNote:
         'MerlinSight est développé comme un module embarqué de localisation robuste pour environnements dégradés.',
+      validationLabel: 'Validation en vol',
+      validationNote:
+        'Des essais en vol ont démontré une erreur de localisation inférieure à 5 m, y compris dans un contexte d’évaluation défense.',
       moduleAlt: 'Prototype du module de navigation MerlinSight',
-      pipelineAlt: 'Vue d’ensemble de la chaîne de traitement MerlinSight',
     },
     about: {
       eyebrow: 'Mission',
@@ -222,12 +264,14 @@ export const siteCopy = {
       title: 'MerlinSight',
       paragraphs: [
         'MerlinSight est un système de navigation embarqué pour UAV conçu pour fonctionner sans GPS.',
-        'Il combine navigation visuo-inertielle et correction en vol à partir de cartes et d’images satellites afin de maintenir une localisation robuste en environnement dégradé.',
+        'Il combine navigation embarquée et correction cartographique à partir d’éléments observés dans l’environnement afin de maintenir une localisation robuste en environnement dégradé.',
       ],
       prototypeLabel: 'Module prototype',
       prototypeTitle: 'Architecture embarquée',
       prototypeBody: 'Conçu pour être embarqué à bord et préserver la navigation lorsque la qualité GNSS se dégrade.',
       systemOverview: 'Vue d’ensemble',
+      systemBody:
+        'MerlinSight fournit une couche de localisation embarquée robuste pour les UAV qui doivent continuer à opérer lorsque le positionnement satellite devient indisponible ou non fiable.',
       pillars: [
         {
           title: 'Navigation visuo-inertielle',
@@ -235,24 +279,58 @@ export const siteCopy = {
         },
         {
           title: 'Correction cartographique',
-          description: 'Utilisation d’images en vol et de références cartographiques ou satellites pour corriger la dérive.',
+          description: 'Utilisation d’éléments observés dans l’environnement et de données de référence fiables pour corriger la dérive en vol.',
         },
         {
           title: 'Intégration UAV',
           description: 'Conçu pour soutenir les décisions de navigation embarquées sur des UAV opérationnels, pas seulement l’analyse après vol.',
         },
       ],
-      roadAlt: 'Visualisation de matching route et carte',
-      keypointAlt: 'Détail de matching de points caractéristiques',
-      trajectoryAlt: 'Visualisation de performance sur erreur de trajectoire',
       correctionLabel: 'Approche de correction',
       correctionTitle: 'Localisation fondée sur la carte',
       correctionBody:
-        'MerlinSight exploite la structure de l’environnement et des données de référence pour corriger la dérive lorsque le GNSS ne peut plus être utilisé de manière fiable.',
+        'MerlinSight effectue une correction cartographique à partir d’éléments observés dans l’environnement et de données de référence fiables, afin de réduire la dérive lorsque le GNSS n’est pas exploitable.',
+      mapCorrectionImageAlt: 'Visualisation publique de correction cartographique avec traces d’observation sur imagerie de référence en niveaux de gris',
+      mapCorrectionDetailAlt: 'Visualisation publique de superposition d’éléments pour la correction cartographique',
       evaluationLabel: 'Évaluation',
-      evaluationTitle: 'Analyse des essais en vol',
+      evaluationTitle: 'Précision validée en vol',
       evaluationBody:
-        'Les performances sont évaluées à l’échelle de trajectoires complètes afin de suivre le comportement de localisation sur l’ensemble du vol.',
+        'Sur les essais en vol, MerlinSight a démontré une erreur moyenne de localisation inférieure à 5 m. Les chiffres ci-dessous présentent, à titre d’exemple, un vol de test avec une unité militaire, après convergence et par comparaison avec une vérité terrain GPS.',
+      validationImageAlt: 'Comparaison en vol entre la vérité terrain GPS en bleu et l’estimation MerlinSight en vert',
+      groundTruthLabel: 'Vérité terrain GPS',
+      estimateLabel: 'Estimation MerlinSight',
+      exampleLabel: 'Exemple de vol d’évaluation défense',
+      exampleNote:
+        'La durée du vol a été définie par la zone de vol autorisée. MerlinSight est conçu pour corriger la dérive à partir d’observations de référence pendant le vol, plutôt que de laisser l’erreur inertielle s’accumuler avec le temps ; des vols plus longs et plus variés font partie de la validation en cours.',
+      exampleMetrics: [
+        ['Erreur 2D moyenne', '3,43 m'],
+        ['Erreur 3D moyenne', '4,24 m'],
+        ['Écart type 2D', '1,76 m'],
+        ['2D p90', '5,74 m'],
+        ['MAE altitude', '1,55 m'],
+      ],
+      durationMetric: ['Durée du vol', '5m 17s'],
+    },
+    partners: {
+      eyebrow: 'Recherche partenaires',
+      title: 'Nous recherchons des partenaires capables d’aider MerlinSight à donner aux drones autonomie et résilience.',
+      titleAccent: 'partenaires',
+      body:
+        'KALGARD échange avec des organisations intéressées par la navigation UAV résiliente, la validation terrain et le déploiement opérationnel.',
+      items: [
+        {
+          title: 'Intégrateurs UAV',
+          body: 'Explorer l’intégration de MerlinSight sur des plateformes drones existantes.',
+        },
+        {
+          title: 'Utilisateurs finaux défense / civil',
+          body: 'Échanger sur les besoins opérationnels et les scénarios de validation en environnement GNSS dégradé.',
+        },
+        {
+          title: 'Investisseurs',
+          body: 'Accompagner la prochaine étape de développement produit, d’essais et d’accès marché.',
+        },
+      ],
     },
     applications: {
       eyebrow: 'Applications',

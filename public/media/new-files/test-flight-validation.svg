@@ -1,0 +1,25 @@
+<svg width="646" height="462" viewBox="0 0 646 462" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Test flight localization comparison</title>
+  <desc id="desc">A dark test-flight validation plot comparing GPS ground truth in blue with the MerlinSight estimate in green.</desc>
+  <rect width="646" height="462" fill="#2A2A2A"/>
+  <g opacity="0.42" stroke="#9C9C9C" stroke-width="2.2">
+    <path d="M-86 96 L710 14"/>
+    <path d="M-74 158 L734 70"/>
+    <path d="M-62 222 L760 127"/>
+    <path d="M-50 289 L790 188"/>
+    <path d="M-38 358 L820 252"/>
+    <path d="M-28 430 L852 319"/>
+    <path d="M24 -42 L124 504"/>
+    <path d="M182 -60 L282 500"/>
+    <path d="M352 -76 L452 494"/>
+    <path d="M535 -95 L636 490"/>
+    <path d="M712 -114 L812 486"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M107 126 C95 121 91 91 112 82 C131 74 149 86 151 106 C154 133 177 151 220 164 C249 173 276 180 279 185 C284 194 271 204 281 223 C294 250 309 273 317 294 C327 319 348 330 374 337 C410 346 440 358 467 369 C491 379 515 378 532 389 C542 396 544 407 537 416" stroke="#1E58B7" stroke-width="4"/>
+    <path d="M107 126 C101 114 102 93 117 85 C136 76 150 90 148 110 C146 132 170 149 213 162 C246 172 273 181 276 187 C282 198 270 207 281 226 C297 254 312 275 320 296 C331 321 352 330 378 337 C413 346 443 357 469 366 C494 376 516 376 532 386 C542 392 548 399 543 410" stroke="#21D138" stroke-width="4"/>
+    <path d="M529 385 C535 388 540 392 545 397" stroke="#D83B2D" stroke-width="4"/>
+    <path d="M537 389 C534 398 534 407 537 416" stroke="#1E58B7" stroke-width="4"/>
+    <path d="M545 392 C546 399 545 406 543 410" stroke="#21D138" stroke-width="4"/>
+  </g>
+</svg>
