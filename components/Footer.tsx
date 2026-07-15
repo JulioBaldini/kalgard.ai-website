@@ -40,7 +40,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:contact@kalgardsystems.com"
+                href="mailto:jules.baldantoni@inria.fr"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum"
               >
                 <Mail className="h-5 w-5" />

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 
 import { useLanguage } from '@/components/LanguageProvider'
+import { HeroEntrance, StaggerGroup, StaggerItem } from '@/components/Motion'
 
 export default function Hero() {
   const { copy } = useLanguage()
@@ -13,7 +14,7 @@ export default function Hero() {
     <section id="home" className="grid-paper relative flex min-h-screen items-center overflow-hidden px-4 pb-16 pt-28 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-          <div className="animate-fadeIn">
+          <HeroEntrance>
             <span className="eyebrow">{hero.eyebrow}</span>
             <h1 className="mt-8 max-w-4xl text-5xl leading-[0.96] text-ink sm:text-6xl lg:text-7xl">
               {hero.title}
@@ -37,18 +38,18 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 gap-4 border-t border-black/10 pt-8 sm:grid-cols-3">
+            <StaggerGroup className="mt-12 grid grid-cols-1 gap-4 border-t border-black/10 pt-8 sm:grid-cols-3">
               {hero.stats.map((stat) => (
-                <div key={stat.label} className="lab-card rounded-[1.75rem] p-5">
+                <StaggerItem key={stat.label} className="lab-card rounded-[1.75rem] p-5">
                   <p className="data-label text-[rgba(9,9,9,0.48)]">{stat.label}</p>
                   <p className="mt-3 text-2xl text-ink">{stat.value}</p>
                   <p className="mt-2 text-sm text-[rgba(9,9,9,0.62)]">{stat.description}</p>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
-          </div>
+            </StaggerGroup>
+          </HeroEntrance>
 
-          <div className="animate-float">
+          <HeroEntrance className="animate-float" delay={0.18}>
             <div className="lab-card relative overflow-hidden rounded-[2rem] p-4">
               <div className="mb-4 flex items-center justify-between rounded-full border border-black/10 bg-[rgba(255,255,255,0.45)] px-4 py-3">
                 <div>
@@ -65,13 +66,18 @@ export default function Hero() {
               </div>
 
               <div className="overflow-hidden rounded-[1.5rem] border border-black/10 bg-white">
-                <Image
-                  src="/media/new-files/module-merlinsight-2.png"
-                  alt={hero.moduleAlt}
-                  width={1596}
-                  height={1192}
-                  className="h-auto w-full"
-                />
+                <video
+                  className="aspect-video w-full bg-[#090909] object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster="/videos/posters/hero-drone-back-on-track.jpg"
+                  aria-label={hero.heroVideoAlt}
+                >
+                  <source src="/videos/demo/hero-drone-back-on-track.mp4" type="video/mp4" />
+                </video>
               </div>
 
               <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -88,7 +94,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </HeroEntrance>
         </div>
       </div>
     </section>

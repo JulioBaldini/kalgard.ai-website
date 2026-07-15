@@ -88,7 +88,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,700&family=Ubuntu+Mono:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </head>

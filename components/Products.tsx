@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Camera, Compass, Map, ShieldCheck, Target } from 'lucide-react'
 
 import { useLanguage } from '@/components/LanguageProvider'
+import { Reveal, StaggerGroup, StaggerItem } from '@/components/Motion'
 
 const icons = [Camera, Map, Compass]
 
@@ -14,7 +15,7 @@ export default function Products() {
   return (
     <section id="products" className="section-shell py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">{products.eyebrow}</span>
           <h2 className="brand-wordmark mt-7 text-4xl text-ink sm:text-5xl">{products.title}</h2>
           {products.paragraphs.map((paragraph) => (
@@ -22,9 +23,9 @@ export default function Products() {
               {paragraph}
             </p>
           ))}
-        </div>
+        </Reveal>
 
-        <div className="lab-card mt-14 overflow-hidden rounded-[2.25rem]">
+        <Reveal className="lab-card mt-14 overflow-hidden rounded-[2.25rem]">
           <div className="grid grid-cols-1 lg:grid-cols-[0.96fr_1.04fr]">
             <div className="grid-paper border-b border-black/10 bg-[rgba(255,255,255,0.26)] p-8 lg:border-b-0 lg:border-r">
               <div className="text-center">
@@ -45,27 +46,27 @@ export default function Products() {
               <p className="data-label text-[rgba(9,9,9,0.48)]">{products.systemOverview}</p>
               <p className="mt-4 text-2xl leading-snug text-ink">{products.systemBody}</p>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <StaggerGroup className="mt-8 grid gap-4 sm:grid-cols-3">
                 {products.pillars.map((pillar, index) => {
                   const Icon = icons[index]
 
                   return (
-                    <div key={pillar.title} className="rounded-[1.5rem] border border-black/10 bg-[rgba(255,255,255,0.42)] p-5">
+                    <StaggerItem key={pillar.title} className="rounded-[1.5rem] border border-black/10 bg-[rgba(255,255,255,0.42)] p-5">
                       <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-black/10 bg-paper">
                         <Icon className="h-5 w-5 text-plum" />
                       </div>
                       <h4 className="mt-4 text-xl text-ink">{pillar.title}</h4>
                       <p className="mt-2 text-sm leading-7 text-[rgba(9,9,9,0.66)]">{pillar.description}</p>
-                    </div>
+                    </StaggerItem>
                   )
                 })}
-              </div>
+              </StaggerGroup>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-          <div className="lab-card rounded-[2rem] p-8">
+        <StaggerGroup className="mt-10 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <StaggerItem className="lab-card rounded-[2rem] p-8">
             <div className="mb-7 grid gap-3">
               <div className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#151515]">
                 <img
@@ -88,9 +89,9 @@ export default function Products() {
             <p className="mt-6 data-label text-[rgba(9,9,9,0.48)]">{products.correctionLabel}</p>
             <h3 className="mt-3 text-3xl text-ink">{products.correctionTitle}</h3>
             <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{products.correctionBody}</p>
-          </div>
+          </StaggerItem>
 
-          <div className="lab-card rounded-[2rem] p-8">
+          <StaggerItem className="lab-card rounded-[2rem] p-8">
             <div className="grid gap-7 xl:grid-cols-[1.05fr_0.95fr]">
               <div className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#272727]">
                 <img
@@ -138,8 +139,8 @@ export default function Products() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerGroup>
       </div>
     </section>
   )

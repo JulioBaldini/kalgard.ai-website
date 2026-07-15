@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { FlaskConical } from 'lucide-react'
 
 import { useLanguage } from '@/components/LanguageProvider'
+import { Reveal, StaggerGroup, StaggerItem } from '@/components/Motion'
 
 export default function Features() {
   const { copy } = useLanguage()
@@ -12,14 +13,14 @@ export default function Features() {
   return (
     <section id="features" className="section-shell py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <span className="eyebrow">{credibility.eyebrow}</span>
           <h2 className="mt-7 text-4xl text-ink sm:text-5xl">{credibility.title}</h2>
           <p className="mt-6 text-lg leading-relaxed text-[rgba(9,9,9,0.72)]">{credibility.body}</p>
-        </div>
+        </Reveal>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="lab-card overflow-hidden rounded-[2rem]">
+        <StaggerGroup className="mt-14 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+          <StaggerItem className="lab-card overflow-hidden rounded-[2rem]">
             <div className="p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
                 <FlaskConical className="h-6 w-6 text-plum" />
@@ -36,9 +37,9 @@ export default function Features() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </StaggerItem>
 
-          <div className="lab-card overflow-hidden rounded-[2rem]">
+          <StaggerItem className="lab-card overflow-hidden rounded-[2rem]">
             <div className="border-b border-black/10 bg-[rgba(255,255,255,0.34)] p-8">
               <p className="data-label text-[rgba(9,9,9,0.48)]">{credibility.incubationLabel}</p>
               <div className="mt-4 flex flex-wrap items-center gap-4">
@@ -60,8 +61,8 @@ export default function Features() {
                 className="h-auto w-full rounded-[1.5rem]"
               />
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerGroup>
       </div>
     </section>
   )

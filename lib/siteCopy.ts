@@ -6,7 +6,7 @@ export const siteCopy = {
       links: [
         ['Mission', '#about'],
         ['MerlinSight', '#products'],
-        ['Recruiting', '#recruiting'],
+        ['Team', '#team'],
         ['Partners', '#partners'],
         ['Contact', '#contact'],
       ],
@@ -49,6 +49,7 @@ export const siteCopy = {
       validationNote:
         'Test flights have demonstrated localization error below 5 m, including in a defense evaluation context.',
       moduleAlt: 'MerlinSight prototype navigation module',
+      heroVideoAlt: 'Drone returning to its corrected trajectory with MerlinSight',
     },
     about: {
       eyebrow: 'Mission',
@@ -139,6 +140,11 @@ export const siteCopy = {
       title: 'Where it fits',
       body:
         'MerlinSight is relevant to UAV operations that need resilient localization when GNSS performance becomes unreliable.',
+      demoLabel: 'System walkthrough',
+      demoTitle: 'Navigation that recovers when GNSS disappears',
+      demoBody:
+        'From visual-inertial estimation to terrain-matched correction, this sequence shows how MerlinSight contains drift and brings the aircraft back onto a trusted trajectory.',
+      demoAlt: 'Subtitled MerlinSight pitch and navigation demonstration',
       items: [
         'Defense and security UAVs',
         'Critical infrastructure monitoring',
@@ -156,26 +162,25 @@ export const siteCopy = {
       incubationBody: 'The company is being developed with INRIA incubation support.',
       imageAlt: 'Workshop testing and prototype preparation',
     },
-    recruiting: {
-      eyebrow: 'Recruiting',
-      title: 'Join the engineering effort',
+    team: {
+      eyebrow: 'Team',
+      title: 'Aeronautics and robotics, built into one team',
       body:
-        'KALGARD is currently recruiting an R&D Engineer in Autonomous Navigation and Embedded Systems through INRIA incubation.',
-      openRole: 'Open role',
-      roleTitle: 'R&D Engineer, Autonomous Navigation and Embedded Systems',
-      roleBody:
-        'The role focuses on MerlinSight development across embedded navigation, onboard perception, hardware integration, and field validation.',
-      details: [
-        ['Location', 'Sophia Antipolis'],
-        ['Contract', 'Full-time CDD, 10 months'],
-        ['Target start date', 'July 1, 2026'],
-        ['Apply by', 'May 24, 2026'],
+        'KALGARD brings together aerospace engineering and advanced robotics expertise to develop resilient navigation systems from research through flight integration.',
+      members: [
+        {
+          name: 'Jules',
+          role: 'Aeronautical Engineer',
+          education: 'Imperial College London',
+          body: 'Aeronautical engineering expertise focused on UAV systems, product development, and bringing MerlinSight into operational flight environments.',
+        },
+        {
+          name: 'Thibault',
+          role: 'PhD in Robotics · Engineer',
+          education: 'ISAE-SUPAERO',
+          body: 'Robotics and engineering expertise focused on autonomous navigation, onboard perception, and resilient localization.',
+        },
       ],
-      profileLabel: 'Profile',
-      profileTitle: 'Advanced C++ or Python, embedded systems, navigation.',
-      profileBody:
-        'The position is aimed at engineers comfortable with real-time systems, state estimation, and onboard UAV software.',
-      cta: 'View Official Job Offer',
     },
     contact: {
       eyebrow: 'Contact',
@@ -196,7 +201,7 @@ export const siteCopy = {
       incubationLabel: 'Incubation',
       incubationBody: 'INRIA-incubated company focused on resilient UAV navigation.',
       copyright: '© 2026 KALGARD Systems. All rights reserved.',
-      note: 'Built for partners, investors, institutions, and recruits.',
+      note: 'Built for partners, investors, institutions, and UAV operators.',
     },
   },
   fr: {
@@ -204,7 +209,7 @@ export const siteCopy = {
       links: [
         ['Mission', '#about'],
         ['MerlinSight', '#products'],
-        ['Recrutement', '#recruiting'],
+        ['Équipe', '#team'],
         ['Partenaires', '#partners'],
         ['Contact', '#contact'],
       ],
@@ -247,6 +252,7 @@ export const siteCopy = {
       validationNote:
         'Des essais en vol ont démontré une erreur de localisation inférieure à 5 m, y compris dans un contexte d’évaluation défense.',
       moduleAlt: 'Prototype du module de navigation MerlinSight',
+      heroVideoAlt: 'Drone retrouvant sa trajectoire corrigée grâce à MerlinSight',
     },
     about: {
       eyebrow: 'Mission',
@@ -337,6 +343,11 @@ export const siteCopy = {
       title: 'Domaines d’usage',
       body:
         'MerlinSight s’adresse aux opérations UAV nécessitant une localisation robuste lorsque les performances GNSS deviennent insuffisantes.',
+      demoLabel: 'Démonstration du système',
+      demoTitle: 'Une navigation qui se recale lorsque le GNSS disparaît',
+      demoBody:
+        'De l’estimation visuo-inertielle à la correction par recalage terrain, cette séquence montre comment MerlinSight contient la dérive et ramène l’appareil sur une trajectoire fiable.',
+      demoAlt: 'Présentation sous-titrée et démonstration de navigation MerlinSight',
       items: [
         'UAV de défense et de sécurité',
         'Surveillance d’infrastructures critiques',
@@ -354,26 +365,25 @@ export const siteCopy = {
       incubationBody: 'La société se développe dans le cadre d’une incubation INRIA.',
       imageAlt: 'Préparation des prototypes et essais en atelier',
     },
-    recruiting: {
-      eyebrow: 'Recrutement',
-      title: 'Rejoindre l’effort d’ingénierie',
+    team: {
+      eyebrow: 'Équipe',
+      title: 'L’aéronautique et la robotique réunies dans une même équipe',
       body:
-        'KALGARD recrute actuellement un(e) ingénieur(e) R&D en navigation autonome et systèmes embarqués dans le cadre de l’incubation INRIA.',
-      openRole: 'Poste ouvert',
-      roleTitle: 'Ingénieur(e) R&D, navigation autonome et systèmes embarqués',
-      roleBody:
-        'Le poste porte sur le développement de MerlinSight, entre navigation embarquée, perception à bord, intégration hardware et validation terrain.',
-      details: [
-        ['Localisation', 'Sophia Antipolis'],
-        ['Contrat', 'CDD temps plein, 10 mois'],
-        ['Prise de poste visée', '1 juillet 2026'],
-        ['Date limite', '24 mai 2026'],
+        'KALGARD réunit des expertises en ingénierie aérospatiale et en robotique avancée pour développer des systèmes de navigation résilients, de la recherche à l’intégration en vol.',
+      members: [
+        {
+          name: 'Jules',
+          role: 'Ingénieur aéronautique',
+          education: 'Imperial College London',
+          body: 'Une expertise en ingénierie aéronautique tournée vers les systèmes UAV, le développement produit et l’intégration de MerlinSight dans des environnements de vol opérationnels.',
+        },
+        {
+          name: 'Thibault',
+          role: 'Docteur en robotique · Ingénieur',
+          education: 'ISAE-SUPAERO',
+          body: 'Une expertise en robotique et en ingénierie centrée sur la navigation autonome, la perception embarquée et la localisation résiliente.',
+        },
       ],
-      profileLabel: 'Profil',
-      profileTitle: 'C++ ou Python avancé, systèmes embarqués, navigation.',
-      profileBody:
-        'Le poste vise des ingénieurs à l’aise avec les systèmes temps réel, l’estimation d’état et le logiciel embarqué pour UAV.',
-      cta: 'Voir l’offre officielle',
     },
     contact: {
       eyebrow: 'Contact',

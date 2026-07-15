@@ -1,16 +1,37 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 import { useLanguage } from '@/components/LanguageProvider'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeHref, setActiveHref] = useState('#home')
   const { lang, setLang, copy } = useLanguage()
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+  useEffect(() => {
+    const sections = ['home', 'about', 'products', 'team', 'partners', 'contact']
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => Boolean(section))
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+        if (visible) setActiveHref(`#${visible.target.id}`)
+      },
+      { rootMargin: '-25% 0px -60% 0px', threshold: [0, 0.1, 0.25] }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
@@ -49,7 +70,9 @@ export default function Header() {
               <a
                 key={href}
                 href={href}
-                className={`data-label whitespace-nowrap text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum ${
+                className={`data-label relative whitespace-nowrap py-2 transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:bg-plum after:transition-transform hover:text-plum ${
+                  href === activeHref ? 'text-plum after:scale-x-100' : 'text-[rgba(9,9,9,0.72)] after:scale-x-0'
+                } ${
                   label === 'MerlinSight' ? 'brand-wordmark tracking-[0.08em]' : ''
                 }`}
               >
@@ -121,7 +144,9 @@ export default function Header() {
                 <a
                   key={href}
                   href={href}
-                  className={`data-label text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum ${
+                  className={`data-label transition-colors hover:text-plum ${
+                    href === activeHref ? 'text-plum' : 'text-[rgba(9,9,9,0.72)]'
+                  } ${
                     label === 'MerlinSight' ? 'brand-wordmark tracking-[0.08em]' : ''
                   }`}
                   onClick={toggleMenu}
