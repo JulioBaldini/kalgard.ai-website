@@ -58,7 +58,7 @@ export default function Hero() {
                 </div>
                 <Image
                   src="/logos/full/Full_logo.png"
-                  alt="MerlinSight by KALGARD"
+                  alt="MerlinSight by KALGARD SYSTEMS"
                   width={110}
                   height={110}
                   className="h-16 w-16 object-contain"

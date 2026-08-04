@@ -93,22 +93,12 @@ export default function Products() {
 
           <StaggerItem className="lab-card rounded-[2rem] p-8">
             <div className="grid gap-7 xl:grid-cols-[1.05fr_0.95fr]">
-              <div className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-[#272727]">
+              <div className="overflow-hidden rounded-[1.25rem] border border-black/10 bg-paper">
                 <img
-                  src="/media/new-files/test-flight-validation.svg"
+                  src="/media/new-files/flight-test-trajectory-2d.png"
                   alt={products.validationImageAlt}
                   className="h-auto w-full"
                 />
-                <div className="flex flex-wrap gap-4 border-t border-white/10 px-4 py-3 text-xs uppercase tracking-[0.18em] text-white/70">
-                  <span className="inline-flex items-center gap-2">
-                    <span className="h-2.5 w-6 rounded-full bg-[#1F62C3]" />
-                    {products.groundTruthLabel}
-                  </span>
-                  <span className="inline-flex items-center gap-2">
-                    <span className="h-2.5 w-6 rounded-full bg-[#20D235]" />
-                    {products.estimateLabel}
-                  </span>
-                </div>
               </div>
               <div>
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">

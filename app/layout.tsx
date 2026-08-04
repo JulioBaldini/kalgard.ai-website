@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 const siteUrl = 'https://kalgardsystems.com'
-const siteTitle = 'MerlinSight by KALGARD'
+const siteTitle = 'MerlinSight by KALGARD SYSTEMS'
 const siteDescription =
   'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
 

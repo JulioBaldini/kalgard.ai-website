@@ -10,7 +10,7 @@ export const siteCopy = {
         ['Partners', '#partners'],
         ['Contact', '#contact'],
       ],
-      strapline: 'BY KALGARD',
+      strapline: 'BY KALGARD SYSTEMS',
       incubationLabel: 'Incubation',
       incubationValue: 'INRIA',
       languageLabel: 'Language',
@@ -47,7 +47,7 @@ export const siteCopy = {
         'MerlinSight is being developed as an onboard module for resilient localization in degraded environments.',
       validationLabel: 'Flight validation',
       validationNote:
-        'Test flights have demonstrated localization error below 5 m, including in a defense evaluation context.',
+        'Test flights have demonstrated localization error below 5 m, including a flight test with an army regiment.',
       moduleAlt: 'MerlinSight prototype navigation module',
       heroVideoAlt: 'Drone returning to its corrected trajectory with MerlinSight',
     },
@@ -98,11 +98,11 @@ export const siteCopy = {
       evaluationLabel: 'Evaluation',
       evaluationTitle: 'Flight-tested precision',
       evaluationBody:
-        'Across flight testing, MerlinSight has demonstrated sub-5 m mean localization error. The figures below show one defense evaluation flight as an example, using post-convergence comparison against GPS ground truth.',
-      validationImageAlt: 'Test flight plot comparing GPS ground truth in blue with MerlinSight estimate in green',
+        'Across flight testing, MerlinSight has demonstrated sub-5 m mean localization error. The figure below shows a flight test performed with an army regiment, using post-convergence comparison against GPS ground truth.',
+      validationImageAlt: '2D trajectory comparison from a flight test with an army regiment, showing GPS ground truth and MerlinSight estimate colored by DTC 2D error',
       groundTruthLabel: 'GPS ground truth',
       estimateLabel: 'MerlinSight estimate',
-      exampleLabel: 'Example defense evaluation flight',
+      exampleLabel: 'Flight test with an army regiment',
       exampleNote:
         'The flight duration was set by the authorized flight zone. MerlinSight is designed to correct drift against reference observations during flight, rather than let dead-reckoning error accumulate with elapsed time; longer and more varied flights are part of ongoing validation.',
       exampleMetrics: [
@@ -213,7 +213,7 @@ export const siteCopy = {
         ['Partenaires', '#partners'],
         ['Contact', '#contact'],
       ],
-      strapline: 'Systèmes de navigation pour UAV',
+      strapline: 'PAR KALGARD SYSTEMS',
       incubationLabel: 'Incubation',
       incubationValue: 'INRIA',
       languageLabel: 'Langue',
@@ -250,7 +250,7 @@ export const siteCopy = {
         'MerlinSight est développé comme un module embarqué de localisation robuste pour environnements dégradés.',
       validationLabel: 'Validation en vol',
       validationNote:
-        'Des essais en vol ont démontré une erreur de localisation inférieure à 5 m, y compris dans un contexte d’évaluation défense.',
+        'Des essais en vol ont démontré une erreur de localisation inférieure à 5 m, y compris lors d’un essai réalisé avec un régiment de l’armée.',
       moduleAlt: 'Prototype du module de navigation MerlinSight',
       heroVideoAlt: 'Drone retrouvant sa trajectoire corrigée grâce à MerlinSight',
     },
@@ -301,11 +301,11 @@ export const siteCopy = {
       evaluationLabel: 'Évaluation',
       evaluationTitle: 'Précision validée en vol',
       evaluationBody:
-        'Sur les essais en vol, MerlinSight a démontré une erreur moyenne de localisation inférieure à 5 m. Les chiffres ci-dessous présentent, à titre d’exemple, un vol de test avec une unité militaire, après convergence et par comparaison avec une vérité terrain GPS.',
-      validationImageAlt: 'Comparaison en vol entre la vérité terrain GPS en bleu et l’estimation MerlinSight en vert',
+        'Sur les essais en vol, MerlinSight a démontré une erreur moyenne de localisation inférieure à 5 m. La figure ci-dessous présente un essai en vol réalisé avec un régiment de l’armée, après convergence et par comparaison avec une vérité terrain GPS.',
+      validationImageAlt: 'Comparaison de trajectoire 2D d’un essai en vol avec un régiment de l’armée, montrant la vérité terrain GPS et l’estimation MerlinSight colorée selon l’erreur DTC 2D',
       groundTruthLabel: 'Vérité terrain GPS',
       estimateLabel: 'Estimation MerlinSight',
-      exampleLabel: 'Exemple de vol d’évaluation défense',
+      exampleLabel: 'Essai en vol avec un régiment de l’armée',
       exampleNote:
         'La durée du vol a été définie par la zone de vol autorisée. MerlinSight est conçu pour corriger la dérive à partir d’observations de référence pendant le vol, plutôt que de laisser l’erreur inertielle s’accumuler avec le temps ; des vols plus longs et plus variés font partie de la validation en cours.',
       exampleMetrics: [
