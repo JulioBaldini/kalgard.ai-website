@@ -27,21 +27,24 @@ export default function Contact() {
 
           <StaggerItem className="lab-card rounded-[2rem] p-8">
             <h3 className="text-2xl text-ink">{contact.infoTitle}</h3>
-            <div className="mt-6">
-              <div className="flex items-start space-x-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
-                  <Mail className="h-6 w-6 text-plum" />
+            <div className="mt-6 space-y-5">
+              {contact.emails.map((entry) => (
+                <div key={entry.address} className="flex items-start space-x-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
+                    <Mail className="h-6 w-6 text-plum" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl text-ink">{entry.name}</h4>
+                    <p className="data-label mt-1 text-[rgba(9,9,9,0.48)]">{entry.role}</p>
+                    <a
+                      href={`mailto:${entry.address}`}
+                      className="mt-2 inline-block text-[rgba(9,9,9,0.68)] underline decoration-plum/40 underline-offset-4 transition-colors hover:text-plum"
+                    >
+                      {entry.address}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-xl text-ink">{contact.emailLabel}</h4>
-                  <a
-                    href="mailto:jules.baldantoni@inria.fr"
-                    className="mt-2 inline-block text-[rgba(9,9,9,0.68)] underline decoration-plum/40 underline-offset-4 transition-colors hover:text-plum"
-                  >
-                    jules.baldantoni@inria.fr
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </StaggerItem>
         </StaggerGroup>

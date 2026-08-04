@@ -170,7 +170,7 @@ export const siteCopy = {
       members: [
         {
           name: 'Jules',
-          role: 'Aeronautical Engineer',
+          role: 'Founder · Aeronautical Engineer',
           education: 'Imperial College London',
           body: 'Aeronautical engineering expertise focused on UAV systems, product development, and bringing MerlinSight into operational flight environments.',
         },
@@ -193,6 +193,18 @@ export const siteCopy = {
         'Get in touch if you are exploring resilient navigation, integration into a UAV platform, investment, or opportunities to work together.',
       infoTitle: 'Contact Information',
       emailLabel: 'Email',
+      emails: [
+        {
+          name: 'Jules Baldantoni',
+          role: 'Founder',
+          address: 'jules.baldantoni@inria.fr',
+        },
+        {
+          name: 'Thibault Noël',
+          role: 'Robotics Engineer',
+          address: 'thibault.noel@inria.fr',
+        },
+      ],
     },
     footer: {
       strapline: 'GPS-denied navigation for UAVs',
@@ -373,7 +385,7 @@ export const siteCopy = {
       members: [
         {
           name: 'Jules',
-          role: 'Ingénieur aéronautique',
+          role: 'Fondateur · Ingénieur aéronautique',
           education: 'Imperial College London',
           body: 'Une expertise en ingénierie aéronautique tournée vers les systèmes UAV, le développement produit et l’intégration de MerlinSight dans des environnements de vol opérationnels.',
         },
@@ -396,6 +408,18 @@ export const siteCopy = {
         'Contactez-nous si vous explorez la navigation résiliente, l’intégration sur une plateforme UAV, un sujet d’investissement ou une opportunité de collaboration.',
       infoTitle: 'Coordonnées',
       emailLabel: 'Email',
+      emails: [
+        {
+          name: 'Jules Baldantoni',
+          role: 'Fondateur',
+          address: 'jules.baldantoni@inria.fr',
+        },
+        {
+          name: 'Thibault Noël',
+          role: 'Ingénieur robotique',
+          address: 'thibault.noel@inria.fr',
+        },
+      ],
     },
     footer: {
       strapline: 'Navigation sans GPS pour UAV',
