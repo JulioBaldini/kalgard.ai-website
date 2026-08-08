@@ -189,3 +189,72 @@ body {
   body, .animate-float { animation: none; }
   .team-card { transition: none; }
 }
+
+/* Scroll reveals.
+   Content is visible by default; the hidden state applies only under
+   html[data-anim="on"], which the pre-paint script in app/layout.tsx sets and
+   removes again if the app never hydrates. Without that attribute the page
+   renders fully — no JavaScript required to read the site. */
+
+:root {
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html[data-anim='on'] [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px) scale(var(--reveal-scale, 1));
+}
+
+html[data-anim='on'] [data-reveal][data-revealed] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.65s var(--ease-reveal) var(--reveal-delay, 0s),
+    transform 0.65s var(--ease-reveal) var(--reveal-delay, 0s);
+}
+
+html[data-anim='on'] [data-stagger] > [data-stagger-item] {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+html[data-anim='on'] [data-stagger][data-revealed] > [data-stagger-item] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.55s var(--ease-reveal),
+    transform 0.55s var(--ease-reveal);
+}
+
+html[data-anim='on'] [data-stagger][data-revealed] > [data-stagger-item]:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+html[data-anim='on'] [data-stagger][data-revealed] > [data-stagger-item]:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+html[data-anim='on'] [data-stagger][data-revealed] > [data-stagger-item]:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+html[data-anim='on'] [data-stagger][data-revealed] > [data-stagger-item]:nth-child(n + 5) {
+  transition-delay: 0.4s;
+}
+
+html[data-anim='on'] [data-hero-entrance] {
+  animation: riseIn 0.75s var(--ease-reveal) var(--reveal-delay, 0s) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-anim='on'] [data-reveal],
+  html[data-anim='on'] [data-stagger] > [data-stagger-item] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html[data-anim='on'] [data-hero-entrance] {
+    animation: none;
+  }
+}

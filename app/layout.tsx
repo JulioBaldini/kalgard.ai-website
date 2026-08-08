@@ -4,12 +4,12 @@ import './globals.css'
 const siteUrl = 'https://kalgardsystems.com'
 const siteTitle = 'MerlinSight by KALGARD SYSTEMS'
 const siteDescription =
-  'Resilient onboard UAV navigation for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
+  'Resilient onboard UAV navigation and georeferencing technologies for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'MerlinSight, KALGARD, KALGARD Systems, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
+  keywords: 'MerlinSight, MerlinSight Astrel, MerlinSight Arrow, MerlinSight Sillage, KALGARD, KALGARD Systems, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
   authors: [{ name: 'KALGARD Systems' }],
   creator: 'KALGARD Systems',
   publisher: 'KALGARD Systems',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: '/media/renders/nav_module_MerlinSight.png',
         width: 1200,
         height: 630,
-        alt: 'KALGARD MerlinSight Navigation System',
+        alt: 'MerlinSight Astrel navigation module by KALGARD Systems',
       },
     ],
   },
@@ -81,6 +81,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Arms the scroll-reveal CSS before first paint, and disarms it again if
+            the app has not hydrated within 4s — so a blocked or stalled bundle
+            leaves a readable page rather than a blank one. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var d=document.documentElement;d.setAttribute('data-anim','on');" +
+              "var t=setTimeout(function(){d.removeAttribute('data-anim')},4000);" +
+              'window.__kalgardAnimReady=function(){clearTimeout(t)};})()',
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

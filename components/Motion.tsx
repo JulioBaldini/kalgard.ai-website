@@ -1,9 +1,57 @@
 'use client'
 
-import { motion, useReducedMotion, type Variants } from 'framer-motion'
-import type { ReactNode } from 'react'
+import { useEffect, useRef, type CSSProperties, type ReactNode } from 'react'
 
-const ease = [0.22, 1, 0.36, 1] as const
+/**
+ * Scroll reveals that never gate content on JavaScript.
+ *
+ * The hidden state lives in globals.css behind `html[data-anim="on"]`, which the
+ * pre-paint script in app/layout.tsx sets. Nothing here ever hides markup — the
+ * components only add `data-revealed` — so a slow, blocked or broken bundle
+ * degrades to a plain readable page instead of a blank one.
+ */
+
+declare global {
+  interface Window {
+    __kalgardAnimReady?: () => void
+  }
+}
+
+function useRevealOnScroll<T extends HTMLElement>() {
+  const ref = useRef<T>(null)
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+
+    // Tell the layout failsafe the app is alive, so it stops counting down.
+    window.__kalgardAnimReady?.()
+
+    const reveal = () => node.setAttribute('data-revealed', '')
+
+    if (typeof IntersectionObserver === 'undefined') {
+      reveal()
+      return
+    }
+
+    // threshold 0 so a block taller than the screen still triggers: a ratio
+    // threshold becomes unreachable once an element outgrows the viewport,
+    // which is how the stacked mobile layout ended up permanently hidden.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return
+        reveal()
+        observer.disconnect()
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0 }
+    )
+
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
+
+  return ref
+}
 
 export function Reveal({
   children,
@@ -16,66 +64,58 @@ export function Reveal({
   delay?: number
   scale?: number
 }) {
-  const reduceMotion = useReducedMotion()
+  const ref = useRevealOnScroll<HTMLDivElement>()
 
   return (
-    <motion.div
+    <div
+      ref={ref}
+      data-reveal=""
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: 28, scale }}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.65, delay, ease }}
+      style={{ '--reveal-scale': String(scale), '--reveal-delay': `${delay}s` } as CSSProperties}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
-const groupVariants: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.06 } },
-}
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 22 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
-}
-
 export function StaggerGroup({ children, className }: { children: ReactNode; className?: string }) {
-  const reduceMotion = useReducedMotion()
+  const ref = useRevealOnScroll<HTMLDivElement>()
 
   return (
-    <motion.div
-      className={className}
-      variants={reduceMotion ? undefined : groupVariants}
-      initial={reduceMotion ? false : 'hidden'}
-      whileInView={reduceMotion ? undefined : 'visible'}
-      viewport={{ once: true, amount: 0.15 }}
-    >
+    <div ref={ref} data-stagger="" className={className}>
       {children}
-    </motion.div>
+    </div>
   )
 }
 
 export function StaggerItem({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <motion.div className={className} variants={itemVariants}>
+    <div data-stagger-item="" className={className}>
       {children}
-    </motion.div>
+    </div>
   )
 }
 
-export function HeroEntrance({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
-  const reduceMotion = useReducedMotion()
+export function HeroEntrance({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: ReactNode
+  className?: string
+  delay?: number
+}) {
+  useEffect(() => {
+    window.__kalgardAnimReady?.()
+  }, [])
 
   return (
-    <motion.div
+    <div
+      data-hero-entrance=""
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      transition={{ duration: 0.75, delay, ease }}
+      style={{ '--reveal-delay': `${delay}s` } as CSSProperties}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
