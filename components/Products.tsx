@@ -1,12 +1,13 @@
 'use client'
 
 import Image from 'next/image'
-import { Camera, Compass, Map, ShieldCheck, Target } from 'lucide-react'
+import { Camera, Compass, Layers, Locate, Map, MapPin, ShieldCheck } from 'lucide-react'
 
 import { useLanguage } from '@/components/LanguageProvider'
 import { Reveal, StaggerGroup, StaggerItem } from '@/components/Motion'
 
 const icons = [Camera, Map, Compass]
+const lineupIcons = [MapPin, Layers]
 
 export default function Products() {
   const { copy } = useLanguage()
@@ -39,6 +40,10 @@ export default function Products() {
                 <p className="data-label text-[rgba(9,9,9,0.5)]">{products.prototypeLabel}</p>
                 <h3 className="mt-3 text-3xl text-ink">{products.prototypeTitle}</h3>
                 <p className="mt-2 text-[rgba(9,9,9,0.66)]">{products.prototypeBody}</p>
+                <div className="mt-6 rounded-[1.25rem] border border-black/10 bg-[rgba(255,255,255,0.42)] p-4 text-left">
+                  <p className="data-label text-[rgba(9,9,9,0.48)]">{products.deliveryLabel}</p>
+                  <p className="mt-2 text-sm leading-6 text-[rgba(9,9,9,0.62)]">{products.deliveryBody}</p>
+                </div>
               </div>
             </div>
 
@@ -84,7 +89,7 @@ export default function Products() {
               </div>
             </div>
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
-              <Target className="h-6 w-6 text-plum" />
+              <Locate className="h-6 w-6 text-plum" />
             </div>
             <p className="mt-6 data-label text-[rgba(9,9,9,0.48)]">{products.correctionLabel}</p>
             <h3 className="mt-3 text-3xl text-ink">{products.correctionTitle}</h3>
@@ -130,6 +135,34 @@ export default function Products() {
               </div>
             </div>
           </StaggerItem>
+        </StaggerGroup>
+
+        <Reveal className="mt-14">
+          <p className="data-label text-[rgba(9,9,9,0.48)]">{products.lineupLabel}</p>
+        </Reveal>
+        <StaggerGroup className="mt-5 grid gap-6 md:grid-cols-2">
+          {products.lineup.map((item, index) => {
+            const Icon = lineupIcons[index]
+
+            return (
+              <StaggerItem
+                key={item.name}
+                className="rounded-[1.75rem] border border-dashed border-black/20 bg-[rgba(255,255,255,0.3)] p-7 sm:p-8"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-black/10 bg-paper">
+                    <Icon className="h-5 w-5 text-plum" />
+                  </div>
+                  <span className="rounded-full border border-black/10 bg-[rgba(255,255,255,0.54)] px-3 py-1 text-xs uppercase tracking-[0.16em] text-[rgba(9,9,9,0.52)]">
+                    {products.lineupTag}
+                  </span>
+                </div>
+                <h3 className="brand-wordmark mt-5 text-2xl text-ink">{item.name}</h3>
+                <p className="mt-2 data-label text-[rgba(9,9,9,0.48)]">{item.role}</p>
+                <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{item.body}</p>
+              </StaggerItem>
+            )
+          })}
         </StaggerGroup>
       </div>
     </section>

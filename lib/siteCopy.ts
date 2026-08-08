@@ -6,6 +6,7 @@ export const siteCopy = {
       links: [
         ['Mission', '#about'],
         ['MerlinSight', '#products'],
+        ['Applications', '#technical-showcase'],
         ['Team', '#team'],
         ['Partners', '#partners'],
         ['Contact', '#contact'],
@@ -20,7 +21,7 @@ export const siteCopy = {
       title: 'Reliable UAV navigation',
       titleAccent: 'when GPS cannot be trusted.',
       body:
-        'KALGARD Systems develops onboard navigation technology for drones operating in GNSS-denied, jammed, spoofed, or unreliable environments.',
+        'KALGARD Systems develops onboard navigation and georeferencing technologies for drones operating in GNSS-denied, jammed, spoofed, or unreliable environments.',
       primaryCta: 'What We Build',
       secondaryCta: 'Contact',
       stats: [
@@ -32,24 +33,24 @@ export const siteCopy = {
         {
           label: 'Approach',
           value: 'Onboard',
-          description: 'Onboard estimation with correction from observed environmental features.',
+          description: 'Onboard estimation with periodic absolute correction from observed environmental features.',
         },
         {
           label: 'Stage',
-          value: 'Prototype',
-          description: 'Active development, flight testing, and technical validation.',
+          value: 'Flight-proven',
+          description: 'Astrel is flight-proven; the wider MerlinSight lineup is in development.',
         },
       ],
-      programLabel: 'Current program',
-      programName: 'MerlinSight',
+      programLabel: 'Current product',
+      programName: 'MerlinSight Astrel',
       systemNoteLabel: 'System note',
       systemNote:
-        'MerlinSight is being developed as an onboard module for resilient localization in degraded environments.',
+        'MerlinSight Astrel, the positioning module of the lineup, keeps a continuous onboard position with periodic absolute correction, with no GNSS or datalink dependence in flight.',
       validationLabel: 'Flight validation',
       validationNote:
-        'Test flights have demonstrated localization error below 5 m, including a flight test with an army regiment.',
-      moduleAlt: 'MerlinSight prototype navigation module',
-      heroVideoAlt: 'Drone returning to its corrected trajectory with MerlinSight',
+        'Real flight testing has demonstrated under 5 m mean 2D error, including a flight test with an army regiment.',
+      moduleAlt: 'MerlinSight Astrel navigation module',
+      heroVideoAlt: 'Drone returning to its corrected trajectory with MerlinSight Astrel',
     },
     about: {
       eyebrow: 'Mission',
@@ -62,49 +63,81 @@ export const siteCopy = {
       contextLabel: 'Development context',
       contextBody: 'Hardware and flight integration work focused on practical UAV deployment constraints.',
     },
+    capabilities: {
+      eyebrow: 'Capabilities',
+      title: 'What the MerlinSight lineup delivers',
+      body:
+        'KALGARD technologies give aerial platforms trusted answers where satellite positioning cannot be relied on.',
+      spotlight: {
+        name: 'Astrel',
+        label: 'Position of the aircraft',
+          body:
+            'Onboard navigation that keeps a trusted position when GNSS is jammed, spoofed or absent: a continuous position with periodic absolute correction. Flight-proven, with under 5 m mean 2D error measured in real flight.',
+          cta: 'Explore Astrel',
+          diagramAlt: 'Line diagram of a UAV holding its own position above terrain',
+      },
+      teasers: [
+        {
+          name: 'Arrow',
+          label: 'Observed points',
+          line: 'An observed point becomes a ground coordinate. Stealth, with no EM wave emission.',
+          diagramAlt: 'Line glyph of a UAV marking an observed ground point',
+        },
+        {
+          name: 'Sillage',
+          label: 'Mapping',
+          line: 'Maps of overflown areas, updated by every flight.',
+          diagramAlt: 'Line glyph of a gridded map with a georeferenced area',
+        },
+      ],
+      developmentTag: 'In development',
+    },
     products: {
       eyebrow: 'What We Build',
       title: 'MerlinSight',
       paragraphs: [
-        'MerlinSight is an onboard navigation system for UAVs designed for GPS-denied operation.',
-        'It combines onboard navigation with map-based correction from observed environmental features to support robust localization in degraded environments.',
+        'MerlinSight is the KALGARD product line for flying without GNSS.',
+        'Astrel, the positioning module, is the current flight-proven product. Arrow and Sillage extend the lineup and are in development.',
       ],
-      prototypeLabel: 'Prototype module',
-      prototypeTitle: 'Onboard architecture',
-      prototypeBody: 'Designed to sit on the aircraft and preserve navigation when GNSS quality breaks down.',
+      prototypeLabel: 'Flight-proven product',
+      prototypeTitle: 'Astrel',
+      prototypeBody: 'The positioning module. It sits on the aircraft and preserves navigation when GNSS is jammed, spoofed or unavailable.',
+      deliveryLabel: 'Delivery',
+      deliveryBody:
+        'Available as a full module combining sensors, compute and software. Software-only integration on existing hardware depends on the platform’s sensors, synchronisation, compute and flight-control access.',
       systemOverview: 'System overview',
       systemBody:
-        'MerlinSight provides a resilient onboard localization layer for UAVs that need to keep operating when satellite positioning becomes unavailable or untrustworthy.',
+        'Astrel provides GNSS-independent absolute positioning: a continuous onboard position with periodic absolute correction, for UAVs that must keep operating when satellite positioning is unavailable or untrustworthy.',
       pillars: [
         {
-          title: 'Visual-inertial navigation',
-          description: 'Onboard estimation from camera and inertial sensing to maintain a continuous position solution.',
+          title: 'Visual-inertial estimation',
+          description: 'Onboard estimation from camera and inertial sensing maintains a continuous position solution between corrections.',
         },
         {
-          title: 'Map-based correction',
-          description: 'Uses observed environmental features and trusted reference data to correct drift during flight.',
+          title: 'Absolute map correction',
+          description: 'The downward camera view is matched against preloaded georeferenced reference data to correct the position with absolute fixes during flight.',
         },
         {
-          title: 'UAV integration',
-          description: 'Built to support onboard navigation decisions on operational UAVs, not just post-flight analysis.',
+          title: 'GPS-like integration',
+          description: 'Latitude, longitude and altitude are output to the flight controller as GPS-like NMEA or MAVLink. No autopilot modification, no GNSS or datalink dependence in flight.',
         },
       ],
       correctionLabel: 'Correction approach',
       correctionTitle: 'Map-based localization',
       correctionBody:
-        'MerlinSight performs map-based correction by comparing observed environmental features with trusted reference data, reducing drift when GNSS cannot be relied on.',
+        'Astrel corrects its onboard estimate by matching the downward camera view against preloaded georeferenced reference data, keeping the position continuous with periodic absolute correction when GNSS cannot be relied on.',
       mapCorrectionImageAlt: 'Public-safe map correction visualization with observation tracks over grayscale reference imagery',
       mapCorrectionDetailAlt: 'Public-safe feature overlay visualization for map-based correction',
       evaluationLabel: 'Evaluation',
-      evaluationTitle: 'Flight-tested precision',
+      evaluationTitle: 'Measured in real flight',
       evaluationBody:
-        'Across flight testing, MerlinSight has demonstrated sub-5 m mean localization error. The figure below shows a flight test performed with an army regiment, using post-convergence comparison against GPS ground truth.',
-      validationImageAlt: '2D trajectory comparison from a flight test with an army regiment, showing GPS ground truth and MerlinSight estimate colored by DTC 2D error',
+        'In real flight testing, Astrel has demonstrated under 5 m mean 2D error, measured post-convergence against GPS ground truth. The figure shows a flight test performed with an army regiment.',
+      validationImageAlt: '2D trajectory comparison from a flight test with an army regiment, showing GPS ground truth and the MerlinSight Astrel estimate',
       groundTruthLabel: 'GPS ground truth',
-      estimateLabel: 'MerlinSight estimate',
+      estimateLabel: 'Astrel estimate',
       exampleLabel: 'Flight test with an army regiment',
       exampleNote:
-        'The flight duration was set by the authorized flight zone. MerlinSight is designed to correct drift against reference observations during flight, rather than let dead-reckoning error accumulate with elapsed time; longer and more varied flights are part of ongoing validation.',
+        'The flight duration was set by the authorized flight zone. Astrel is designed to keep a continuous position with periodic absolute correction rather than let dead-reckoning error accumulate with elapsed time; longer and more varied flights are part of ongoing validation.',
       exampleMetrics: [
         ['Mean 2D error', '3.43 m'],
         ['Mean 3D error', '4.24 m'],
@@ -113,6 +146,22 @@ export const siteCopy = {
         ['Altitude MAE', '1.55 m'],
       ],
       durationMetric: ['Flight duration', '5m 17s'],
+      lineupLabel: 'The rest of the lineup',
+      lineupTag: 'In development',
+      lineup: [
+        {
+          name: 'Arrow',
+          role: 'Georeferencing of observed points',
+          body:
+            'An observed point becomes a ground coordinate, ready to report and share. Stealth: no laser, no EM wave emission, nothing that gives the aircraft away.',
+        },
+        {
+          name: 'Sillage',
+          role: 'Mapping from flight',
+          body:
+            'Flights become maps. Every flight updates the map of the area it covers, georeferenced, without any GNSS.',
+        },
+      ],
     },
     partners: {
       eyebrow: 'Partner Search',
@@ -123,7 +172,7 @@ export const siteCopy = {
       items: [
         {
           title: 'UAV integrators',
-          body: 'Explore MerlinSight integration on existing drone platforms.',
+          body: 'Explore MerlinSight Astrel integration on existing drone platforms.',
         },
         {
           title: 'Defense and civil end users',
@@ -137,19 +186,36 @@ export const siteCopy = {
     },
     applications: {
       eyebrow: 'Applications',
-      title: 'Where it fits',
+      title: 'Where our technologies apply',
       body:
-        'MerlinSight is relevant to UAV operations that need resilient localization when GNSS performance becomes unreliable.',
+        'KALGARD develops onboard navigation and georeferencing technologies for aerial platforms operating where satellite positioning is degraded, denied or insufficient.',
       demoLabel: 'System walkthrough',
       demoTitle: 'Navigation that recovers when GNSS disappears',
       demoBody:
-        'From visual-inertial estimation to terrain-matched correction, this sequence shows how MerlinSight contains drift and brings the aircraft back onto a trusted trajectory.',
+        'From visual-inertial estimation to terrain-matched correction, this sequence shows how MerlinSight Astrel contains drift and brings the aircraft back onto a trusted trajectory.',
       demoAlt: 'Subtitled MerlinSight pitch and navigation demonstration',
-      items: [
-        'Defense and security UAVs',
-        'Critical infrastructure monitoring',
-        'Operations in GNSS-degraded environments',
+      columns: [
+        {
+          title: 'Defence & security',
+          items: [
+            'Operations through jammed or spoofed airspace',
+            'Deep reconnaissance beyond the reach of a reliable data link',
+            'Mission continuity when GNSS is lost mid-flight',
+            'Reporting the position of observed points of interest, in ground coordinates',
+          ],
+        },
+        {
+          title: 'Civil & critical infrastructure',
+          items: [
+            'Operational continuity for critical infrastructure exposed to interference',
+            'Inspection in urban and constrained environments where GNSS degrades',
+            'Search and rescue',
+            'BVLOS corridors independent of GNSS availability',
+          ],
+        },
       ],
+      qualifier:
+        'Capability detail, performance figures and integration data are shared with qualified partners under NDA.',
     },
     credibility: {
       eyebrow: 'Credibility',
@@ -157,7 +223,7 @@ export const siteCopy = {
       body: 'KALGARD Systems is an INRIA-incubated company focused on resilient UAV navigation.',
       cardTitle: 'Focused technical development',
       cardBody:
-        'The company is building MerlinSight at the intersection of onboard perception, navigation, and UAV integration.',
+        'The company is building the MerlinSight lineup at the intersection of onboard perception, navigation, and UAV integration.',
       incubationLabel: 'Incubation',
       incubationBody: 'The company is being developed with INRIA incubation support.',
       imageAlt: 'Workshop testing and prototype preparation',
@@ -209,7 +275,7 @@ export const siteCopy = {
     footer: {
       strapline: 'GPS-denied navigation for UAVs',
       body:
-        'KALGARD develops resilient onboard navigation technology for drone operations where GNSS cannot be trusted.',
+        'KALGARD develops resilient onboard navigation and georeferencing technologies for drone operations where GNSS cannot be trusted.',
       incubationLabel: 'Incubation',
       incubationBody: 'INRIA-incubated company focused on resilient UAV navigation.',
       copyright: '© 2026 KALGARD Systems. All rights reserved.',
@@ -221,6 +287,7 @@ export const siteCopy = {
       links: [
         ['Mission', '#about'],
         ['MerlinSight', '#products'],
+        ['Applications', '#technical-showcase'],
         ['Équipe', '#team'],
         ['Partenaires', '#partners'],
         ['Contact', '#contact'],
@@ -235,36 +302,36 @@ export const siteCopy = {
       title: 'Une navigation UAV robuste',
       titleAccent: 'quand le GPS n’est plus fiable.',
       body:
-        'KALGARD Systems développe une technologie de navigation embarquée pour drones opérant dans des environnements GNSS dégradés, brouillés, usurpés ou indisponibles.',
-      primaryCta: 'Notre système',
+        'KALGARD Systems développe des technologies embarquées de navigation et de géoréférencement pour drones opérant dans des environnements GNSS dégradés, brouillés, usurpés ou indisponibles.',
+      primaryCta: 'Notre gamme',
       secondaryCta: 'Contact',
       stats: [
         {
-          label: 'Cible',
+          label: 'Domaine',
           value: 'GNSS dégradé',
           description: 'Navigation pour environnements où le signal satellite est absent ou non fiable.',
         },
         {
           label: 'Approche',
           value: 'Embarquée',
-          description: 'Estimation embarquée avec correction à partir d’éléments observés dans l’environnement.',
+          description: 'Estimation embarquée avec correction absolue périodique à partir d’éléments observés dans l’environnement.',
         },
         {
           label: 'Avancement',
-          value: 'Prototype',
-          description: 'Développement, essais en vol et validation technique en cours.',
+          value: 'Éprouvé en vol',
+          description: 'Astrel est éprouvé en vol ; la suite de la gamme MerlinSight est en développement.',
         },
       ],
-      programLabel: 'Programme en cours',
-      programName: 'MerlinSight',
+      programLabel: 'Produit actuel',
+      programName: 'MerlinSight Astrel',
       systemNoteLabel: 'Note système',
       systemNote:
-        'MerlinSight est développé comme un module embarqué de localisation robuste pour environnements dégradés.',
+        'MerlinSight Astrel, le module de positionnement de la gamme, maintient une position embarquée continue avec correction absolue périodique, sans dépendance au GNSS ni à une liaison de données en vol.',
       validationLabel: 'Validation en vol',
       validationNote:
-        'Des essais en vol ont démontré une erreur de localisation inférieure à 5 m, y compris lors d’un essai réalisé avec un régiment de l’armée.',
-      moduleAlt: 'Prototype du module de navigation MerlinSight',
-      heroVideoAlt: 'Drone retrouvant sa trajectoire corrigée grâce à MerlinSight',
+        'Les essais en vol réels ont démontré une erreur 2D moyenne inférieure à 5 m, y compris lors d’un essai réalisé avec un régiment de l’armée.',
+      moduleAlt: 'Module de navigation MerlinSight Astrel',
+      heroVideoAlt: 'Drone retrouvant sa trajectoire corrigée grâce à MerlinSight Astrel',
     },
     about: {
       eyebrow: 'Mission',
@@ -277,49 +344,81 @@ export const siteCopy = {
       contextLabel: 'Contexte de développement',
       contextBody: 'Travaux d’intégration hardware et essais en vol orientés vers les contraintes réelles de déploiement UAV.',
     },
+    capabilities: {
+      eyebrow: 'Capacités',
+      title: 'Ce qu’apporte la gamme MerlinSight',
+      body:
+        'Les technologies KALGARD apportent aux plateformes aériennes des réponses fiables là où le positionnement par satellite fait défaut.',
+      spotlight: {
+        name: 'Astrel',
+        label: 'Position de l’appareil',
+          body:
+            'Navigation embarquée qui maintient une position fiable lorsque le GNSS est brouillé, usurpé ou absent : une position continue avec correction absolue périodique. Éprouvée en vol, avec une erreur 2D moyenne inférieure à 5 m mesurée en vol réel.',
+          cta: 'Découvrir Astrel',
+          diagramAlt: 'Schéma d’un drone maintenant sa propre position au-dessus du terrain',
+      },
+      teasers: [
+        {
+          name: 'Arrow',
+          label: 'Points observés',
+          line: 'Un point observé devient une coordonnée au sol. Discrétion totale, sans aucune émission électromagnétique.',
+          diagramAlt: 'Pictogramme d’un drone marquant un point observé au sol',
+        },
+        {
+          name: 'Sillage',
+          label: 'Cartographie',
+          line: 'Des cartes des zones survolées, mises à jour à chaque vol.',
+          diagramAlt: 'Pictogramme d’une carte quadrillée avec une zone géoréférencée',
+        },
+      ],
+      developmentTag: 'En développement',
+    },
     products: {
-      eyebrow: 'Notre système',
+      eyebrow: 'Notre gamme',
       title: 'MerlinSight',
       paragraphs: [
-        'MerlinSight est un système de navigation embarqué pour UAV conçu pour fonctionner sans GPS.',
-        'Il combine navigation embarquée et correction cartographique à partir d’éléments observés dans l’environnement afin de maintenir une localisation robuste en environnement dégradé.',
+        'MerlinSight est la gamme de produits KALGARD pour voler sans GNSS.',
+        'Astrel, le module de positionnement, est le produit actuel, éprouvé en vol. Arrow et Sillage prolongent la gamme et sont en développement.',
       ],
-      prototypeLabel: 'Module prototype',
-      prototypeTitle: 'Architecture embarquée',
-      prototypeBody: 'Conçu pour être embarqué à bord et préserver la navigation lorsque la qualité GNSS se dégrade.',
+      prototypeLabel: 'Produit éprouvé en vol',
+      prototypeTitle: 'Astrel',
+      prototypeBody: 'Le module de positionnement. Embarqué à bord, il préserve la navigation lorsque le GNSS est brouillé, usurpé ou indisponible.',
+      deliveryLabel: 'Livraison',
+      deliveryBody:
+        'Disponible en module complet réunissant capteurs, calcul et logiciel. Une intégration purement logicielle sur un matériel existant dépend des capteurs, de la synchronisation, de la puissance de calcul et de l’accès au contrôle de vol de la plateforme.',
       systemOverview: 'Vue d’ensemble',
       systemBody:
-        'MerlinSight fournit une couche de localisation embarquée robuste pour les UAV qui doivent continuer à opérer lorsque le positionnement satellite devient indisponible ou non fiable.',
+        'Astrel fournit un positionnement absolu indépendant du GNSS : une position embarquée continue avec correction absolue périodique, pour les UAV qui doivent continuer à opérer lorsque le positionnement satellite devient indisponible ou non fiable.',
       pillars: [
         {
-          title: 'Navigation visuo-inertielle',
-          description: 'Estimation embarquée à partir de la caméra et des capteurs inertiels pour maintenir une solution de position continue.',
+          title: 'Estimation visuo-inertielle',
+          description: 'L’estimation embarquée à partir de la caméra et des capteurs inertiels maintient une solution de position continue entre les corrections.',
         },
         {
-          title: 'Correction cartographique',
-          description: 'Utilisation d’éléments observés dans l’environnement et de données de référence fiables pour corriger la dérive en vol.',
+          title: 'Correction absolue sur carte',
+          description: 'La vue de la caméra vers le sol est recalée sur des données de référence géoréférencées préchargées pour corriger la position par des recalages absolus en vol.',
         },
         {
-          title: 'Intégration UAV',
-          description: 'Conçu pour soutenir les décisions de navigation embarquées sur des UAV opérationnels, pas seulement l’analyse après vol.',
+          title: 'Intégration type GPS',
+          description: 'Latitude, longitude et altitude sont transmises au contrôleur de vol aux formats NMEA ou MAVLink, comme un GPS. Aucune modification de l’autopilote, aucune dépendance au GNSS ni à une liaison de données en vol.',
         },
       ],
       correctionLabel: 'Approche de correction',
       correctionTitle: 'Localisation fondée sur la carte',
       correctionBody:
-        'MerlinSight effectue une correction cartographique à partir d’éléments observés dans l’environnement et de données de référence fiables, afin de réduire la dérive lorsque le GNSS n’est pas exploitable.',
+        'Astrel corrige son estimation embarquée en recalant la vue de la caméra vers le sol sur des données de référence géoréférencées préchargées : la position reste continue, avec une correction absolue périodique, lorsque le GNSS n’est pas exploitable.',
       mapCorrectionImageAlt: 'Visualisation publique de correction cartographique avec traces d’observation sur imagerie de référence en niveaux de gris',
       mapCorrectionDetailAlt: 'Visualisation publique de superposition d’éléments pour la correction cartographique',
       evaluationLabel: 'Évaluation',
-      evaluationTitle: 'Précision validée en vol',
+      evaluationTitle: 'Mesuré en vol réel',
       evaluationBody:
-        'Sur les essais en vol, MerlinSight a démontré une erreur moyenne de localisation inférieure à 5 m. La figure ci-dessous présente un essai en vol réalisé avec un régiment de l’armée, après convergence et par comparaison avec une vérité terrain GPS.',
-      validationImageAlt: 'Comparaison de trajectoire 2D d’un essai en vol avec un régiment de l’armée, montrant la vérité terrain GPS et l’estimation MerlinSight colorée selon l’erreur DTC 2D',
+        'En essais en vol réels, Astrel a démontré une erreur 2D moyenne inférieure à 5 m, mesurée après convergence par comparaison avec une vérité terrain GPS. La figure présente un essai en vol réalisé avec un régiment de l’armée.',
+      validationImageAlt: 'Comparaison de trajectoire 2D d’un essai en vol avec un régiment de l’armée, montrant la vérité terrain GPS et l’estimation MerlinSight Astrel',
       groundTruthLabel: 'Vérité terrain GPS',
-      estimateLabel: 'Estimation MerlinSight',
+      estimateLabel: 'Estimation Astrel',
       exampleLabel: 'Essai en vol avec un régiment de l’armée',
       exampleNote:
-        'La durée du vol a été définie par la zone de vol autorisée. MerlinSight est conçu pour corriger la dérive à partir d’observations de référence pendant le vol, plutôt que de laisser l’erreur inertielle s’accumuler avec le temps ; des vols plus longs et plus variés font partie de la validation en cours.',
+        'La durée du vol a été définie par la zone de vol autorisée. Astrel est conçu pour maintenir une position continue avec correction absolue périodique, plutôt que de laisser l’erreur inertielle s’accumuler avec le temps ; des vols plus longs et plus variés font partie de la validation en cours.',
       exampleMetrics: [
         ['Erreur 2D moyenne', '3,43 m'],
         ['Erreur 3D moyenne', '4,24 m'],
@@ -328,6 +427,22 @@ export const siteCopy = {
         ['MAE altitude', '1,55 m'],
       ],
       durationMetric: ['Durée du vol', '5m 17s'],
+      lineupLabel: 'La suite de la gamme',
+      lineupTag: 'En développement',
+      lineup: [
+        {
+          name: 'Arrow',
+          role: 'Géoréférencement des points observés',
+          body:
+            'Un point observé devient une coordonnée au sol, prête à être transmise et partagée. Discrétion totale : aucun laser, aucune émission électromagnétique, rien qui trahisse l’appareil.',
+        },
+        {
+          name: 'Sillage',
+          role: 'Cartographie au fil des vols',
+          body:
+            'Les vols deviennent des cartes. Chaque vol met à jour la carte de la zone survolée, géoréférencée, sans aucun GNSS.',
+        },
+      ],
     },
     partners: {
       eyebrow: 'Recherche partenaires',
@@ -338,7 +453,7 @@ export const siteCopy = {
       items: [
         {
           title: 'Intégrateurs UAV',
-          body: 'Explorer l’intégration de MerlinSight sur des plateformes drones existantes.',
+          body: 'Explorer l’intégration de MerlinSight Astrel sur des plateformes drones existantes.',
         },
         {
           title: 'Utilisateurs finaux défense / civil',
@@ -352,19 +467,36 @@ export const siteCopy = {
     },
     applications: {
       eyebrow: 'Applications',
-      title: 'Domaines d’usage',
+      title: 'Où s’appliquent nos technologies',
       body:
-        'MerlinSight s’adresse aux opérations UAV nécessitant une localisation robuste lorsque les performances GNSS deviennent insuffisantes.',
+        'KALGARD développe des technologies embarquées de navigation et de géoréférencement pour les plateformes aériennes opérant là où le positionnement par satellite est dégradé, indisponible ou insuffisant.',
       demoLabel: 'Démonstration du système',
       demoTitle: 'Une navigation qui se recale lorsque le GNSS disparaît',
       demoBody:
-        'De l’estimation visuo-inertielle à la correction par recalage terrain, cette séquence montre comment MerlinSight contient la dérive et ramène l’appareil sur une trajectoire fiable.',
+        'De l’estimation visuo-inertielle à la correction par recalage terrain, cette séquence montre comment MerlinSight Astrel contient la dérive et ramène l’appareil sur une trajectoire fiable.',
       demoAlt: 'Présentation sous-titrée et démonstration de navigation MerlinSight',
-      items: [
-        'UAV de défense et de sécurité',
-        'Surveillance d’infrastructures critiques',
-        'Opérations en environnements GNSS dégradés',
+      columns: [
+        {
+          title: 'Défense et sécurité',
+          items: [
+            'Opérations à travers un espace aérien brouillé ou usurpé',
+            'Reconnaissance dans la profondeur, au-delà de la portée d’une liaison de données',
+            'Continuité de mission lorsque le GNSS est perdu en vol',
+            'Remontée de la position des points d’intérêt observés, en coordonnées géographiques',
+          ],
+        },
+        {
+          title: 'Civil et infrastructures critiques',
+          items: [
+            'Continuité d’exploitation pour les infrastructures critiques exposées aux interférences',
+            'Inspection en environnement urbain et contraint où le GNSS se dégrade',
+            'Recherche et sauvetage',
+            'Corridors BVLOS indépendants de la disponibilité du GNSS',
+          ],
+        },
       ],
+      qualifier:
+        'Le détail des capacités, les performances et les données d’intégration sont partagés avec des partenaires qualifiés sous accord de confidentialité.',
     },
     credibility: {
       eyebrow: 'Crédibilité',
@@ -372,7 +504,7 @@ export const siteCopy = {
       body: 'KALGARD Systems est une société incubée par INRIA, centrée sur la navigation résiliente pour UAV.',
       cardTitle: 'Développement technique ciblé',
       cardBody:
-        'La société développe MerlinSight à l’intersection de la perception embarquée, de la navigation et de l’intégration UAV.',
+        'La société développe la gamme MerlinSight à l’intersection de la perception embarquée, de la navigation et de l’intégration UAV.',
       incubationLabel: 'Incubation',
       incubationBody: 'La société se développe dans le cadre d’une incubation INRIA.',
       imageAlt: 'Préparation des prototypes et essais en atelier',
@@ -424,7 +556,7 @@ export const siteCopy = {
     footer: {
       strapline: 'Navigation sans GPS pour UAV',
       body:
-        'KALGARD développe une technologie de navigation embarquée résiliente pour les opérations drone où le GNSS ne peut pas être considéré comme fiable.',
+        'KALGARD développe des technologies embarquées de navigation et de géoréférencement résilientes pour les opérations drone où le GNSS ne peut pas être considéré comme fiable.',
       incubationLabel: 'Incubation',
       incubationBody: 'Société incubée par INRIA, centrée sur la navigation résiliente pour UAV.',
       copyright: '© 2026 KALGARD Systems. Tous droits réservés.',

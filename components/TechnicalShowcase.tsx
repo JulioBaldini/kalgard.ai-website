@@ -1,7 +1,11 @@
 'use client'
 
+import { Building2, Lock, Shield } from 'lucide-react'
+
 import { useLanguage } from '@/components/LanguageProvider'
 import { Reveal, StaggerGroup, StaggerItem } from '@/components/Motion'
+
+const columnIcons = [Shield, Building2]
 
 export default function TechnicalShowcase() {
   const { copy } = useLanguage()
@@ -16,13 +20,40 @@ export default function TechnicalShowcase() {
           <p className="mt-6 text-lg leading-relaxed text-[rgba(9,9,9,0.72)]">{applications.body}</p>
         </Reveal>
 
-        <StaggerGroup className="mt-14 grid gap-6 md:grid-cols-3">
-          {applications.items.map((application) => (
-            <StaggerItem key={application} className="lab-card rounded-[1.75rem] p-8">
-              <p className="text-2xl leading-snug text-ink">{application}</p>
-            </StaggerItem>
-          ))}
+        <StaggerGroup className="mt-14 grid gap-6 md:grid-cols-2">
+          {applications.columns.map((column, columnIndex) => {
+            const Icon = columnIcons[columnIndex]
+
+            return (
+              <StaggerItem key={column.title} className="lab-card rounded-[1.75rem] p-8 sm:p-9">
+                <div className="flex items-center justify-between">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-[rgba(255,255,255,0.48)]">
+                    <Icon className="h-6 w-6 text-plum" />
+                  </div>
+                  <span className="data-label text-[rgba(9,9,9,0.38)]">{String(columnIndex + 1).padStart(2, '0')}</span>
+                </div>
+                <h3 className="mt-6 text-2xl text-ink sm:text-3xl">{column.title}</h3>
+                <ul className="mt-7 border-t border-black/10">
+                  {column.items.map((item, itemIndex) => (
+                    <li key={item} className="flex items-baseline gap-5 border-b border-black/10 py-4">
+                      <span className="data-label shrink-0 text-[rgba(9,9,9,0.38)]">
+                        {String(itemIndex + 1).padStart(2, '0')}
+                      </span>
+                      <span className="leading-relaxed text-[rgba(9,9,9,0.72)]">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </StaggerItem>
+            )
+          })}
         </StaggerGroup>
+
+        <Reveal className="mt-8">
+          <p className="flex items-start gap-3 text-sm leading-6 text-[rgba(9,9,9,0.5)]">
+            <Lock className="mt-1 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+            {applications.qualifier}
+          </p>
+        </Reveal>
 
         <Reveal className="lab-card mt-10 overflow-hidden rounded-[2.25rem]" scale={0.96}>
           <div className="relative aspect-video overflow-hidden bg-[#090909]">
