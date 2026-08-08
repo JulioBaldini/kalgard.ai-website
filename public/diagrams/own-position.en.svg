@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380">
+  <polyline points="-46,344.6 -2.3,336.1 41.4,327.7 85.1,336.3 128.9,348.6 172.6,347.7 216.3,343.4 260,343.1 303.7,336.5 347.4,328.4 391.1,335.6 434.9,348.1 478.6,345.8 522.3,337.1 566,335.5" fill="none" stroke="rgba(238,228,213,0.30)" stroke-width="1"/>
+  <polyline points="-7.7,320.3 30.5,312.6 68.8,306 107,313.1 145.3,320.2 183.5,316.7 221.8,314.2 260,315.5 298.2,309.6 336.5,303 374.7,309.7 413,318.6 451.2,315.4 489.5,310.6 527.7,312.4" fill="none" stroke="rgba(238,228,213,0.27)" stroke-width="1"/>
+  <polyline points="25.8,295.8 59.2,290.6 92.7,286.5 126.2,291.4 159.6,293.1 193.1,287.6 226.5,287.8 260,292.4 293.5,289.3 326.9,285 360.4,290.2 393.8,294.4 427.3,290.1 460.8,289.1 494.2,294.5" fill="none" stroke="rgba(238,228,213,0.25)" stroke-width="1"/>
+  <polyline points="54.3,273.6 83.7,271.5 113.1,270.5 142.5,274 171.8,271.6 201.2,265.2 230.6,267.9 260,275.1 289.4,274.6 318.8,272.2 348.2,275 377.5,274.4 406.9,268.6 436.3,270.2 465.7,277.5" fill="none" stroke="rgba(238,228,213,0.22)" stroke-width="1"/>
+  <polyline points="77.6,257.1 103.7,257.4 129.7,258.9 155.8,261.4 181.8,256.6 207.9,250.3 233.9,254 260,261.3 286.1,261.6 312.1,260.1 338.2,261 364.2,256.9 390.3,250.6 416.3,253.6 442.4,261.3" fill="none" stroke="rgba(238,228,213,0.20)" stroke-width="1"/>
+  <polyline points="95.4,246.8 118.9,247.3 142.4,249.6 166,251.3 189.5,245.8 213,240.3 236.5,243.8 260,249.2 283.5,248.8 307,248 330.5,248.4 354,243.6 377.6,238.3 401.1,241.9 424.6,248.6" fill="none" stroke="rgba(238,228,213,0.17)" stroke-width="1"/>
+  <polyline points="107.2,240.4 129.1,239.6 150.9,241.4 172.7,242.7 194.5,238.1 216.4,234.5 238.2,237.4 260,240.1 281.8,238.8 303.6,238.9 325.5,240.1 347.3,236.7 369.1,233.4 390.9,236.9 412.8,241.2" fill="none" stroke="rgba(238,228,213,0.15)" stroke-width="1"/>
+  <polyline points="112,237.6 133.1,235.5 154.3,236.8 175.4,238.1 196.6,235.6 217.7,234.2 238.9,236.6 260,237.1 281.1,235.1 302.3,236 323.4,238.1 344.6,236.5 365.7,235 386.9,237.5 408,238.9" fill="none" stroke="rgba(238,228,213,0.12)" stroke-width="1"/>
+  <polyline points="-46,344.6 -7.7,320.3 25.8,295.8 54.3,273.6 77.6,257.1 95.4,246.8 107.2,240.4 112,237.6" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="-2.3,336.1 30.5,312.6 59.2,290.6 83.7,271.5 103.7,257.4 118.9,247.3 129.1,239.6 133.1,235.5" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="41.4,327.7 68.8,306 92.7,286.5 113.1,270.5 129.7,258.9 142.4,249.6 150.9,241.4 154.3,236.8" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="85.1,336.3 107,313.1 126.2,291.4 142.5,274 155.8,261.4 166,251.3 172.7,242.7 175.4,238.1" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="128.9,348.6 145.3,320.2 159.6,293.1 171.8,271.6 181.8,256.6 189.5,245.8 194.5,238.1 196.6,235.6" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="172.6,347.7 183.5,316.7 193.1,287.6 201.2,265.2 207.9,250.3 213,240.3 216.4,234.5 217.7,234.2" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="216.3,343.4 221.8,314.2 226.5,287.8 230.6,267.9 233.9,254 236.5,243.8 238.2,237.4 238.9,236.6" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="260,343.1 260,315.5 260,292.4 260,275.1 260,261.3 260,249.2 260,240.1 260,237.1" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="303.7,336.5 298.2,309.6 293.5,289.3 289.4,274.6 286.1,261.6 283.5,248.8 281.8,238.8 281.1,235.1" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="347.4,328.4 336.5,303 326.9,285 318.8,272.2 312.1,260.1 307,248 303.6,238.9 302.3,236" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="391.1,335.6 374.7,309.7 360.4,290.2 348.2,275 338.2,261 330.5,248.4 325.5,240.1 323.4,238.1" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="434.9,348.1 413,318.6 393.8,294.4 377.5,274.4 364.2,256.9 354,243.6 347.3,236.7 344.6,236.5" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="478.6,345.8 451.2,315.4 427.3,290.1 406.9,268.6 390.3,250.6 377.6,238.3 369.1,233.4 365.7,235" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="522.3,337.1 489.5,310.6 460.8,289.1 436.3,270.2 416.3,253.6 401.1,241.9 390.9,236.9 386.9,237.5" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <polyline points="566,335.5 527.7,312.4 494.2,294.5 465.7,277.5 442.4,261.3 424.6,248.6 412.8,241.2 408,238.9" fill="none" stroke="rgba(238,228,213,0.14)" stroke-width="1"/>
+  <line x1="149" y1="105" x2="149" y2="272" stroke="rgba(238,228,213,0.28)" stroke-dasharray="4 6"/>
+  <g transform="translate(149 84)" fill="none" stroke="rgba(238,228,213,0.85)" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+    <g stroke="rgba(238,228,213,0.28)">
+      <line x1="-7" y1="-2" x2="-19" y2="-7"/>
+      <line x1="7" y1="-2" x2="19" y2="-7"/>
+      <line x1="-19" y1="-7" x2="-19" y2="-10"/>
+      <line x1="19" y1="-7" x2="19" y2="-10"/>
+      <ellipse cx="-19" cy="-10" rx="12" ry="3"/>
+      <ellipse cx="19" cy="-10" rx="12" ry="3"/>
+    </g>
+    <path d="M-10 -3 L10 -3 L13 1 L10 5 L-10 5 L-13 1 Z"/>
+    <line x1="-11" y1="2" x2="-30" y2="6"/>
+    <line x1="11" y1="2" x2="30" y2="6"/>
+    <line x1="-30" y1="6" x2="-30" y2="3"/>
+    <line x1="30" y1="6" x2="30" y2="3"/>
+    <ellipse cx="-30" cy="3" rx="15" ry="4"/>
+    <ellipse cx="30" cy="3" rx="15" ry="4"/>
+    <circle cx="-30" cy="3" r="1.2" fill="rgba(238,228,213,0.85)" stroke="none"/>
+    <circle cx="30" cy="3" r="1.2" fill="rgba(238,228,213,0.85)" stroke="none"/>
+    <line x1="0" y1="5" x2="0" y2="10"/>
+    <circle cx="0" cy="13" r="3.4"/>
+    <line x1="0" y1="16.4" x2="0" y2="19" stroke="#BB2AFF" stroke-width="1.6"/>
+  </g>
+  <g stroke-width="1.4" fill="none">
+    <line x1="149" y1="272" x2="149" y2="204" stroke="#BB2AFF"/>
+    <line x1="149" y1="272" x2="211" y2="272.2" stroke="rgba(238,228,213,0.85)"/>
+    <line x1="149" y1="272" x2="180.8" y2="238.9" stroke="rgba(238,228,213,0.85)"/>
+  </g>
+  <path d="M153.5 213 L149 204 L144.5 213" fill="none" stroke="#BB2AFF" stroke-width="1.4"/>
+  <path d="M202 276.7 L211 272.2 L202 267.7" fill="none" stroke="rgba(238,228,213,0.85)" stroke-width="1.4"/>
+  <path d="M177.8 248.5 L180.8 238.9 L171.4 242.2" fill="none" stroke="rgba(238,228,213,0.85)" stroke-width="1.4"/>
+  <circle cx="149" cy="272" r="3.5" fill="#BB2AFF"/>
+  <text x="158" y="208" fill="#BB2AFF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="0.16em">Z</text>
+  <text x="218" y="276.2" fill="rgba(238,228,213,0.62)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="0.16em">X</text>
+  <text x="185.8" y="231.9" fill="rgba(238,228,213,0.62)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="0.16em">Y</text>
+  <line x1="203" y1="78" x2="290" y2="56" stroke="rgba(238,228,213,0.28)"/>
+  <text x="298" y="60" fill="rgba(238,228,213,0.62)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="0.16em">UAV POSITION</text>
+  <line x1="149" y1="272" x2="360" y2="319" stroke="rgba(238,228,213,0.14)" stroke-dasharray="3 6"/>
+  <rect x="330" y="298" width="166" height="42" rx="10" fill="#0d0b0a" stroke="rgba(238,228,213,0.28)"/>
+  <text x="348" y="324" fill="#D8C21F" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" letter-spacing="0.16em">LAT · LON · ALT</text>
+</svg>

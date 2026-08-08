@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import Capabilities from '@/components/Capabilities'
 import Products from '@/components/Products'
 import TechnicalShowcase from '@/components/TechnicalShowcase'
 import Features from '@/components/Features'
@@ -17,6 +18,7 @@ export default function Home() {
         <Header />
         <Hero />
         <About />
+        <Capabilities />
         <Products />
         <TechnicalShowcase />
         <Features />
