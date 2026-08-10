@@ -16,19 +16,18 @@ Delivery formats, if mentioned: the full module (sensors + compute + software), 
 
 ### MerlinSight Arrow (in development)
 
-Georeferencing of observed points. Output + advantage only, never inputs or method: an observed point becomes a ground coordinate, ready to report and share. The advantage is stated as an end-user consequence, stealth: no laser, no EM wave emission, nothing that gives the aircraft away. Do not mention the camera, observation of the scene by a sensor, registration, or any link to how Astrel works; do not use "passive" mechanism framing such as "no emission toward the scene". "In development" for the product.
+Public label only: Targeting / Ciblage. No explanatory sentence on the site. Do not describe outputs, method, inputs, stealth, lasers, emissions, coordinates, observation, or any link to Astrel. "In development" for the product.
 
 ### MerlinSight Sillage (in development)
 
-Mapping from flight. Output + advantage only: flights become maps, every flight updates the map of the area it covers, georeferenced, without any GNSS. Do not name inputs such as "flight video". Framed as direction / roadmap.
+Public label only: Mapping / Cartographie. No explanatory sentence on the site. Do not describe maps from flight, GNSS independence, georeferencing process, inputs, or any link to Astrel. Framed as direction / roadmap. "In development" for the product.
 
 ## Hard Wording Rules
 
-- Never imply the products share one module, core, estimator or technology. No "one module, three outputs", no "the same registration that...". Each product is described by its outcome only.
+- Never imply the products share one module, core, estimator or technology. No "one module, three outputs", no "the same registration that...". Each product is described by its public label only for Arrow and Sillage; by its outcome for Astrel.
 - No accuracy figure, no timeline, no availability claim for Arrow or Sillage.
 - Never "drift-free". Say "continuous position with periodic absolute correction".
-- No targeting language for Arrow: no "targeting", "target acquisition", "designation for effects", "ciblage". Allowed framing: coordinates for "reporting, cueing and situational awareness" / "observation et remontée de coordonnées".
-- Arrow and Sillage are described by output and advantage only (passive / no laser for Arrow, no GNSS for Sillage). Never inputs, never method, never the GNSS-pose-chain comparison (retired 2026-08-07 as too revealing), never a link to Astrel. Do not claim passive geolocation is novel.
+- Arrow and Sillage stay at one word each (Targeting / Mapping, Ciblage / Cartographie). No sentence that would let a competitor infer capability, method, or shared technology with Astrel.
 - Never quote 3.39 m anywhere. Published Astrel figures are limited to the army-regiment flight-test table above plus the "under 5 m" headline.
 - Never present a ruggedised defence kit as existing.
 - No em dashes in site copy, either language. French copy is written natively, not translated.

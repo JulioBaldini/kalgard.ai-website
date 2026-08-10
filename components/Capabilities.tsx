@@ -76,7 +76,9 @@ export default function Capabilities() {
                     <SightName name={teaser.name} />
                   </h3>
                   <p className="data-label mt-3 text-paper/60">{teaser.label}</p>
-                  <p className="mt-2 leading-relaxed text-paper/62">{teaser.line}</p>
+                  {teaser.line ? (
+                    <p className="mt-2 leading-relaxed text-paper/62">{teaser.line}</p>
+                  ) : null}
                 </div>
                 <img
                   src={`/diagrams/${teaserGlyphs[index]}.svg`}

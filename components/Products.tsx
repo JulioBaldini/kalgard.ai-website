@@ -159,7 +159,9 @@ export default function Products() {
                 </div>
                 <h3 className="brand-wordmark mt-5 text-2xl text-ink">{item.name}</h3>
                 <p className="mt-2 data-label text-[rgba(9,9,9,0.48)]">{item.role}</p>
-                <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{item.body}</p>
+                {item.body ? (
+                  <p className="mt-4 leading-relaxed text-[rgba(9,9,9,0.68)]">{item.body}</p>
+                ) : null}
               </StaggerItem>
             )
           })}

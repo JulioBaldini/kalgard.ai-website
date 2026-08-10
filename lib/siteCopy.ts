@@ -79,15 +79,15 @@ export const siteCopy = {
       teasers: [
         {
           name: 'Arrow',
-          label: 'Observed points',
-          line: 'An observed point becomes a ground coordinate. Stealth, with no EM wave emission.',
-          diagramAlt: 'Line glyph of a UAV marking an observed ground point',
+          label: 'Targeting',
+          line: '',
+          diagramAlt: 'Line glyph for MerlinSight Arrow',
         },
         {
           name: 'Sillage',
           label: 'Mapping',
-          line: 'Maps of overflown areas, updated by every flight.',
-          diagramAlt: 'Line glyph of a gridded map with a georeferenced area',
+          line: '',
+          diagramAlt: 'Line glyph for MerlinSight Sillage',
         },
       ],
       developmentTag: 'In development',
@@ -151,15 +151,13 @@ export const siteCopy = {
       lineup: [
         {
           name: 'Arrow',
-          role: 'Georeferencing of observed points',
-          body:
-            'An observed point becomes a ground coordinate, ready to report and share. Stealth: no laser, no EM wave emission, nothing that gives the aircraft away.',
+          role: 'Targeting',
+          body: '',
         },
         {
           name: 'Sillage',
-          role: 'Mapping from flight',
-          body:
-            'Flights become maps. Every flight updates the map of the area it covers, georeferenced, without any GNSS.',
+          role: 'Mapping',
+          body: '',
         },
       ],
     },
@@ -201,7 +199,7 @@ export const siteCopy = {
             'Operations through jammed or spoofed airspace',
             'Deep reconnaissance beyond the reach of a reliable data link',
             'Mission continuity when GNSS is lost mid-flight',
-            'Reporting the position of observed points of interest, in ground coordinates',
+            'Targeting',
           ],
         },
         {
@@ -360,15 +358,15 @@ export const siteCopy = {
       teasers: [
         {
           name: 'Arrow',
-          label: 'Points observés',
-          line: 'Un point observé devient une coordonnée au sol. Discrétion totale, sans aucune émission électromagnétique.',
-          diagramAlt: 'Pictogramme d’un drone marquant un point observé au sol',
+          label: 'Ciblage',
+          line: '',
+          diagramAlt: 'Pictogramme MerlinSight Arrow',
         },
         {
           name: 'Sillage',
           label: 'Cartographie',
-          line: 'Des cartes des zones survolées, mises à jour à chaque vol.',
-          diagramAlt: 'Pictogramme d’une carte quadrillée avec une zone géoréférencée',
+          line: '',
+          diagramAlt: 'Pictogramme MerlinSight Sillage',
         },
       ],
       developmentTag: 'En développement',
@@ -432,15 +430,13 @@ export const siteCopy = {
       lineup: [
         {
           name: 'Arrow',
-          role: 'Géoréférencement des points observés',
-          body:
-            'Un point observé devient une coordonnée au sol, prête à être transmise et partagée. Discrétion totale : aucun laser, aucune émission électromagnétique, rien qui trahisse l’appareil.',
+          role: 'Ciblage',
+          body: '',
         },
         {
           name: 'Sillage',
-          role: 'Cartographie au fil des vols',
-          body:
-            'Les vols deviennent des cartes. Chaque vol met à jour la carte de la zone survolée, géoréférencée, sans aucun GNSS.',
+          role: 'Cartographie',
+          body: '',
         },
       ],
     },
@@ -482,7 +478,7 @@ export const siteCopy = {
             'Opérations à travers un espace aérien brouillé ou usurpé',
             'Reconnaissance dans la profondeur, au-delà de la portée d’une liaison de données',
             'Continuité de mission lorsque le GNSS est perdu en vol',
-            'Remontée de la position des points d’intérêt observés, en coordonnées géographiques',
+            'Ciblage',
           ],
         },
         {

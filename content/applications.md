@@ -4,11 +4,11 @@
 
 ### Defense and Security UAVs
 
-MerlinSight Astrel supports UAV operations that need resilient positioning when GNSS performance becomes unreliable or hostile. MerlinSight Arrow, in development, extends the line toward the ground coordinates of observed points, for reporting, cueing and situational awareness.
+MerlinSight Astrel supports UAV operations that need resilient positioning when GNSS performance becomes unreliable or hostile. MerlinSight Arrow, in development, is listed publicly as targeting only.
 
 ### Critical Infrastructure Monitoring
 
-The system is relevant for inspection and monitoring missions where operators need continuity of positioning around strategic infrastructure. MerlinSight Sillage, in development, points toward georeferenced maps built and refreshed from the flight itself.
+The system is relevant for inspection and monitoring missions where operators need continuity of positioning around strategic infrastructure. MerlinSight Sillage, in development, is listed publicly as mapping only.
 
 ### GNSS-Degraded Operations
 
