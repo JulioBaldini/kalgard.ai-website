@@ -152,14 +152,14 @@ export default function Technology() {
                 muted
                 playsInline
                 preload="metadata"
-                poster="/videos/posters/hero-drone-back-on-track.jpg"
-                aria-label="3D visualization of MS-1 recovering the trajectory"
+                poster="/videos/posters/merlinsight-pitch.jpg"
+                aria-label="MerlinSight concept film"
               >
-                <source src="/videos/demo/hero-drone-back-on-track.mp4" type="video/mp4" />
+                <source src="/videos/demo/merlinsight-pitch.mp4" type="video/mp4" />
               </video>
             </div>
             <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
-              Concept visualization · MS-1 in action
+              Concept film · MerlinSight
             </figcaption>
           </figure>
         </div>
