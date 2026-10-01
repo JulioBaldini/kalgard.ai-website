@@ -1,4 +1,3 @@
-import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Capabilities from '@/components/Capabilities'
@@ -15,7 +14,6 @@ export default function Home() {
   return (
     <LanguageProvider>
       <main className="min-h-screen">
-        <Header />
         <Hero />
         <About />
         <Capabilities />
