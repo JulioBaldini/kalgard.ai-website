@@ -1,53 +1,40 @@
-'use client'
+import SectionHeader from './SectionHeader'
 
-import { GraduationCap } from 'lucide-react'
-
-import { useLanguage } from '@/components/LanguageProvider'
-import { Reveal, StaggerGroup, StaggerItem } from '@/components/Motion'
+const MEMBERS = [
+  {
+    name: 'Jules Baldantoni',
+    role: 'Founder · Aeronautical Engineer',
+    school: 'Imperial College London',
+    line: 'UAV systems and product. Bringing MerlinSight into operational flight.',
+  },
+  {
+    name: 'Thibault Noël',
+    role: 'Robotics Engineer · PhD',
+    school: 'ISAE-SUPAERO',
+    line: 'Autonomous navigation, onboard perception, resilient localization.',
+  },
+]
 
 export default function Team() {
-  const { copy } = useLanguage()
-  const team = copy.team
-
   return (
-    <section id="team" className="section-shell py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-3xl">
-          <span className="eyebrow">{team.eyebrow}</span>
-          <h2 className="mt-7 text-4xl text-ink sm:text-5xl">{team.title}</h2>
-          <p className="mt-6 text-lg leading-relaxed text-[rgba(9,9,9,0.72)]">{team.body}</p>
-        </Reveal>
+    <section id="team" className="bg-ink px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
+      <div className="mx-auto max-w-5xl">
+        <SectionHeader title="Team" tone="light" />
 
-        <StaggerGroup className="mt-14 grid gap-8 md:grid-cols-2">
-          {team.members.map((member, index) => (
-            <StaggerItem
-              key={member.name}
-              className={
-                index === 1
-                  ? 'team-card rounded-[2rem] border border-black/10 bg-[rgba(9,9,9,0.95)] p-8 text-paper sm:p-10'
-                  : 'team-card lab-card rounded-[2rem] p-8 sm:p-10'
-              }
-            >
-              <div
-                className={`flex h-12 w-12 items-center justify-center rounded-2xl border ${
-                  index === 1
-                    ? 'border-white/15 bg-white/10'
-                    : 'border-black/10 bg-[rgba(255,255,255,0.48)]'
-                }`}
-              >
-                <GraduationCap className={index === 1 ? 'h-6 w-6 text-paper' : 'h-6 w-6 text-plum'} />
-              </div>
-              <h3 className="mt-7 text-3xl">{member.name}</h3>
-              <p className={`data-label mt-3 ${index === 1 ? 'text-paper/60' : 'text-[rgba(9,9,9,0.48)]'}`}>
-                {member.role}
+        <div className="mt-14 grid gap-12 md:grid-cols-2 md:gap-8">
+          {MEMBERS.map((m) => (
+            <div key={m.name} className="border-l border-clay/40 pl-6">
+              <h3 className="font-display text-h4 font-medium uppercase leading-none text-bedrock md:text-h3">
+                {m.name}
+              </h3>
+              <p className="mt-3 font-sans text-sm font-medium text-bedrock/70">{m.role}</p>
+              <p className="font-sans text-sm font-light text-clay">{m.school}</p>
+              <p className="mt-4 max-w-sm font-sans text-sm font-light leading-relaxed text-bedrock/70">
+                {m.line}
               </p>
-              <p className={`mt-2 text-lg ${index === 1 ? 'text-paper' : 'text-ink'}`}>{member.education}</p>
-              <p className={`mt-6 leading-relaxed ${index === 1 ? 'text-paper/75' : 'text-[rgba(9,9,9,0.68)]'}`}>
-                {member.body}
-              </p>
-            </StaggerItem>
+            </div>
           ))}
-        </StaggerGroup>
+        </div>
       </div>
     </section>
   )

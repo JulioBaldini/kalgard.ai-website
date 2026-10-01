@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS: [string, string][] = [
-  ['About', '#about'],
+  ['Mission', '#mission'],
   ['Technology', '#technology'],
   ['Team', '#team'],
 ]
@@ -17,7 +17,7 @@ export default function Header() {
     <>
       <header className="absolute inset-x-0 top-0 z-50 w-full bg-ink">
         <div className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <a href="#home" className="shrink-0" aria-label="KALGARD — home">
+          <a href="#home" className="shrink-0" aria-label="KALGARD home">
             <Image
               src="/logos/logo-h.png"
               alt="KALGARD"
