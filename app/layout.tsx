@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 const siteUrl = 'https://kalgardsystems.com'
-const siteTitle = 'MerlinSight by KALGARD SYSTEMS'
+const siteTitle = 'Kalgard'
 const siteDescription =
   'Resilient onboard UAV navigation and georeferencing technologies for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
 
@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.png', type: 'image/png' },
-      { url: '/logos/small/Small_logo.png', type: 'image/png' },
+      { url: '/icon-light.png', type: 'image/png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.png', type: 'image/png', media: '(prefers-color-scheme: dark)' },
     ],
-    shortcut: '/icon.png',
+    shortcut: '/icon-light.png',
     apple: '/apple-icon.png',
   },
   openGraph: {
@@ -63,7 +63,7 @@ export default function RootLayout({
         '@id': `${siteUrl}/#organization`,
         name: 'KALGARD Systems',
         url: siteUrl,
-        logo: `${siteUrl}/icon.png`,
+        logo: `${siteUrl}/icon-light.png`,
       },
       {
         '@type': 'WebSite',
