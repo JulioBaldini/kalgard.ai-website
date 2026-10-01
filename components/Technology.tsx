@@ -40,7 +40,7 @@ export default function Technology() {
       <div className="mx-auto max-w-5xl">
         <SectionHeader title="Technology" meta="GNSS-independent" tone="dark" />
 
-        {/* product render: black studio background melts into bedrock */}
+        {/* product render: transparent background sits directly on bedrock */}
         <div className="mt-14 grid items-center gap-10 md:grid-cols-2">
           <div>
             <h3 className="font-display text-2xl font-medium uppercase leading-none text-ink md:text-h3">
@@ -64,11 +64,11 @@ export default function Technology() {
             </ul>
           </div>
           <Image
-            src="/media/renders/nav_module_MerlinSight.png"
-            alt="MerlinSight onboard module"
-            width={2194}
-            height={1092}
-            className="w-full mix-blend-lighten"
+            src="/media/renders/merlinsight-mk2-r100.png"
+            alt="MerlinSight MK2-R100 sensor module"
+            width={1448}
+            height={1086}
+            className="w-full"
           />
         </div>
 
@@ -96,20 +96,35 @@ export default function Technology() {
 
         {/* real hardware, monochrome until hovered; small concept-film slot
             until the full teaser lands */}
-        <div className="mt-16 grid gap-4 md:grid-cols-3">
+        <div className="mt-16 grid gap-4 md:grid-cols-2">
           <figure>
             <div className="relative overflow-hidden p-1.5">
               <Brackets />
               <Image
-                src="/media/new-files/module-merlinsight-2.png"
+                src="/media/new-files/module-mk2-prototype.jpg"
                 alt="MerlinSight prototype, camera and compute"
-                width={2062}
-                height={1390}
+                width={1280}
+                height={853}
                 className="aspect-[3/2] w-full object-cover grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
               />
             </div>
             <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
               Prototype · optics &amp; compute
+            </figcaption>
+          </figure>
+          <figure>
+            <div className="relative overflow-hidden p-1.5">
+              <Brackets />
+              <Image
+                src="/media/new-files/field-demo.jpg"
+                alt="Presenting the MerlinSight prototype to a soldier in the field"
+                width={1800}
+                height={1200}
+                className="aspect-[3/2] w-full object-cover grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
+              />
+            </div>
+            <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
+              Field demonstration · army regiment
             </figcaption>
           </figure>
           <figure>

@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/media/renders/nav_module_MerlinSight.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'MerlinSight Astrel navigation module by KALGARD Systems',
+        alt: 'KALGARD logo',
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: ['/media/renders/nav_module_MerlinSight.png'],
+    images: ['/og-image.png'],
   },
 }
 
