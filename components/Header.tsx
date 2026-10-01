@@ -1,163 +1,121 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
-import { useLanguage } from '@/components/LanguageProvider'
+const NAV_LINKS: [string, string][] = [
+  ['Mission', '#mission'],
+  ['Technology', '#technology'],
+  ['Team', '#team'],
+]
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeHref, setActiveHref] = useState('#home')
-  const { lang, setLang, copy } = useLanguage()
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-
-  useEffect(() => {
-    const sections = ['home', 'about', 'products', 'team', 'partners', 'contact']
-      .map((id) => document.getElementById(id))
-      .filter((section): section is HTMLElement => Boolean(section))
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-
-        if (visible) setActiveHref(`#${visible.target.id}`)
-      },
-      { rootMargin: '-25% 0px -60% 0px', threshold: [0, 0.1, 0.25] }
-    )
-
-    sections.forEach((section) => observer.observe(section))
-    return () => observer.disconnect()
-  }, [])
+  const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className={`mx-auto max-w-7xl border border-black/10 bg-[rgba(255,249,240,0.78)] px-4 backdrop-blur-xl sm:px-5 ${isMenuOpen ? 'rounded-t-[2rem] rounded-b-2xl' : 'rounded-full'}`}>
-        <div className="flex items-center justify-between gap-4 py-3">
-          <a href="#home" className="min-w-0 flex items-center gap-3">
-            <div className="p-1">
-              <Image
-                src="/logos/small/Small_logo.png"
-                alt="KALGARD Systems Logo"
-                width={40}
-                height={40}
-                className="h-10 w-10 object-contain"
-              />
-            </div>
-            <div className="min-w-0">
-              <p className="brand-wordmark text-xl leading-none text-ink sm:text-2xl">MERLINSIGHT</p>
-              <p className="data-label mt-1 truncate text-[rgba(9,9,9,0.58)]">{copy.nav.strapline}</p>
-            </div>
+    <>
+      <header className="absolute inset-x-0 top-0 z-50 w-full bg-ink">
+        <div className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+          <a href="#home" className="shrink-0" aria-label="KALGARD home">
+            <Image
+              src="/logos/logo-h.png"
+              alt="KALGARD"
+              width={1296}
+              height={304}
+              priority
+              className="h-9 w-auto"
+            />
           </a>
 
-          <div className="hidden max-w-[13rem] items-center gap-2 overflow-hidden rounded-full border border-black/10 bg-[rgba(255,255,255,0.42)] px-3 py-2 xl:flex">
-            <div className="min-w-0 text-right">
-              <p className="data-label text-[rgba(9,9,9,0.56)]">{copy.nav.incubationLabel}</p>
-              <p className="truncate text-xs text-[rgba(9,9,9,0.56)]">{copy.nav.incubationValue}</p>
-            </div>
-            <img
-              src="/logos/partners/RF-Inria_Logo_RVB.jpg"
-              alt="INRIA logo"
-              className="h-8 w-auto max-w-[6.5rem] shrink-0 rounded bg-white px-2 py-1 object-contain"
-            />
-          </div>
-
-          <nav className="hidden items-center gap-5 lg:flex xl:gap-6">
-            {copy.nav.links.map(([label, href]) => (
-              <a
-                key={href}
-                href={href}
-                className={`data-label relative whitespace-nowrap py-2 transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:bg-plum after:transition-transform hover:text-plum ${
-                  href === activeHref ? 'text-plum after:scale-x-100' : 'text-[rgba(9,9,9,0.72)] after:scale-x-0'
-                } ${
-                  label === 'MerlinSight' ? 'brand-wordmark tracking-[0.08em]' : ''
-                }`}
-              >
-                {label}
-              </a>
-            ))}
+          {/* desktop nav */}
+          <nav className="hidden items-center gap-8 md:flex">
+            <ul className="flex items-center gap-8">
+              {NAV_LINKS.map(([label, href]) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="font-sans text-sm font-medium uppercase tracking-wide text-bedrock/70 transition-colors hover:font-bold hover:text-bedrock"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#contact"
+              className="bg-marker px-5 py-2 font-sans text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-salmon-2"
+            >
+              Contact us
+            </a>
           </nav>
 
-          <div className="hidden items-center gap-2 lg:flex">
-            <span className="data-label text-[rgba(9,9,9,0.56)]">{copy.nav.languageLabel}</span>
-            <div className="flex rounded-full border border-black/10 bg-[rgba(255,255,255,0.42)] p-1">
-              <button
-                type="button"
-                onClick={() => setLang('en')}
-                className={`rounded-full px-3 py-1 text-xs uppercase tracking-[0.2em] transition-colors ${
-                  lang === 'en' ? 'bg-ink text-paper' : 'text-[rgba(9,9,9,0.68)] hover:text-plum'
-                }`}
-              >
-                EN
-              </button>
-              <button
-                type="button"
-                onClick={() => setLang('fr')}
-                className={`rounded-full px-3 py-1 text-xs uppercase tracking-[0.2em] transition-colors ${
-                  lang === 'fr' ? 'bg-ink text-paper' : 'text-[rgba(9,9,9,0.68)] hover:text-plum'
-                }`}
-              >
-                FR
-              </button>
-            </div>
-          </div>
-
+          {/* mobile burger */}
           <button
-            className="rounded-full border border-black/10 p-2 text-[rgba(9,9,9,0.72)] transition-colors hover:text-plum lg:hidden"
-            onClick={toggleMenu}
+            type="button"
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+            className="text-bedrock md:hidden"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <Menu className="h-7 w-7" />
+          </button>
+        </div>
+      </header>
+
+      {/* mobile overlay menu */}
+      <div
+        className={`fixed inset-0 z-[60] bg-bedrock transition-all duration-300 md:hidden ${
+          open ? 'visible opacity-100' : 'invisible opacity-0'
+        }`}
+      >
+        <div className="flex items-center justify-between px-4 py-3">
+          <Image
+            src="/icon-dark.png"
+            alt="KALGARD"
+            width={300}
+            height={300}
+            className="h-9 w-9"
+          />
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="text-ink"
+          >
+            <X className="h-7 w-7" />
           </button>
         </div>
 
-        {isMenuOpen && (
-          <div className="border-t border-black/10 py-4 lg:hidden">
-            <div className="mb-4 flex items-center justify-between">
-              <span className="data-label text-[rgba(9,9,9,0.56)]">{copy.nav.languageLabel}</span>
-              <div className="flex rounded-full border border-black/10 bg-[rgba(255,255,255,0.42)] p-1">
-                <button
-                  type="button"
-                  onClick={() => setLang('en')}
-                  className={`rounded-full px-3 py-1 text-xs uppercase tracking-[0.2em] transition-colors ${
-                    lang === 'en' ? 'bg-ink text-paper' : 'text-[rgba(9,9,9,0.68)] hover:text-plum'
-                  }`}
-                >
-                  EN
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setLang('fr')}
-                  className={`rounded-full px-3 py-1 text-xs uppercase tracking-[0.2em] transition-colors ${
-                    lang === 'fr' ? 'bg-ink text-paper' : 'text-[rgba(9,9,9,0.68)] hover:text-plum'
-                  }`}
-                >
-                  FR
-                </button>
-              </div>
-            </div>
-
-            <nav className="flex flex-col gap-4">
-              {copy.nav.links.map(([label, href]) => (
+        <nav className="flex h-[calc(100%-3.5rem)] flex-col justify-between px-6 pb-10 pt-8">
+          <ul className="flex flex-col gap-2">
+            {NAV_LINKS.map(([label, href], i) => (
+              <li
+                key={href}
+                className={`border-b border-ink/10 transition-all duration-500 ${
+                  open ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                }`}
+                style={{ transitionDelay: open ? `${100 + i * 70}ms` : '0ms' }}
+              >
                 <a
-                  key={href}
                   href={href}
-                  className={`data-label transition-colors hover:text-plum ${
-                    href === activeHref ? 'text-plum' : 'text-[rgba(9,9,9,0.72)]'
-                  } ${
-                    label === 'MerlinSight' ? 'brand-wordmark tracking-[0.08em]' : ''
-                  }`}
-                  onClick={toggleMenu}
+                  onClick={() => setOpen(false)}
+                  className="block py-4 font-display text-4xl font-medium uppercase tracking-wide text-ink transition-colors hover:text-marker"
                 >
                   {label}
                 </a>
-              ))}
-            </nav>
-          </div>
-        )}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="block bg-marker py-4 text-center font-sans text-base font-semibold uppercase tracking-wide text-ink transition-colors hover:bg-salmon-2"
+          >
+            Contact us
+          </a>
+        </nav>
       </div>
-    </header>
+    </>
   )
 }

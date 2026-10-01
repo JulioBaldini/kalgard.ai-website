@@ -8,31 +8,43 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: '#eee4d5',
-        parchment: '#e0d2bf',
-        ink: '#090909',
-        plum: '#800080',
-        violet: '#bb2aff',
-        gold: '#c8b337',
-        'kalgard': {
-          50: '#f6f0e8',
-          100: '#eee4d5',
-          200: '#e0d2bf',
-          300: '#d1c0a7',
-          400: '#b99a72',
-          500: '#800080',
-          600: '#5f005f',
-          700: '#3e003f',
-          800: '#1e001f',
-          900: '#090909',
-        }
+        // primary
+        bedrock: '#0F0E0B',
+        ink: '#E0DACE',
+        marker: '#FF5030',
+        // secondary
+        loam: '#2E2A20',
+        clay: '#8A7A60',
+        // tints
+        salmon: '#FFB7AA',
+        'salmon-2': '#FF7300',
+        blood: '#9C0003',
+        'blood-2': '#B6003A',
+      },
+      fontFamily: {
+        display: ['Rajdhani', 'sans-serif'],
+        sans: ['Barlow', 'sans-serif'],
+      },
+      fontSize: {
+        h1: ['60px', { lineHeight: '100%' }],
+        h2: ['40px', { lineHeight: '100%' }],
+        h3: ['32px', { lineHeight: '100%' }],
+        h4: ['20px', { lineHeight: '100%' }],
+        h5: ['16px', { lineHeight: '100%' }],
+        body: ['12px', { lineHeight: '125%' }],
+      },
+      spacing: {
+        paragraph: '24px',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-bedrock-loam': 'linear-gradient(135deg, #0F0E0B, #2E2A20)',
+        'gradient-bedrock-marker': 'linear-gradient(135deg, #0F0E0B, #FF5030)',
+        'gradient-ink-clay': 'linear-gradient(135deg, #E0DACE, #8A7A60)',
       },
     },
   },
   plugins: [],
-} 
+}
