@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const siteUrl = 'https://kalgardsystems.com'
+const siteUrl = 'https://kalgard.ai'
 const siteTitle = 'Kalgard'
 const siteDescription =
   'Resilient onboard UAV navigation and georeferencing technologies for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
