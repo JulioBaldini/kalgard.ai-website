@@ -266,7 +266,7 @@ For internal development:
 ## 📞 Support
 
 For technical support or questions about the website:
-- Contact: jules.baldantoni@inria.fr
+- Contact: jules@kalgard.ai
 - Documentation: See `/content/` directory
 - Issues: Create GitHub issue for bugs
 
