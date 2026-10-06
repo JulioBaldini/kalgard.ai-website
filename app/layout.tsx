@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const siteUrl = 'https://kalgard.ai'
-const siteTitle = 'Kalgard'
+const siteTitle = 'KALGARD Systems | GNSS-denied UAV navigation'
 const siteDescription =
   'Resilient onboard UAV navigation and georeferencing technologies for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
 
@@ -21,10 +21,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      // Plain icon with no media query, for search engines.
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
       { url: '/icon-light.png', type: 'image/png', media: '(prefers-color-scheme: light)' },
       { url: '/icon-dark.png', type: 'image/png', media: '(prefers-color-scheme: dark)' },
     ],
-    shortcut: '/icon-light.png',
+    shortcut: '/favicon.ico',
     apple: '/apple-icon.png',
   },
   openGraph: {
