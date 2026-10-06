@@ -10,7 +10,7 @@ const siteDescription =
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'MerlinSight, MerlinSight Astrel, MerlinSight Arrow, MerlinSight Sillage, KALGARD, KALGARD Systems, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
+  keywords: 'MerlinSight, MerlinSight MS-1, MerlinSight MS-2, MerlinSight MS-3, KALGARD, KALGARD Systems, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
   authors: [{ name: 'KALGARD Systems' }],
   creator: 'KALGARD Systems',
   publisher: 'KALGARD Systems',
