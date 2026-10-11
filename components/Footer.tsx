@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const contacts = [
-  { role: 'Team', emails: ['jules@kalgard.ai', 'thibault@kalgard.ai'] },
+  { role: 'Engineering team', emails: ['jules@kalgard.ai', 'thibault@kalgard.ai'] },
   { role: 'Business', emails: ['maxime@kalgard.ai'] },
   { role: 'Testing & military field experience', emails: ['massimo@kalgard.ai'] },
 ]
