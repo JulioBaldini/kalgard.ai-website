@@ -1,6 +1,6 @@
 const PARTNERS = [
   { name: 'INRIA Startup Studio', role: 'Incubation' },
-  { name: 'French Army Regiments', role: 'Flight trials' },
+  { name: 'Army observers', role: 'Flight trials' },
 ]
 
 export default function PartnersBand() {
@@ -23,6 +23,14 @@ export default function PartnersBand() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+        <p className="max-w-3xl font-display text-2xl font-medium uppercase leading-tight text-ink md:text-h3">
+          Flown on military ground in front of army observers.{' '}
+          <span className="text-marker">
+            In active work with French defence stakeholders and industrial groups.
+          </span>
+        </p>
       </div>
     </section>
   )
