@@ -4,7 +4,7 @@ export default function Mission() {
   return (
     <section id="mission" className="bg-ink px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
       <div className="mx-auto max-w-5xl">
-        <SectionHeader title="Mission" meta="43.6150° N · 7.0717° E" tone="light" />
+        <SectionHeader title="Mission" meta="48.8566° N · 2.3522° E" tone="light" />
 
         <h3 className="mt-14 max-w-2xl font-display text-2xl font-medium uppercase leading-none text-bedrock md:text-h3">
           When GNSS goes dark, flight must continue
