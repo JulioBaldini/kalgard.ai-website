@@ -50,7 +50,7 @@ export default function Footer() {
             className="h-6 w-auto self-start invert"
           />
           <div className="font-sans text-xs font-light text-ink/40">
-            <p>INRIA-incubated · © 2026 KALGARD Systems. All rights reserved.</p>
+            <p>Paris, France · INRIA-incubated · © 2026 KALGARD Systems. All rights reserved.</p>
           </div>
         </div>
       </div>

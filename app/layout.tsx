@@ -67,6 +67,11 @@ export default function RootLayout({
         name: 'KALGARD Systems',
         url: siteUrl,
         logo: `${siteUrl}/icon-light.png`,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Paris',
+          addressCountry: 'FR',
+        },
       },
       {
         '@type': 'WebSite',
