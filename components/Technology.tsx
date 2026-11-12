@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import MediaCarousel from './MediaCarousel'
 import SectionHeader from './SectionHeader'
 
 const MODULES = [
@@ -26,17 +27,6 @@ const MODULES = [
 ]
 
 // survey-style corner brackets, like a viewfinder locking the frame
-function Brackets() {
-  return (
-    <>
-      <span aria-hidden="true" className="absolute left-0 top-0 h-3 w-3 border-l border-t border-ink/60" />
-      <span aria-hidden="true" className="absolute right-0 top-0 h-3 w-3 border-r border-t border-ink/60" />
-      <span aria-hidden="true" className="absolute bottom-0 left-0 h-3 w-3 border-b border-l border-ink/60" />
-      <span aria-hidden="true" className="absolute bottom-0 right-0 h-3 w-3 border-b border-r border-ink/60" />
-    </>
-  )
-}
-
 export default function Technology() {
   return (
     <section id="technology" className="bg-bedrock px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
@@ -102,105 +92,7 @@ export default function Technology() {
           ))}
         </div>
 
-        {/* real hardware and field work, monochrome until hovered; the last
-            slot loops a cut of the flight trials (no faces) */}
-        <div className="mt-16 grid gap-4 md:grid-cols-2">
-          <figure>
-            <div className="relative overflow-hidden p-1.5">
-              <Brackets />
-              <Image
-                src="/media/new-files/module-mk2-prototype.jpg"
-                alt="MerlinSight prototype, camera and compute"
-                width={1280}
-                height={853}
-                className="aspect-[3/2] w-full object-cover grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
-              />
-            </div>
-            <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
-              Prototype · optics &amp; compute
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="relative overflow-hidden p-1.5">
-              <Brackets />
-              <Image
-                src="/media/new-files/field-demo.jpg"
-                alt="Presenting the MerlinSight prototype to a soldier in the field"
-                width={1800}
-                height={1200}
-                className="aspect-[3/2] w-full object-cover grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
-              />
-            </div>
-            <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
-              Field demonstration · army regiment
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="relative overflow-hidden p-1.5">
-              <Brackets />
-              <Image
-                src="/media/new-files/workshop.png"
-                alt="Flight integration work in the KALGARD workshop"
-                width={1169}
-                height={492}
-                className="aspect-[3/2] w-full object-cover grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
-              />
-            </div>
-            <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
-              Flight integration · workshop
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="relative overflow-hidden p-1.5">
-              <Brackets />
-              <Image
-                src="/media/new-files/field-mission-setup.jpg"
-                alt="Preparing a flight on a laptop in the field"
-                width={1800}
-                height={1200}
-                className="aspect-[3/2] w-full object-cover grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
-              />
-            </div>
-            <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
-              Mission setup · in the field
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="relative overflow-hidden p-1.5">
-              <Brackets />
-              <Image
-                src="/media/new-files/field-trial-site.jpg"
-                alt="Flight trial site with the drone and ground equipment on folding tables"
-                width={1800}
-                height={1200}
-                className="aspect-[3/2] w-full object-cover grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
-              />
-            </div>
-            <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
-              Flight trials · on site
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="relative overflow-hidden p-1.5">
-              <Brackets />
-              <video
-                className="aspect-[3/2] w-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                poster="/videos/posters/field-trial.jpg"
-                aria-label="Fitting the MerlinSight module under a drone, then the drone in flight"
-              >
-                <source src="/videos/demo/field-trial.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <figcaption className="mt-3 font-sans text-xs font-light uppercase tracking-[0.15em] text-ink/40">
-              Flight trials · module on the airframe
-            </figcaption>
-          </figure>
-        </div>
+        <MediaCarousel />
 
       </div>
     </section>
