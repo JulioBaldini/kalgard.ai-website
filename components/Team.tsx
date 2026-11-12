@@ -1,6 +1,8 @@
 import SectionHeader from './SectionHeader'
 
-const MEMBERS = [
+type Member = { name: string; role?: string; school?: string; line?: string }
+
+const MEMBERS: Member[] = [
   {
     name: 'Jules Baldantoni',
     role: 'Founder · Aeronautical Engineer',
@@ -20,11 +22,8 @@ const MEMBERS = [
     line: 'Field trials and end users. Then engineering and AI in aerospace: operational experience behind every product choice.',
   },
   {
-    // first name only until he agrees to his last name being public
+    // stealth: first name only, nothing else about him (no role, background or employer)
     name: 'Maxime',
-    role: 'Business · Partnerships · Finance',
-    school: 'Formerly BCG · private equity',
-    line: 'Strategy, industrial partnerships and financing.',
   },
 ]
 
@@ -40,11 +39,15 @@ export default function Team() {
               <h3 className="font-display text-h4 font-medium uppercase leading-none text-bedrock md:text-h3">
                 {m.name}
               </h3>
-              <p className="mt-3 font-sans text-sm font-medium text-bedrock/70">{m.role}</p>
-              <p className="font-sans text-sm font-light text-clay">{m.school}</p>
-              <p className="mt-4 max-w-sm font-sans text-sm font-light leading-relaxed text-bedrock/70">
-                {m.line}
-              </p>
+              {m.role && (
+                <p className="mt-3 font-sans text-sm font-medium text-bedrock/70">{m.role}</p>
+              )}
+              {m.school && <p className="font-sans text-sm font-light text-clay">{m.school}</p>}
+              {m.line && (
+                <p className="mt-4 max-w-sm font-sans text-sm font-light leading-relaxed text-bedrock/70">
+                  {m.line}
+                </p>
+              )}
             </div>
           ))}
         </div>
