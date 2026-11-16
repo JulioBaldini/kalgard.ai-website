@@ -3,17 +3,17 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const siteUrl = 'https://kalgard.ai'
-const siteTitle = 'KALGARD Systems | GNSS-denied UAV navigation'
+const siteTitle = 'Kalgard | GNSS-denied UAV navigation'
 const siteDescription =
-  'Resilient onboard UAV navigation and georeferencing technologies for GPS-denied and GNSS-degraded environments, built by KALGARD Systems.'
+  'Resilient onboard UAV navigation and georeferencing technologies for GPS-denied and GNSS-degraded environments, built by Kalgard.'
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
-  keywords: 'MerlinSight, MerlinSight MS-1, MerlinSight MS-2, MerlinSight MS-3, KALGARD, KALGARD Systems, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
-  authors: [{ name: 'KALGARD Systems' }],
-  creator: 'KALGARD Systems',
-  publisher: 'KALGARD Systems',
+  keywords: 'MerlinSight, MerlinSight MS-1, MerlinSight MS-2, MerlinSight MS-3, Kalgard, INRIA, UAV navigation, GPS-denied navigation, GNSS-degraded navigation, resilient navigation',
+  authors: [{ name: 'Kalgard' }],
+  creator: 'Kalgard',
+  publisher: 'Kalgard',
   robots: 'index, follow',
   metadataBase: new URL(siteUrl),
   alternates: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     url: siteUrl,
-    siteName: 'KALGARD Systems',
+    siteName: 'Kalgard',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'KALGARD logo',
+        alt: 'Kalgard logo',
       },
     ],
   },
@@ -64,7 +64,8 @@ export default function RootLayout({
       {
         '@type': 'Organization',
         '@id': `${siteUrl}/#organization`,
-        name: 'KALGARD Systems',
+        name: 'Kalgard',
+        legalName: 'Kalgard Systems',
         url: siteUrl,
         logo: `${siteUrl}/icon-light.png`,
         address: {
@@ -77,7 +78,7 @@ export default function RootLayout({
         '@type': 'WebSite',
         '@id': `${siteUrl}/#website`,
         url: siteUrl,
-        name: 'KALGARD Systems',
+        name: 'Kalgard',
         description: siteDescription,
         publisher: {
           '@id': `${siteUrl}/#organization`,

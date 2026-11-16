@@ -43,7 +43,7 @@ const SLIDES: Slide[] = [
   },
   {
     src: '/media/new-files/workshop.png',
-    alt: 'Flight integration work in the KALGARD workshop',
+    alt: 'Flight integration work in the Kalgard workshop',
     caption: 'Flight integration · workshop',
   },
 ]

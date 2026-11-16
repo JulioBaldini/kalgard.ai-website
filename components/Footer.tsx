@@ -44,13 +44,13 @@ export default function Footer() {
         <div className="mt-16 flex flex-col gap-6 border-t border-loam pt-8 md:flex-row md:items-center md:justify-between">
           <Image
             src="/logos/logo-h.png"
-            alt="KALGARD"
+            alt="Kalgard"
             width={1296}
             height={304}
             className="h-6 w-auto self-start invert"
           />
           <div className="font-sans text-xs font-light text-ink/40">
-            <p>Paris, France · INRIA-incubated · © 2026 KALGARD Systems. All rights reserved.</p>
+            <p>Paris, France · INRIA-incubated · © 2026 Kalgard. All rights reserved.</p>
           </div>
         </div>
       </div>

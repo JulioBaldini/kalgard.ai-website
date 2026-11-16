@@ -18,10 +18,10 @@ export default function Header() {
     <>
       <header className="absolute inset-x-0 top-0 z-50 w-full bg-ink">
         <div className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <a href="#home" className="shrink-0" aria-label="KALGARD home">
+          <a href="#home" className="shrink-0" aria-label="Kalgard home">
             <Image
               src="/logos/logo-h.png"
-              alt="KALGARD"
+              alt="Kalgard"
               width={1296}
               height={304}
               priority
@@ -72,7 +72,7 @@ export default function Header() {
         <div className="flex items-center justify-between px-4 py-3">
           <Image
             src="/icon-dark.png"
-            alt="KALGARD"
+            alt="Kalgard"
             width={300}
             height={300}
             className="h-9 w-9"

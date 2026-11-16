@@ -16,7 +16,7 @@ export default function Mission() {
             simply gone. Every drone that depends on it fails with it.
           </p>
           <p className="font-sans text-lg font-light leading-relaxed text-bedrock/80">
-            KALGARD builds vision-based onboard positioning that reads the terrain
+            Kalgard builds vision-based onboard positioning that reads the terrain
             beneath the aircraft and keeps a trusted position through the whole
             flight. No GNSS, no datalink.
           </p>
