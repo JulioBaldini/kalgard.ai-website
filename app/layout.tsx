@@ -65,7 +65,6 @@ export default function RootLayout({
         '@type': 'Organization',
         '@id': `${siteUrl}/#organization`,
         name: 'Kalgard',
-        legalName: 'Kalgard Systems',
         url: siteUrl,
         logo: `${siteUrl}/icon-light.png`,
         address: {
