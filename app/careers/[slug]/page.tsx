@@ -49,7 +49,7 @@ function BlockView({ block }: { block: Block }) {
   )
 }
 
-function Details({ opening, mailto }: { opening: Opening; mailto: string }) {
+function Details({ opening }: { opening: Opening }) {
   const rows = [
     ['Contract type', opening.contract],
     ['Salary', opening.salary],
@@ -78,14 +78,11 @@ function Details({ opening, mailto }: { opening: Opening; mailto: string }) {
       </dl>
       <div className="px-6 pb-6">
         <a
-          href={mailto}
+          href={`/careers/${opening.id}/apply`}
           className="block bg-marker px-7 py-3 text-center font-sans text-sm font-semibold uppercase tracking-wide text-ink transition-all duration-200 hover:-translate-y-0.5 hover:bg-salmon-2 hover:shadow-lg hover:shadow-marker/30"
         >
           Apply
         </a>
-        <p className="mt-4 break-all text-center font-sans text-xs font-light text-ink/40">
-          {opening.applyEmail}
-        </p>
       </div>
     </aside>
   )
@@ -94,10 +91,6 @@ function Details({ opening, mailto }: { opening: Opening; mailto: string }) {
 export default function OpeningPage({ params }: Props) {
   const opening = getOpenings().find((o) => o.id === params.slug)
   if (!opening) notFound()
-
-  const mailto = `mailto:${opening.applyEmail}?subject=${encodeURIComponent(
-    `Application — ${opening.title}`,
-  )}`
 
   return (
     <main className="min-h-screen bg-bedrock">
@@ -140,7 +133,7 @@ export default function OpeningPage({ params }: Props) {
               ))}
             </div>
 
-            <Details opening={opening} mailto={mailto} />
+            <Details opening={opening} />
           </div>
         </div>
       </section>
