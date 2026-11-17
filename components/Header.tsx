@@ -5,9 +5,10 @@ import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS: [string, string][] = [
-  ['Mission', '#mission'],
-  ['Technology', '#technology'],
-  ['Results', '#results'],
+  ['Mission', '/#mission'],
+  ['Technology', '/#technology'],
+  ['Results', '/#results'],
+  ['Careers', '/#careers'],
 ]
 
 export default function Header() {
@@ -17,7 +18,7 @@ export default function Header() {
     <>
       <header className="absolute inset-x-0 top-0 z-50 w-full bg-ink">
         <div className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <a href="#home" className="shrink-0" aria-label="Kalgard home">
+          <a href="/" className="shrink-0" aria-label="Kalgard home">
             <Image
               src="/logos/logo-h.png"
               alt="Kalgard"
