@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import MediaCarousel from './MediaCarousel'
 import SectionHeader from './SectionHeader'
 
 const MODULES = [
@@ -91,9 +90,6 @@ export default function Technology() {
             </article>
           ))}
         </div>
-
-        <MediaCarousel />
-
       </div>
     </section>
   )
