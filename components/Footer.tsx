@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import ContactForm from './ContactForm'
 
 const contacts = [
-  { role: 'Engineering team', emails: ['jules@kalgard.ai', 'thibault@kalgard.ai'] },
   { role: 'Business', emails: ['maxime@kalgard.ai'] },
-  { role: 'Testing & military field experience', emails: ['massimo@kalgard.ai'] },
+  { role: 'Engineering', emails: ['jules@kalgard.ai'] },
+  { role: 'Product', emails: ['massimo@kalgard.ai'] },
 ]
 
 export default function Footer() {
@@ -15,30 +16,38 @@ export default function Footer() {
         </p>
         <div className="mt-3 h-px w-10 bg-clay/40" />
 
-        <a
-          href="mailto:contact@kalgardsystems.com"
-          className="mt-10 block w-fit font-display text-2xl font-medium uppercase leading-none text-ink transition-colors hover:text-marker md:text-h3"
-        >
-          contact@kalgardsystems.com
-        </a>
+        <div className="mt-10 grid gap-14 lg:grid-cols-5">
+          <div className="lg:col-span-3">
+            <ContactForm />
+          </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-3">
-          {contacts.map(({ role, emails }) => (
-            <div key={role}>
-              <p className="font-sans text-xs font-medium uppercase tracking-[0.2em] text-clay">
-                {role}
-              </p>
-              {emails.map((email) => (
-                <a
-                  key={email}
-                  href={`mailto:${email}`}
-                  className="mt-3 block w-fit break-all font-sans text-base text-ink/80 transition-colors hover:text-marker"
-                >
-                  {email}
-                </a>
+          <div className="lg:col-span-2">
+            <a
+              href="mailto:contact@kalgard.ai"
+              className="block w-fit font-display text-2xl font-medium uppercase leading-none text-ink transition-colors hover:text-marker md:text-h3"
+            >
+              contact@kalgard.ai
+            </a>
+
+            <div className="mt-12 grid gap-8">
+              {contacts.map(({ role, emails }) => (
+                <div key={role}>
+                  <p className="font-sans text-xs font-medium uppercase tracking-[0.2em] text-clay">
+                    {role}
+                  </p>
+                  {emails.map((email) => (
+                    <a
+                      key={email}
+                      href={`mailto:${email}`}
+                      className="mt-3 block w-fit break-all font-sans text-base text-ink/80 transition-colors hover:text-marker"
+                    >
+                      {email}
+                    </a>
+                  ))}
+                </div>
               ))}
             </div>
-          ))}
+          </div>
         </div>
 
         <div className="mt-16 flex flex-col gap-6 border-t border-loam pt-8 md:flex-row md:items-center md:justify-between">

@@ -3,6 +3,7 @@ import Mission from '@/components/Mission'
 import Technology from '@/components/Technology'
 import FieldResults from '@/components/FieldResults'
 import PartnersBand from '@/components/PartnersBand'
+import Careers from '@/components/Careers'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Mission />
       <Technology />
       <FieldResults />
+      <Careers />
       <Footer />
     </main>
   )
