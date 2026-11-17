@@ -3,7 +3,7 @@ title: Founding Engineer - ML in Computer Vision & Robotics
 team: Engineering
 location: Paris, France
 contract: Full-time
-salary: €2,800-3,600 gross/month during incubation · €70-90k post-raise
+salary: €70-90k + BSPCE
 experience: 3-5 years, startup experience
 education: Top-tier engineering school or PhD
 work_time: Full-time
@@ -49,6 +49,5 @@ Beyond the skills, you want ownership: a founding-engineer seat means the hard p
 ## Benefits
 
 - Founding-engineer position: first hire alongside the three founders, with matching influence on product and architecture.
-- During the Inria incubation, salary is set by degree: €2,800 gross/month (engineer) or €3,600 gross/month (PhD/researcher). After the raise: €70-90k.
 - Real field exposure: your code flies in real campaigns, measured against the aircraft's own GPS, not a simulator.
 - Inria Startup Studio environment in Paris: research-grade surroundings, direct access to the French deep-tech and defence ecosystem.
