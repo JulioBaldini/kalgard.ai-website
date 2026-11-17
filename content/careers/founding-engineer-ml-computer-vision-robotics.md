@@ -7,7 +7,7 @@ salary: €70-90k + BSPCE
 experience: 3-5 years, startup experience
 education: Top-tier engineering school or PhD
 work_time: Full-time
-summary: Join the founding team and own the ML and computer-vision core of MerlinSight, the onboard navigation agent that gives drones their position when GNSS is jammed or denied.
+summary: Join the founding team and own the computer-vision and map-matching models of MerlinSight, the onboard navigation agent that gives drones their position when GNSS is jammed or denied.
 apply_email: contact@kalgard.ai
 published: true
 ---
@@ -20,29 +20,28 @@ We are incubated by the Inria Startup Studio and based in Paris, working with th
 
 ## Role
 
-You own a large share of the ML and computer-vision core of MerlinSight: the models and pipelines that turn what the drone sees into a position, running in real time on embedded hardware, proven flight after flight.
+You own the models at the core of MerlinSight: computer-vision and map-matching models that turn what the drone sees into a position, fine-tuned on real flight data and running in real time on embedded hardware.
 
-### Perception & machine learning
+### Computer vision & map matching
 
-- Design, train and evaluate the models that match onboard imagery against maps and georeferenced data.
-- Push robustness where it is hardest: low altitude, seasonal change, degraded weather, terrain without texture.
-- Build the evaluation discipline (datasets, metrics, replay) that turns flight logs into model improvements.
+- Design, train and evaluate the map-matching models that align onboard imagery with georeferenced data: rasterised matching against imagery and raster maps, vector matching against the road graph.
+- Fine-tune vision models for low-altitude UAV imagery, where perspective and scale change fast.
+- Push robustness where it is hardest: seasonal change, degraded weather, terrain without texture.
 
-### Onboard robotics
+### Reinforcement learning & fine-tuning
 
-- Ship the pipeline on embedded compute (Raspberry Pi 5, Jetson-class), under real latency and power budgets.
-- Fuse vision with inertial odometry so the trajectory holds between two corrections.
-- Harden the system for flight: failure modes, degraded sensors, graceful fallbacks.
+- Explore reinforcement learning to orchestrate the matching pipelines in flight: which model to trust, on which terrain, at which moment.
+- Build the fine-tuning loop on flight data: datasets, metrics, replay, so every campaign makes the models better.
+- Take models from research idea to a version that earns its place in the onboard pipeline.
 
-### Field & ownership
+### Light robotics
 
-- Take part in flight campaigns: instrument the missions, fly the system, close the loop from logs to code.
-- Shape the technical architecture that will carry the product line, alongside the CTO.
-- Help build the team: your standards become the engineering culture.
+- Ship your models on embedded compute (Raspberry Pi 5, Jetson-class), under real latency and power budgets.
+- Take part in flight campaigns: instrument the missions, watch your models fly, close the loop from logs to code.
 
 ## Profile
 
-You come from a top-tier engineering school or hold a PhD, with 3 to 5 years of experience including time in a startup, so you know what it means to ship with a small team and no safety net. Your core is machine learning applied to computer vision, ideally localization, SLAM, state estimation or geospatial matching, and you are at ease taking a model from research idea to code that runs on an embedded board.
+You come from a top-tier engineering school or hold a PhD, with 3 to 5 years of experience including time in a startup, so you know what it means to ship with a small team and no safety net. Your core is machine learning for computer vision: training and fine-tuning vision models, with experience in reinforcement learning and, ideally, map matching, geospatial data or visual localization. You are at ease taking a model from research idea to code that runs on an embedded board.
 
 Beyond the skills, you want ownership: a founding-engineer seat means the hard problems are yours, the field results are yours, and so is a real say in where the product goes. Interest in defence and dual-use robotics matters; French work authorization is preferred.
 
