@@ -37,7 +37,7 @@ You own the models at the core of MerlinSight: computer-vision and map-matching 
 ### Light robotics
 
 - Ship your models on embedded compute (Raspberry Pi 5, Jetson-class), under real latency and power budgets.
-- Take part in flight campaigns: instrument the missions, watch your models fly, close the loop from logs to code.
+- Work from the flight logs the team brings back: replay the missions, measure your models against them, close the loop from data to code.
 
 ## Profile
 
@@ -48,5 +48,5 @@ Beyond the skills, you want ownership: a founding-engineer seat means the hard p
 ## Benefits
 
 - Founding-engineer position: first hire alongside the three founders, with matching influence on product and architecture.
-- Real field exposure: your code flies in real campaigns, measured against the aircraft's own GPS, not a simulator.
+- Real flight data: your models are measured on real campaigns flown by the team, against the aircraft's own GPS, not a simulator.
 - Inria Startup Studio environment in Paris: research-grade surroundings, direct access to the French deep-tech and defence ecosystem.
